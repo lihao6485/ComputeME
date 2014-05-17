@@ -12,13 +12,16 @@
 		1B30D9A0192606400029F9E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B30D99F192606400029F9E1 /* UIKit.framework */; };
 		1B30D9A6192606400029F9E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B30D9A4192606400029F9E1 /* InfoPlist.strings */; };
 		1B30D9A8192606400029F9E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B30D9A7192606400029F9E1 /* main.m */; };
-		1B30D9AC192606400029F9E1 /* CMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B30D9AB192606400029F9E1 /* CMAppDelegate.m */; };
 		1B30D9AE192606400029F9E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B30D9AD192606400029F9E1 /* Images.xcassets */; };
 		1B30D9B5192606400029F9E1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B30D9B4192606400029F9E1 /* XCTest.framework */; };
 		1B30D9B6192606400029F9E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B30D99B1926063F0029F9E1 /* Foundation.framework */; };
 		1B30D9B7192606400029F9E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B30D99F192606400029F9E1 /* UIKit.framework */; };
 		1B30D9BF192606400029F9E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B30D9BD192606400029F9E1 /* InfoPlist.strings */; };
 		1B30D9C1192606400029F9E1 /* ComputeMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B30D9C0192606400029F9E1 /* ComputeMeTests.m */; };
+		8CD2771070F744904D02B4D9 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD27840ACC60CB5EA37BB17 /* .gitkeep */; };
+		8CD27A7958F14107DDC2C64D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD275CA7231F92AA031C7C8 /* .gitkeep */; };
+		8CD27E3728595E2C1639273B /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD274B8E2EE26756D95BBD6 /* .gitkeep */; };
+		8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27CACC5E1A53C02AC9DCF /* CMAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,14 +43,17 @@
 		1B30D9A5192606400029F9E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B30D9A7192606400029F9E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1B30D9A9192606400029F9E1 /* ComputeMe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComputeMe-Prefix.pch"; sourceTree = "<group>"; };
-		1B30D9AA192606400029F9E1 /* CMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMAppDelegate.h; sourceTree = "<group>"; };
-		1B30D9AB192606400029F9E1 /* CMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMAppDelegate.m; sourceTree = "<group>"; };
 		1B30D9AD192606400029F9E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1B30D9B3192606400029F9E1 /* ComputeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComputeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B30D9B4192606400029F9E1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1B30D9BC192606400029F9E1 /* ComputeMeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ComputeMeTests-Info.plist"; sourceTree = "<group>"; };
 		1B30D9BE192606400029F9E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B30D9C0192606400029F9E1 /* ComputeMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComputeMeTests.m; sourceTree = "<group>"; };
+		8CD274B8E2EE26756D95BBD6 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = file.gitkeep; path = .gitkeep; sourceTree = "<group>"; };
+		8CD275CA7231F92AA031C7C8 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = file.gitkeep; path = .gitkeep; sourceTree = "<group>"; };
+		8CD27840ACC60CB5EA37BB17 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = file.gitkeep; path = .gitkeep; sourceTree = "<group>"; };
+		8CD27CACC5E1A53C02AC9DCF /* CMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMAppDelegate.m; sourceTree = "<group>"; };
+		8CD27DB35A55B476759508F0 /* CMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAppDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +113,12 @@
 		1B30D9A1192606400029F9E1 /* ComputeMe */ = {
 			isa = PBXGroup;
 			children = (
-				1B30D9AA192606400029F9E1 /* CMAppDelegate.h */,
-				1B30D9AB192606400029F9E1 /* CMAppDelegate.m */,
 				1B30D9AD192606400029F9E1 /* Images.xcassets */,
 				1B30D9A2192606400029F9E1 /* Supporting Files */,
+				8CD278F4E5C97EE3A5CA2132 /* AppDelegate */,
+				8CD277698415B9B86F0A4FF5 /* Controller */,
+				8CD27307221AD305183033EA /* View */,
+				8CD27CFB5D9D2B4B7028FF81 /* Model */,
 			);
 			path = ComputeMe;
 			sourceTree = "<group>";
@@ -142,6 +150,39 @@
 				1B30D9BD192606400029F9E1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8CD27307221AD305183033EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CD27840ACC60CB5EA37BB17 /* .gitkeep */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CD277698415B9B86F0A4FF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8CD275CA7231F92AA031C7C8 /* .gitkeep */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8CD278F4E5C97EE3A5CA2132 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8CD27DB35A55B476759508F0 /* CMAppDelegate.h */,
+				8CD27CACC5E1A53C02AC9DCF /* CMAppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		8CD27CFB5D9D2B4B7028FF81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CD274B8E2EE26756D95BBD6 /* .gitkeep */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +263,9 @@
 			files = (
 				1B30D9A6192606400029F9E1 /* InfoPlist.strings in Resources */,
 				1B30D9AE192606400029F9E1 /* Images.xcassets in Resources */,
+				8CD27E3728595E2C1639273B /* .gitkeep in Resources */,
+				8CD27A7958F14107DDC2C64D /* .gitkeep in Resources */,
+				8CD2771070F744904D02B4D9 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B30D9AC192606400029F9E1 /* CMAppDelegate.m in Sources */,
 				1B30D9A8192606400029F9E1 /* main.m in Sources */,
+				8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

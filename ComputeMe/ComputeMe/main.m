@@ -6,13 +6,10 @@
 //  Copyright (c) 2014 Pointwelve. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "CMAppDelegate.h"
 
-int main(int argc, char * argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([CMAppDelegate class]));
-    }
+int main(int argc, char *argv[]) {
+   @autoreleasepool {
+      return UIApplicationMain(argc, argv, nil, NSStringFromClass([CMAppDelegate class]));
+   }
 }
