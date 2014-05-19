@@ -26,6 +26,8 @@
 		F68A00851929AD560053F183 /* QuestionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68A00841929AD560053F183 /* QuestionStoryboard.storyboard */; };
 		F68A00881929AD6D0053F183 /* CMStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68A00871929AD6D0053F183 /* CMStartViewController.m */; };
 		F68A008B1929AD7D0053F183 /* CMGameTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */; };
+		F68A008D192A18790053F183 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68A008C192A18790053F183 /* CoreData.framework */; };
+		F68A0091192A19180053F183 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F68A008F192A19180053F183 /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		F68A00871929AD6D0053F183 /* CMStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMStartViewController.m; sourceTree = "<group>"; };
 		F68A00891929AD7D0053F183 /* CMGameTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGameTypeViewController.h; sourceTree = "<group>"; };
 		F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGameTypeViewController.m; sourceTree = "<group>"; };
+		F68A008C192A18790053F183 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F68A0090192A19180053F183 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68A008D192A18790053F183 /* CoreData.framework in Frameworks */,
 				1B30D99E1926063F0029F9E1 /* CoreGraphics.framework in Frameworks */,
 				1B30D9A0192606400029F9E1 /* UIKit.framework in Frameworks */,
 				1B30D99C1926063F0029F9E1 /* Foundation.framework in Frameworks */,
@@ -112,6 +117,7 @@
 		1B30D99A1926063F0029F9E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F68A008C192A18790053F183 /* CoreData.framework */,
 				1B30D99B1926063F0029F9E1 /* Foundation.framework */,
 				1B30D99D1926063F0029F9E1 /* CoreGraphics.framework */,
 				1B30D99F192606400029F9E1 /* UIKit.framework */,
@@ -126,6 +132,7 @@
 				1B30D9AD192606400029F9E1 /* Images.xcassets */,
 				8CD278F4E5C97EE3A5CA2132 /* AppDelegate */,
 				8CD277698415B9B86F0A4FF5 /* Controller */,
+				F68A008E192A18C80053F183 /* Data */,
 				8CD27CFB5D9D2B4B7028FF81 /* Model */,
 				F68A00811929AD1C0053F183 /* Storyboard */,
 				1B30D9A2192606400029F9E1 /* Supporting Files */,
@@ -207,6 +214,14 @@
 				F68A00841929AD560053F183 /* QuestionStoryboard.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F68A008E192A18C80053F183 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F68A008F192A19180053F183 /* DataModel.xcdatamodeld */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F68A008B1929AD7D0053F183 /* CMGameTypeViewController.m in Sources */,
+				F68A0091192A19180053F183 /* DataModel.xcdatamodeld in Sources */,
 				1B30D9A8192606400029F9E1 /* main.m in Sources */,
 				F68A00881929AD6D0053F183 /* CMStartViewController.m in Sources */,
 				8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */,
@@ -522,6 +538,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F68A008F192A19180053F183 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F68A0090192A19180053F183 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = F68A0090192A19180053F183 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1B30D9901926063F0029F9E1 /* Project object */;
 }
