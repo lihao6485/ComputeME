@@ -22,6 +22,10 @@
 		8CD27A7958F14107DDC2C64D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD275CA7231F92AA031C7C8 /* .gitkeep */; };
 		8CD27E3728595E2C1639273B /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD274B8E2EE26756D95BBD6 /* .gitkeep */; };
 		8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27CACC5E1A53C02AC9DCF /* CMAppDelegate.m */; };
+		F68A00831929AD480053F183 /* InitialStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68A00821929AD480053F183 /* InitialStoryboard.storyboard */; };
+		F68A00851929AD560053F183 /* QuestionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68A00841929AD560053F183 /* QuestionStoryboard.storyboard */; };
+		F68A00881929AD6D0053F183 /* CMStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68A00871929AD6D0053F183 /* CMStartViewController.m */; };
+		F68A008B1929AD7D0053F183 /* CMGameTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,12 @@
 		8CD27840ACC60CB5EA37BB17 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = file.gitkeep; path = .gitkeep; sourceTree = "<group>"; };
 		8CD27CACC5E1A53C02AC9DCF /* CMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMAppDelegate.m; sourceTree = "<group>"; };
 		8CD27DB35A55B476759508F0 /* CMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAppDelegate.h; sourceTree = "<group>"; };
+		F68A00821929AD480053F183 /* InitialStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InitialStoryboard.storyboard; sourceTree = "<group>"; };
+		F68A00841929AD560053F183 /* QuestionStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuestionStoryboard.storyboard; sourceTree = "<group>"; };
+		F68A00861929AD6D0053F183 /* CMStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMStartViewController.h; sourceTree = "<group>"; };
+		F68A00871929AD6D0053F183 /* CMStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMStartViewController.m; sourceTree = "<group>"; };
+		F68A00891929AD7D0053F183 /* CMGameTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGameTypeViewController.h; sourceTree = "<group>"; };
+		F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGameTypeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,11 +124,12 @@
 			isa = PBXGroup;
 			children = (
 				1B30D9AD192606400029F9E1 /* Images.xcassets */,
-				1B30D9A2192606400029F9E1 /* Supporting Files */,
 				8CD278F4E5C97EE3A5CA2132 /* AppDelegate */,
 				8CD277698415B9B86F0A4FF5 /* Controller */,
-				8CD27307221AD305183033EA /* View */,
 				8CD27CFB5D9D2B4B7028FF81 /* Model */,
+				F68A00811929AD1C0053F183 /* Storyboard */,
+				1B30D9A2192606400029F9E1 /* Supporting Files */,
+				8CD27307221AD305183033EA /* View */,
 			);
 			path = ComputeMe;
 			sourceTree = "<group>";
@@ -164,6 +175,10 @@
 			isa = PBXGroup;
 			children = (
 				8CD275CA7231F92AA031C7C8 /* .gitkeep */,
+				F68A00861929AD6D0053F183 /* CMStartViewController.h */,
+				F68A00871929AD6D0053F183 /* CMStartViewController.m */,
+				F68A00891929AD7D0053F183 /* CMGameTypeViewController.h */,
+				F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,6 +198,15 @@
 				8CD274B8E2EE26756D95BBD6 /* .gitkeep */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F68A00811929AD1C0053F183 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F68A00821929AD480053F183 /* InitialStoryboard.storyboard */,
+				F68A00841929AD560053F183 /* QuestionStoryboard.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +287,9 @@
 			files = (
 				1B30D9A6192606400029F9E1 /* InfoPlist.strings in Resources */,
 				1B30D9AE192606400029F9E1 /* Images.xcassets in Resources */,
+				F68A00831929AD480053F183 /* InitialStoryboard.storyboard in Resources */,
 				8CD27E3728595E2C1639273B /* .gitkeep in Resources */,
+				F68A00851929AD560053F183 /* QuestionStoryboard.storyboard in Resources */,
 				8CD27A7958F14107DDC2C64D /* .gitkeep in Resources */,
 				8CD2771070F744904D02B4D9 /* .gitkeep in Resources */,
 			);
@@ -284,7 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68A008B1929AD7D0053F183 /* CMGameTypeViewController.m in Sources */,
 				1B30D9A8192606400029F9E1 /* main.m in Sources */,
+				F68A00881929AD6D0053F183 /* CMStartViewController.m in Sources */,
 				8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +510,7 @@
 				1B30D9C6192606400029F9E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B30D9C7192606400029F9E1 /* Build configuration list for PBXNativeTarget "ComputeMeTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +519,7 @@
 				1B30D9C9192606400029F9E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
