@@ -28,6 +28,7 @@
 		F68A008B1929AD7D0053F183 /* CMGameTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */; };
 		F68A008D192A18790053F183 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68A008C192A18790053F183 /* CoreData.framework */; };
 		F68A0091192A19180053F183 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F68A008F192A19180053F183 /* DataModel.xcdatamodeld */; };
+		F6FF31A2192C85320096D64D /* CMQuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FF31A1192C85320096D64D /* CMQuestionTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGameTypeViewController.m; sourceTree = "<group>"; };
 		F68A008C192A18790053F183 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F68A0090192A19180053F183 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		F6FF31A0192C85320096D64D /* CMQuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMQuestionTableViewController.h; sourceTree = "<group>"; };
+		F6FF31A1192C85320096D64D /* CMQuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQuestionTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,10 +185,12 @@
 			isa = PBXGroup;
 			children = (
 				8CD275CA7231F92AA031C7C8 /* .gitkeep */,
-				F68A00861929AD6D0053F183 /* CMStartViewController.h */,
-				F68A00871929AD6D0053F183 /* CMStartViewController.m */,
 				F68A00891929AD7D0053F183 /* CMGameTypeViewController.h */,
 				F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */,
+				F6FF31A0192C85320096D64D /* CMQuestionTableViewController.h */,
+				F6FF31A1192C85320096D64D /* CMQuestionTableViewController.m */,
+				F68A00861929AD6D0053F183 /* CMStartViewController.h */,
+				F68A00871929AD6D0053F183 /* CMStartViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				F68A008B1929AD7D0053F183 /* CMGameTypeViewController.m in Sources */,
 				F68A0091192A19180053F183 /* DataModel.xcdatamodeld in Sources */,
 				1B30D9A8192606400029F9E1 /* main.m in Sources */,
+				F6FF31A2192C85320096D64D /* CMQuestionTableViewController.m in Sources */,
 				F68A00881929AD6D0053F183 /* CMStartViewController.m in Sources */,
 				8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */,
 			);
