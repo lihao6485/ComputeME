@@ -16,10 +16,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-   //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-   // Override point for customization after application launch.
-   //self.window.backgroundColor = [UIColor whiteColor];
-   //[self.window makeKeyAndVisible];
+//    NSManagedObjectContext *context = [self managedObjectContext];
+//    NSManagedObject *question = [NSEntityDescription
+//                                 insertNewObjectForEntityForName:@"Question"
+//                                 inManagedObjectContext:context];
+//    [question setValue:@"Programming Language" forKey:@"category"];
+//    [question setValue:@"Length of the string \"Correct\" is" forKey:@"content"];
+//    [question setValue:NO forKey:@"isImage"];
+//    NSManagedObject *options = [NSEntityDescription
+//                                insertNewObjectForEntityForName:@"Options"
+//                                inManagedObjectContext:context];
+//    [options setValue:@"7" forKey:@"answer"];
+//    [options setValue:@"7" forKey:@"option1"];
+//    [options setValue:@"8" forKey:@"option2"];
+//    [options setValue:@"9" forKey:@"option3"];
+//    [options setValue:@"implementation dependent" forKey:@"option4"];
+//    [question setValue:options forKey:@"options"];
+//    [options setValue:question forKey:@"question"];
+//    NSError *error;
+//    if (![context save:&error]) {
+//        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+//    }
    return YES;
 }
 
@@ -75,7 +92,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"test2" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"DataModel" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -88,7 +105,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"test2.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"DataModel.sqlite"];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
