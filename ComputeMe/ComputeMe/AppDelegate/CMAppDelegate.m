@@ -21,16 +21,16 @@
 //                                 insertNewObjectForEntityForName:@"Question"
 //                                 inManagedObjectContext:context];
 //    [question setValue:@"Programming Language" forKey:@"category"];
-//    [question setValue:@"Length of the string \"Correct\" is" forKey:@"content"];
-//    [question setValue:NO forKey:@"isImage"];
+//    [question setValue:@"The \"const\" feature can be applied to " forKey:@"content"];
+//    [question setValue:@NO forKey:@"isImage"];
 //    NSManagedObject *options = [NSEntityDescription
 //                                insertNewObjectForEntityForName:@"Options"
 //                                inManagedObjectContext:context];
-//    [options setValue:@"7" forKey:@"answer"];
-//    [options setValue:@"7" forKey:@"option1"];
-//    [options setValue:@"8" forKey:@"option2"];
-//    [options setValue:@"9" forKey:@"option3"];
-//    [options setValue:@"implementation dependent" forKey:@"option4"];
+//    [options setValue:@"all of the above" forKey:@"answer"];
+//    [options setValue:@"an identifier " forKey:@"option1"];
+//    [options setValue:@"an array" forKey:@"option2"];
+//    [options setValue:@"an array argument" forKey:@"option3"];
+//    [options setValue:@"all of the above" forKey:@"option4"];
 //    [question setValue:options forKey:@"options"];
 //    [options setValue:question forKey:@"question"];
 //    NSError *error;

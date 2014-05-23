@@ -30,6 +30,8 @@
 		F6602EF1192F88CE007F83E1 /* QuestionWithImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6602EF0192F88CE007F83E1 /* QuestionWithImageView.xib */; };
 		F6602EF4192F890A007F83E1 /* CMQuestionWithImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602EF3192F890A007F83E1 /* CMQuestionWithImageView.m */; };
 		F6602EFA192F896A007F83E1 /* CMQuestionWithoutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602EF9192F896A007F83E1 /* CMQuestionWithoutImageView.m */; };
+		F6602F06192FB777007F83E1 /* Options.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602F05192FB777007F83E1 /* Options.m */; };
+		F6602F09192FB777007F83E1 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602F08192FB777007F83E1 /* Question.m */; };
 		F68A00831929AD480053F183 /* InitialStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68A00821929AD480053F183 /* InitialStoryboard.storyboard */; };
 		F68A00851929AD560053F183 /* QuestionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68A00841929AD560053F183 /* QuestionStoryboard.storyboard */; };
 		F68A00881929AD6D0053F183 /* CMStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68A00871929AD6D0053F183 /* CMStartViewController.m */; };
@@ -80,6 +82,10 @@
 		F6602EF3192F890A007F83E1 /* CMQuestionWithImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQuestionWithImageView.m; sourceTree = "<group>"; };
 		F6602EF8192F896A007F83E1 /* CMQuestionWithoutImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMQuestionWithoutImageView.h; sourceTree = "<group>"; };
 		F6602EF9192F896A007F83E1 /* CMQuestionWithoutImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQuestionWithoutImageView.m; sourceTree = "<group>"; };
+		F6602F04192FB777007F83E1 /* Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Options.h; sourceTree = "<group>"; };
+		F6602F05192FB777007F83E1 /* Options.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Options.m; sourceTree = "<group>"; };
+		F6602F07192FB777007F83E1 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		F6602F08192FB777007F83E1 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		F68A00821929AD480053F183 /* InitialStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InitialStoryboard.storyboard; sourceTree = "<group>"; };
 		F68A00841929AD560053F183 /* QuestionStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuestionStoryboard.storyboard; sourceTree = "<group>"; };
 		F68A00861929AD6D0053F183 /* CMStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMStartViewController.h; sourceTree = "<group>"; };
@@ -257,6 +263,10 @@
 			isa = PBXGroup;
 			children = (
 				F68A008F192A19180053F183 /* DataModel.xcdatamodeld */,
+				F6602F07192FB777007F83E1 /* Question.h */,
+				F6602F08192FB777007F83E1 /* Question.m */,
+				F6602F04192FB777007F83E1 /* Options.h */,
+				F6602F05192FB777007F83E1 /* Options.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -407,7 +417,9 @@
 				F68A0091192A19180053F183 /* DataModel.xcdatamodeld in Sources */,
 				1B30D9A8192606400029F9E1 /* main.m in Sources */,
 				F6FF31A2192C85320096D64D /* CMQuestionTableViewController.m in Sources */,
+				F6602F06192FB777007F83E1 /* Options.m in Sources */,
 				F68A00881929AD6D0053F183 /* CMStartViewController.m in Sources */,
+				F6602F09192FB777007F83E1 /* Question.m in Sources */,
 				8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */,
 				F6602EF4192F890A007F83E1 /* CMQuestionWithImageView.m in Sources */,
 			);
