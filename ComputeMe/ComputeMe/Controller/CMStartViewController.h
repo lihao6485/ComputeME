@@ -6,8 +6,11 @@
 //  Copyright (c) 2014 Pointwelve. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface CMStartViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *titleFirstLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleSecondLabel;
+@property (weak, nonatomic) IBOutlet UILabel *startLabel;
 
 @end

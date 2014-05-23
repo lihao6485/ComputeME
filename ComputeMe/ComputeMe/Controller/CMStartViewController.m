@@ -7,6 +7,7 @@
 //
 
 #import "CMStartViewController.h"
+#import "CMGameTypeViewController.h"
 
 @interface CMStartViewController ()
 
@@ -27,12 +28,40 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self initTitleLabel];
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)initTitleLabel
+{
+    self.titleFirstLabel.font = [UIFont fontWithName:@"CODE Light" size:40];
+    self.titleSecondLabel.font = [UIFont fontWithName:@"CODE Light" size:60];
+    
+    [self.startLabel setAlpha:0.2f];
+    
+    [UIView animateWithDuration:0.8f
+                          delay:0.0f
+                        options:UIViewAnimationOptionCurveEaseIn
+     | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat| UIViewAnimationOptionAllowUserInteraction
+                     animations:^{
+                         [self.startLabel setAlpha:1.0f];
+                     }
+                     completion:nil];
+}
+
+- (void)tapAction:(UITapGestureRecognizer *)tapGestureRecognizer
+{
+    UINavigationController *navController = [self.storyboard instantiateViewControllerWithIdentifier:@"InitialNavigationController"];
+    [self presentViewController:navController animated:YES completion:^{
+        
+    }];
 }
 
 /*
