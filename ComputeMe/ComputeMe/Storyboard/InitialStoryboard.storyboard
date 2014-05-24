@@ -17,7 +17,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gg2-qR-UR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141" y="146"/>
+            <point key="canvasLocation" x="1143" y="-134"/>
         </scene>
         <!--Game Type View Controller-->
         <scene sceneID="657-AI-Svi">
@@ -35,7 +35,9 @@
                                 <rect key="frame" x="20" y="190" width="280" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="35"/>
-                                <state key="normal" title="challenge"/>
+                                <state key="normal" title="challenge">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Dhx-Ai-vCK" kind="push" id="VJ3-ar-hTQ"/>
                                 </connections>
@@ -44,7 +46,9 @@
                                 <rect key="frame" x="20" y="260" width="280" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="35"/>
-                                <state key="normal" title="classic"/>
+                                <state key="normal" title="classic">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Dhx-Ai-vCK" kind="push" id="2tf-MA-lZw"/>
                                 </connections>
@@ -53,7 +57,9 @@
                                 <rect key="frame" x="20" y="330" width="280" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="35"/>
-                                <state key="normal" title="story"/>
+                                <state key="normal" title="story">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Dhx-Ai-vCK" kind="push" id="hVr-re-ldW"/>
                                 </connections>
@@ -93,66 +99,83 @@
             </objects>
             <point key="canvasLocation" x="1563" y="-186"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Category View Controller-->
         <scene sceneID="WIZ-XT-zmx">
             <objects>
-                <viewController id="Dhx-Ai-vCK" sceneMemberID="viewController">
+                <viewController id="Dhx-Ai-vCK" customClass="CMGameCategoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jn8-eN-6RT"/>
                         <viewControllerLayoutGuide type="bottom" id="Vqp-FD-GOs"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iFX-Xs-iG7">
+                    <view key="view" contentMode="scaleToFill" id="iFX-Xs-iG7" customClass="CMQuestionWithImageView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMB-fl-wAy">
-                                <rect key="frame" x="20" y="110" width="280" height="48"/>
+                                <rect key="frame" x="89" y="144" width="143" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Programming Language">
+                                <state key="normal" title="hardware">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoi-a2-2mt">
-                                <rect key="frame" x="20" y="190" width="280" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eoi-a2-2mt">
+                                <rect key="frame" x="61" y="214" width="202" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Hardware">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="programming\nlanguage">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inU-MJ-vyP">
-                                <rect key="frame" x="20" y="260" width="280" height="48"/>
+                                <rect key="frame" x="110" y="302" width="101" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Networking">
+                                <state key="normal" title="history">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFX-Gv-r7A">
-                                <rect key="frame" x="20" y="330" width="280" height="48"/>
+                                <rect key="frame" x="78" y="374" width="165" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="History">
+                                <state key="normal" title="networking">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caL-e9-nqM">
-                                <rect key="frame" x="20" y="400" width="280" height="48"/>
+                                <rect key="frame" x="65" y="445" width="190" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Algorithm and Logic">
+                                <state key="normal" title="digital media">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnX-dA-9RP">
+                                <rect key="frame" x="56" y="85" width="209" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.011764707043766975" green="0.58039218187332153" blue="0.7568628191947937" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="cu1-0x-cHN"/>
+                    <connections>
+                        <outlet property="digitalMediaButton" destination="caL-e9-nqM" id="AOX-s5-2Bi"/>
+                        <outlet property="hardwareButton" destination="nMB-fl-wAy" id="dOw-7O-6cZ"/>
+                        <outlet property="historyButton" destination="inU-MJ-vyP" id="VVs-87-WhT"/>
+                        <outlet property="networkingButton" destination="tFX-Gv-r7A" id="wbe-9s-4k8"/>
+                        <outlet property="programmingButton" destination="eoi-a2-2mt" id="jb1-0f-xwp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LzC-nI-7LW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952" y="-214"/>
+            <point key="canvasLocation" x="2006" y="-186"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="UUx-nN-6Uf">
@@ -211,7 +234,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IhV-rB-PVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="OI0-Ia-6hb">
                     <connections>
-                        <segue destination="FrS-e7-Q54" kind="modal" id="sCl-gG-UTS"/>
+                        <segue destination="FrS-e7-Q54" kind="modal" modalTransitionStyle="crossDissolve" id="sCl-gG-UTS"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

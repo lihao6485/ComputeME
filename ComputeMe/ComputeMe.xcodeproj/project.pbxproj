@@ -21,6 +21,7 @@
 		1B4F74A9192F991F00AE86F7 /* COCOGOOSE.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F74A6192F981900AE86F7 /* COCOGOOSE.otf */; };
 		1B4F74AA192F992100AE86F7 /* CODE Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F74A8192F981900AE86F7 /* CODE Light.otf */; };
 		1B4F74AB192F992300AE86F7 /* CODE Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F74A7192F981900AE86F7 /* CODE Bold.otf */; };
+		1BF4FB121930914800C72B30 /* CMGameCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4FB111930914800C72B30 /* CMGameCategoryViewController.m */; };
 		5BBD01B0C1064E668AEB4DC9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7214806C06D34B39846C897D /* libPods.a */; };
 		8CD2771070F744904D02B4D9 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD27840ACC60CB5EA37BB17 /* .gitkeep */; };
 		8CD27A7958F14107DDC2C64D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD275CA7231F92AA031C7C8 /* .gitkeep */; };
@@ -70,6 +71,8 @@
 		1B4F74A6192F981900AE86F7 /* COCOGOOSE.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = COCOGOOSE.otf; sourceTree = "<group>"; };
 		1B4F74A7192F981900AE86F7 /* CODE Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE Bold.otf"; sourceTree = "<group>"; };
 		1B4F74A8192F981900AE86F7 /* CODE Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE Light.otf"; sourceTree = "<group>"; };
+		1BF4FB101930914800C72B30 /* CMGameCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGameCategoryViewController.h; sourceTree = "<group>"; };
+		1BF4FB111930914800C72B30 /* CMGameCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGameCategoryViewController.m; sourceTree = "<group>"; };
 		7214806C06D34B39846C897D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD274B8E2EE26756D95BBD6 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = file.gitkeep; path = .gitkeep; sourceTree = "<group>"; };
 		8CD275CA7231F92AA031C7C8 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = file.gitkeep; path = .gitkeep; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				F6FF31A1192C85320096D64D /* CMQuestionTableViewController.m */,
 				F68A00861929AD6D0053F183 /* CMStartViewController.h */,
 				F68A00871929AD6D0053F183 /* CMStartViewController.m */,
+				1BF4FB101930914800C72B30 /* CMGameCategoryViewController.h */,
+				1BF4FB111930914800C72B30 /* CMGameCategoryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -423,6 +428,7 @@
 				F6FF31A2192C85320096D64D /* CMQuestionTableViewController.m in Sources */,
 				F6602F06192FB777007F83E1 /* Options.m in Sources */,
 				F68A00881929AD6D0053F183 /* CMStartViewController.m in Sources */,
+				1BF4FB121930914800C72B30 /* CMGameCategoryViewController.m in Sources */,
 				F6602F09192FB777007F83E1 /* Question.m in Sources */,
 				8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */,
 				F6602EF4192F890A007F83E1 /* CMQuestionWithImageView.m in Sources */,

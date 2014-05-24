@@ -33,13 +33,18 @@
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"RESULT"
-                                                                    style:UIBarButtonItemStyleDone target:nil action:nil];
+                                                                    style:UIBarButtonItemStyleDone target:self action:@selector(settingAction:)];
     [rightButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                      [UIFont fontWithName:@"COCOGOOSE" size:17], NSFontAttributeName,
                                      [UIColor blackColor], NSForegroundColorAttributeName,
                                      nil]
                            forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = rightButton;
+}
+
+- (void)settingAction:(id)sender
+{
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,9 +58,6 @@
     [[self.challengeButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:35]];
     [[self.classicButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:35]];
     [[self.storyButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:35]];
-    [self.challengeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.classicButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.storyButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 }
 
 /*

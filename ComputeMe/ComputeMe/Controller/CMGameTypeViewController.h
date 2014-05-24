@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Pointwelve. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface CMGameTypeViewController : UIViewController
 
