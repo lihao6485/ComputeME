@@ -27,6 +27,22 @@
 {
     [super viewDidLoad];
     [self.resetAllButton setTintColor:[UIColor colorWithHue:357.0f saturation:79.0f brightness:74.0f alpha:1.0f]];
+    self.navigationItem.hidesBackButton = YES;
+    
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"MODE"
+                                                                   style:UIBarButtonItemStyleDone target:self action:@selector(backAction:)];
+    [leftButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                        [UIFont fontWithName:@"COCOGOOSE" size:17], NSFontAttributeName,
+                                        [UIColor blackColor], NSForegroundColorAttributeName,
+                                        nil]
+                              forState:UIControlStateNormal];
+    
+    [self.navigationItem setLeftBarButtonItem:leftButton];
+}
+
+- (void)backAction:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning

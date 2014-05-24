@@ -83,6 +83,9 @@
                                 <state key="normal" title="Button" image="Setting">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="settingAction:" destination="PIn-gI-43R" eventType="touchUpInside" id="vXZ-03-pRm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12941177189350128" green="0.64313727617263794" blue="0.81568634510040283" alpha="1" colorSpace="deviceRGB"/>

@@ -7,6 +7,7 @@
 //
 
 #import "CMGameTypeViewController.h"
+#import "CMSettingViewController.h"
 
 @interface CMGameTypeViewController ()
 
@@ -33,7 +34,7 @@
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"RESULT"
-                                                                    style:UIBarButtonItemStyleDone target:self action:@selector(settingAction:)];
+                                                                    style:UIBarButtonItemStyleDone target:self action:@selector(resultAction:)];
     [rightButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                      [UIFont fontWithName:@"COCOGOOSE" size:17], NSFontAttributeName,
                                      [UIColor blackColor], NSForegroundColorAttributeName,
@@ -42,9 +43,11 @@
     self.navigationItem.rightBarButtonItem = rightButton;
 }
 
-- (void)settingAction:(id)sender
+- (IBAction)settingAction:(id)sender
 {
-    
+    UIStoryboard *settingStoryboard = [UIStoryboard storyboardWithName:@"SettingStoryboard" bundle:nil];
+    CMSettingViewController *settingVC = [settingStoryboard instantiateViewControllerWithIdentifier:@"CMSettingViewController"];
+    [self.navigationController pushViewController:settingVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
