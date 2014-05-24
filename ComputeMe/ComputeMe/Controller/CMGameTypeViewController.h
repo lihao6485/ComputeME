@@ -10,4 +10,8 @@
 
 @interface CMGameTypeViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *challengeButton;
+@property (weak, nonatomic) IBOutlet UIButton *classicButton;
+@property (weak, nonatomic) IBOutlet UIButton *storyButton;
+
 @end
