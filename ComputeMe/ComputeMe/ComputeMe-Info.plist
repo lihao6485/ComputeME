@@ -26,12 +26,12 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Cocogoose_trail.otf</string>
+		<string>COCOGOOSE.otf</string>
 		<string>CODE Bold.otf</string>
 		<string>CODE Light.otf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
-	<string>QuestionStoryboard</string>
+	<string>InitialStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

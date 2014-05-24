@@ -7,7 +7,6 @@
 //
 
 #import "CMStartViewController.h"
-#import "CMGameTypeViewController.h"
 
 @interface CMStartViewController ()
 
@@ -48,23 +47,14 @@
     
     [UIView animateWithDuration:0.8f
                           delay:0.0f
-                        options:UIViewAnimationOptionCurveEaseIn
-     | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat| UIViewAnimationOptionAllowUserInteraction
+                        options:UIViewAnimationOptionCurveEaseIn| UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat| UIViewAnimationOptionAllowUserInteraction
                      animations:^{
                          [self.startLabel setAlpha:1.0f];
                      }
                      completion:nil];
 }
 
-- (void)tapAction:(UITapGestureRecognizer *)tapGestureRecognizer
-{
-    UINavigationController *navController = [self.storyboard instantiateViewControllerWithIdentifier:@"InitialNavigationController"];
-    [self presentViewController:navController animated:YES completion:^{
-        
-    }];
-}
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -72,7 +62,8 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+
 }
-*/
+
 
 @end

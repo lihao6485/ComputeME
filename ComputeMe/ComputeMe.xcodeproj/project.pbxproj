@@ -18,7 +18,7 @@
 		1B30D9B7192606400029F9E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B30D99F192606400029F9E1 /* UIKit.framework */; };
 		1B30D9BF192606400029F9E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B30D9BD192606400029F9E1 /* InfoPlist.strings */; };
 		1B30D9C1192606400029F9E1 /* ComputeMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B30D9C0192606400029F9E1 /* ComputeMeTests.m */; };
-		1B4F74A9192F991F00AE86F7 /* Cocogoose_trial.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F74A6192F981900AE86F7 /* Cocogoose_trial.otf */; };
+		1B4F74A9192F991F00AE86F7 /* COCOGOOSE.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F74A6192F981900AE86F7 /* COCOGOOSE.otf */; };
 		1B4F74AA192F992100AE86F7 /* CODE Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F74A8192F981900AE86F7 /* CODE Light.otf */; };
 		1B4F74AB192F992300AE86F7 /* CODE Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F74A7192F981900AE86F7 /* CODE Bold.otf */; };
 		5BBD01B0C1064E668AEB4DC9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7214806C06D34B39846C897D /* libPods.a */; };
@@ -67,7 +67,7 @@
 		1B30D9BC192606400029F9E1 /* ComputeMeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ComputeMeTests-Info.plist"; sourceTree = "<group>"; };
 		1B30D9BE192606400029F9E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B30D9C0192606400029F9E1 /* ComputeMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComputeMeTests.m; sourceTree = "<group>"; };
-		1B4F74A6192F981900AE86F7 /* Cocogoose_trial.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cocogoose_trial.otf; sourceTree = "<group>"; };
+		1B4F74A6192F981900AE86F7 /* COCOGOOSE.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = COCOGOOSE.otf; sourceTree = "<group>"; };
 		1B4F74A7192F981900AE86F7 /* CODE Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE Bold.otf"; sourceTree = "<group>"; };
 		1B4F74A8192F981900AE86F7 /* CODE Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE Light.otf"; sourceTree = "<group>"; };
 		7214806C06D34B39846C897D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,7 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				F64DF00D192FCAB5004DDFFB /* ImportUtility.sqlite */,
-				1B4F74A6192F981900AE86F7 /* Cocogoose_trial.otf */,
+				1B4F74A6192F981900AE86F7 /* COCOGOOSE.otf */,
 				1B4F74A7192F981900AE86F7 /* CODE Bold.otf */,
 				1B4F74A8192F981900AE86F7 /* CODE Light.otf */,
 				1B30D9A3192606400029F9E1 /* ComputeMe-Info.plist */,
@@ -359,7 +359,7 @@
 				1B4F74AB192F992300AE86F7 /* CODE Bold.otf in Resources */,
 				F68A00851929AD560053F183 /* QuestionStoryboard.storyboard in Resources */,
 				8CD27A7958F14107DDC2C64D /* .gitkeep in Resources */,
-				1B4F74A9192F991F00AE86F7 /* Cocogoose_trial.otf in Resources */,
+				1B4F74A9192F991F00AE86F7 /* COCOGOOSE.otf in Resources */,
 				8CD2771070F744904D02B4D9 /* .gitkeep in Resources */,
 				F6602EF1192F88CE007F83E1 /* QuestionWithImageView.xib in Resources */,
 				1B4F74AA192F992100AE86F7 /* CODE Light.otf in Resources */,
