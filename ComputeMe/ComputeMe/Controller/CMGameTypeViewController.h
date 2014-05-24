@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *challengeButton;
 @property (weak, nonatomic) IBOutlet UIButton *classicButton;
 @property (weak, nonatomic) IBOutlet UIButton *storyButton;
+@property (weak, nonatomic) IBOutlet UIButton *settingButton;
 
 @end
