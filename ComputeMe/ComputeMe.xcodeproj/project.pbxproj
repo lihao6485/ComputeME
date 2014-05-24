@@ -33,6 +33,8 @@
 		F6602EFA192F896A007F83E1 /* CMQuestionWithoutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602EF9192F896A007F83E1 /* CMQuestionWithoutImageView.m */; };
 		F6602F06192FB777007F83E1 /* Options.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602F05192FB777007F83E1 /* Options.m */; };
 		F6602F09192FB777007F83E1 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602F08192FB777007F83E1 /* Question.m */; };
+		F67EC4B9193091520024C1B8 /* SettingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67EC4B8193091520024C1B8 /* SettingStoryboard.storyboard */; };
+		F67EC4BC193093B80024C1B8 /* CMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EC4BB193093B80024C1B8 /* CMSettingViewController.m */; };
 		F68A00831929AD480053F183 /* InitialStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68A00821929AD480053F183 /* InitialStoryboard.storyboard */; };
 		F68A00851929AD560053F183 /* QuestionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68A00841929AD560053F183 /* QuestionStoryboard.storyboard */; };
 		F68A00881929AD6D0053F183 /* CMStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68A00871929AD6D0053F183 /* CMStartViewController.m */; };
@@ -88,6 +90,9 @@
 		F6602F05192FB777007F83E1 /* Options.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Options.m; sourceTree = "<group>"; };
 		F6602F07192FB777007F83E1 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		F6602F08192FB777007F83E1 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		F67EC4B8193091520024C1B8 /* SettingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingStoryboard.storyboard; sourceTree = "<group>"; };
+		F67EC4BA193093B80024C1B8 /* CMSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSettingViewController.h; sourceTree = "<group>"; };
+		F67EC4BB193093B80024C1B8 /* CMSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSettingViewController.m; sourceTree = "<group>"; };
 		F68A00821929AD480053F183 /* InitialStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InitialStoryboard.storyboard; sourceTree = "<group>"; };
 		F68A00841929AD560053F183 /* QuestionStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuestionStoryboard.storyboard; sourceTree = "<group>"; };
 		F68A00861929AD6D0053F183 /* CMStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMStartViewController.h; sourceTree = "<group>"; };
@@ -232,6 +237,8 @@
 				F6FF31A1192C85320096D64D /* CMQuestionTableViewController.m */,
 				F68A00861929AD6D0053F183 /* CMStartViewController.h */,
 				F68A00871929AD6D0053F183 /* CMStartViewController.m */,
+				F67EC4BA193093B80024C1B8 /* CMSettingViewController.h */,
+				F67EC4BB193093B80024C1B8 /* CMSettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -258,6 +265,7 @@
 			children = (
 				F68A00821929AD480053F183 /* InitialStoryboard.storyboard */,
 				F68A00841929AD560053F183 /* QuestionStoryboard.storyboard */,
+				F67EC4B8193091520024C1B8 /* SettingStoryboard.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -358,6 +366,7 @@
 				8CD27E3728595E2C1639273B /* .gitkeep in Resources */,
 				1B4F74AB192F992300AE86F7 /* CODE Bold.otf in Resources */,
 				F68A00851929AD560053F183 /* QuestionStoryboard.storyboard in Resources */,
+				F67EC4B9193091520024C1B8 /* SettingStoryboard.storyboard in Resources */,
 				8CD27A7958F14107DDC2C64D /* .gitkeep in Resources */,
 				1B4F74A9192F991F00AE86F7 /* COCOGOOSE.otf in Resources */,
 				8CD2771070F744904D02B4D9 /* .gitkeep in Resources */,
@@ -426,6 +435,7 @@
 				F6602F09192FB777007F83E1 /* Question.m in Sources */,
 				8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */,
 				F6602EF4192F890A007F83E1 /* CMQuestionWithImageView.m in Sources */,
+				F67EC4BC193093B80024C1B8 /* CMSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
