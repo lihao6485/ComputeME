@@ -21,6 +21,7 @@
 		1B4F74A9192F991F00AE86F7 /* COCOGOOSE.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F74A6192F981900AE86F7 /* COCOGOOSE.otf */; };
 		1B4F74AA192F992100AE86F7 /* CODE Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F74A8192F981900AE86F7 /* CODE Light.otf */; };
 		1B4F74AB192F992300AE86F7 /* CODE Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F74A7192F981900AE86F7 /* CODE Bold.otf */; };
+		1B5580AA1931EC8C002BD897 /* CMGetReadyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5580A91931EC8C002BD897 /* CMGetReadyViewController.m */; };
 		1BF4FB121930914800C72B30 /* CMGameCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4FB111930914800C72B30 /* CMGameCategoryViewController.m */; };
 		5BBD01B0C1064E668AEB4DC9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7214806C06D34B39846C897D /* libPods.a */; };
 		8CD2771070F744904D02B4D9 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD27840ACC60CB5EA37BB17 /* .gitkeep */; };
@@ -73,6 +74,8 @@
 		1B4F74A6192F981900AE86F7 /* COCOGOOSE.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = COCOGOOSE.otf; sourceTree = "<group>"; };
 		1B4F74A7192F981900AE86F7 /* CODE Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE Bold.otf"; sourceTree = "<group>"; };
 		1B4F74A8192F981900AE86F7 /* CODE Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE Light.otf"; sourceTree = "<group>"; };
+		1B5580A81931EC8C002BD897 /* CMGetReadyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGetReadyViewController.h; sourceTree = "<group>"; };
+		1B5580A91931EC8C002BD897 /* CMGetReadyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGetReadyViewController.m; sourceTree = "<group>"; };
 		1BF4FB101930914800C72B30 /* CMGameCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGameCategoryViewController.h; sourceTree = "<group>"; };
 		1BF4FB111930914800C72B30 /* CMGameCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGameCategoryViewController.m; sourceTree = "<group>"; };
 		7214806C06D34B39846C897D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +247,8 @@
 				1BF4FB111930914800C72B30 /* CMGameCategoryViewController.m */,
 				F67EC4BA193093B80024C1B8 /* CMSettingViewController.h */,
 				F67EC4BB193093B80024C1B8 /* CMSettingViewController.m */,
+				1B5580A81931EC8C002BD897 /* CMGetReadyViewController.h */,
+				1B5580A91931EC8C002BD897 /* CMGetReadyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -436,6 +441,7 @@
 				1B30D9A8192606400029F9E1 /* main.m in Sources */,
 				F6FF31A2192C85320096D64D /* CMQuestionTableViewController.m in Sources */,
 				F6602F06192FB777007F83E1 /* Options.m in Sources */,
+				1B5580AA1931EC8C002BD897 /* CMGetReadyViewController.m in Sources */,
 				F68A00881929AD6D0053F183 /* CMStartViewController.m in Sources */,
 				1BF4FB121930914800C72B30 /* CMGameCategoryViewController.m in Sources */,
 				F6602F09192FB777007F83E1 /* Question.m in Sources */,
