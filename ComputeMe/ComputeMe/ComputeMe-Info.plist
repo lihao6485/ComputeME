@@ -32,7 +32,7 @@
 		<string>myriadpro.otf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
-	<string>ResultStoryboard</string>
+	<string>QuestionStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -31,6 +31,7 @@
 		8CD27A7958F14107DDC2C64D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD275CA7231F92AA031C7C8 /* .gitkeep */; };
 		8CD27E3728595E2C1639273B /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD274B8E2EE26756D95BBD6 /* .gitkeep */; };
 		8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27CACC5E1A53C02AC9DCF /* CMAppDelegate.m */; };
+		F6369E3C1932262A00B619AF /* CMQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6369E3B1932262A00B619AF /* CMQuestionViewController.m */; };
 		F64DF00E192FCAB5004DDFFB /* ImportUtility.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F64DF00D192FCAB5004DDFFB /* ImportUtility.sqlite */; };
 		F6602EEF192F882D007F83E1 /* QuestionWithoutImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6602EEE192F882D007F83E1 /* QuestionWithoutImageView.xib */; };
 		F6602EF1192F88CE007F83E1 /* QuestionWithImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6602EF0192F88CE007F83E1 /* QuestionWithImageView.xib */; };
@@ -46,7 +47,6 @@
 		F68A008B1929AD7D0053F183 /* CMGameTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */; };
 		F68A008D192A18790053F183 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68A008C192A18790053F183 /* CoreData.framework */; };
 		F68A0091192A19180053F183 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F68A008F192A19180053F183 /* DataModel.xcdatamodeld */; };
-		F6FF31A2192C85320096D64D /* CMQuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FF31A1192C85320096D64D /* CMQuestionTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +92,8 @@
 		8CD27CACC5E1A53C02AC9DCF /* CMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMAppDelegate.m; sourceTree = "<group>"; };
 		8CD27DB35A55B476759508F0 /* CMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAppDelegate.h; sourceTree = "<group>"; };
 		DC41B8A13C784DD2905DC7AF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F6369E3A1932262A00B619AF /* CMQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMQuestionViewController.h; sourceTree = "<group>"; };
+		F6369E3B1932262A00B619AF /* CMQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQuestionViewController.m; sourceTree = "<group>"; };
 		F64DF00D192FCAB5004DDFFB /* ImportUtility.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ImportUtility.sqlite; sourceTree = "<group>"; };
 		F6602EEE192F882D007F83E1 /* QuestionWithoutImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionWithoutImageView.xib; sourceTree = "<group>"; };
 		F6602EF0192F88CE007F83E1 /* QuestionWithImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionWithImageView.xib; sourceTree = "<group>"; };
@@ -114,8 +116,6 @@
 		F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGameTypeViewController.m; sourceTree = "<group>"; };
 		F68A008C192A18790053F183 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F68A0090192A19180053F183 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		F6FF31A0192C85320096D64D /* CMQuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMQuestionTableViewController.h; sourceTree = "<group>"; };
-		F6FF31A1192C85320096D64D /* CMQuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQuestionTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,8 +247,6 @@
 				8CD275CA7231F92AA031C7C8 /* .gitkeep */,
 				F68A00891929AD7D0053F183 /* CMGameTypeViewController.h */,
 				F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */,
-				F6FF31A0192C85320096D64D /* CMQuestionTableViewController.h */,
-				F6FF31A1192C85320096D64D /* CMQuestionTableViewController.m */,
 				F68A00861929AD6D0053F183 /* CMStartViewController.h */,
 				F68A00871929AD6D0053F183 /* CMStartViewController.m */,
 				1BF4FB101930914800C72B30 /* CMGameCategoryViewController.h */,
@@ -259,6 +257,8 @@
 				1B5580A91931EC8C002BD897 /* CMGetReadyViewController.m */,
 				1B5580AD1931F954002BD897 /* CMGameResultViewController.h */,
 				1B5580AE1931F954002BD897 /* CMGameResultViewController.m */,
+				F6369E3A1932262A00B619AF /* CMQuestionViewController.h */,
+				F6369E3B1932262A00B619AF /* CMQuestionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -452,13 +452,13 @@
 				F6602EFA192F896A007F83E1 /* CMQuestionWithoutImageView.m in Sources */,
 				F68A0091192A19180053F183 /* DataModel.xcdatamodeld in Sources */,
 				1B30D9A8192606400029F9E1 /* main.m in Sources */,
-				F6FF31A2192C85320096D64D /* CMQuestionTableViewController.m in Sources */,
 				F6602F06192FB777007F83E1 /* Options.m in Sources */,
 				1B5580AA1931EC8C002BD897 /* CMGetReadyViewController.m in Sources */,
 				F68A00881929AD6D0053F183 /* CMStartViewController.m in Sources */,
 				1BF4FB121930914800C72B30 /* CMGameCategoryViewController.m in Sources */,
 				F6602F09192FB777007F83E1 /* Question.m in Sources */,
 				8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */,
+				F6369E3C1932262A00B619AF /* CMQuestionViewController.m in Sources */,
 				1B5580AF1931F954002BD897 /* CMGameResultViewController.m in Sources */,
 				F6602EF4192F890A007F83E1 /* CMQuestionWithImageView.m in Sources */,
 				F67EC4BC193093B80024C1B8 /* CMSettingViewController.m in Sources */,
