@@ -29,9 +29,10 @@
 		<string>COCOGOOSE.otf</string>
 		<string>CODE Bold.otf</string>
 		<string>CODE Light.otf</string>
+		<string>myriadpro.otf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
-	<string>InitialStoryboard</string>
+	<string>ResultStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

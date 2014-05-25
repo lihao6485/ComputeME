@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B071EEE193200CA00F29D4A /* myriadpro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B071EED193200CA00F29D4A /* myriadpro.otf */; };
 		1B30D99C1926063F0029F9E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B30D99B1926063F0029F9E1 /* Foundation.framework */; };
 		1B30D99E1926063F0029F9E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B30D99D1926063F0029F9E1 /* CoreGraphics.framework */; };
 		1B30D9A0192606400029F9E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B30D99F192606400029F9E1 /* UIKit.framework */; };
@@ -22,6 +23,8 @@
 		1B4F74AA192F992100AE86F7 /* CODE Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F74A8192F981900AE86F7 /* CODE Light.otf */; };
 		1B4F74AB192F992300AE86F7 /* CODE Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F74A7192F981900AE86F7 /* CODE Bold.otf */; };
 		1B5580AA1931EC8C002BD897 /* CMGetReadyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5580A91931EC8C002BD897 /* CMGetReadyViewController.m */; };
+		1B5580AC1931F59C002BD897 /* ResultStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5580AB1931F59C002BD897 /* ResultStoryboard.storyboard */; };
+		1B5580AF1931F954002BD897 /* CMGameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5580AE1931F954002BD897 /* CMGameResultViewController.m */; };
 		1BF4FB121930914800C72B30 /* CMGameCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4FB111930914800C72B30 /* CMGameCategoryViewController.m */; };
 		5BBD01B0C1064E668AEB4DC9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7214806C06D34B39846C897D /* libPods.a */; };
 		8CD2771070F744904D02B4D9 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD27840ACC60CB5EA37BB17 /* .gitkeep */; };
@@ -57,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B071EED193200CA00F29D4A /* myriadpro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = myriadpro.otf; sourceTree = "<group>"; };
 		1B30D9981926063F0029F9E1 /* ComputeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComputeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B30D99B1926063F0029F9E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B30D99D1926063F0029F9E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,6 +80,9 @@
 		1B4F74A8192F981900AE86F7 /* CODE Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE Light.otf"; sourceTree = "<group>"; };
 		1B5580A81931EC8C002BD897 /* CMGetReadyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGetReadyViewController.h; sourceTree = "<group>"; };
 		1B5580A91931EC8C002BD897 /* CMGetReadyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGetReadyViewController.m; sourceTree = "<group>"; };
+		1B5580AB1931F59C002BD897 /* ResultStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResultStoryboard.storyboard; sourceTree = "<group>"; };
+		1B5580AD1931F954002BD897 /* CMGameResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGameResultViewController.h; sourceTree = "<group>"; };
+		1B5580AE1931F954002BD897 /* CMGameResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGameResultViewController.m; sourceTree = "<group>"; };
 		1BF4FB101930914800C72B30 /* CMGameCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGameCategoryViewController.h; sourceTree = "<group>"; };
 		1BF4FB111930914800C72B30 /* CMGameCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGameCategoryViewController.m; sourceTree = "<group>"; };
 		7214806C06D34B39846C897D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +196,7 @@
 		1B30D9A2192606400029F9E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1B071EED193200CA00F29D4A /* myriadpro.otf */,
 				F64DF00D192FCAB5004DDFFB /* ImportUtility.sqlite */,
 				1B4F74A6192F981900AE86F7 /* COCOGOOSE.otf */,
 				1B4F74A7192F981900AE86F7 /* CODE Bold.otf */,
@@ -249,6 +257,8 @@
 				F67EC4BB193093B80024C1B8 /* CMSettingViewController.m */,
 				1B5580A81931EC8C002BD897 /* CMGetReadyViewController.h */,
 				1B5580A91931EC8C002BD897 /* CMGetReadyViewController.m */,
+				1B5580AD1931F954002BD897 /* CMGameResultViewController.h */,
+				1B5580AE1931F954002BD897 /* CMGameResultViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,6 +286,7 @@
 				F68A00821929AD480053F183 /* InitialStoryboard.storyboard */,
 				F68A00841929AD560053F183 /* QuestionStoryboard.storyboard */,
 				F67EC4B8193091520024C1B8 /* SettingStoryboard.storyboard */,
+				1B5580AB1931F59C002BD897 /* ResultStoryboard.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -372,6 +383,8 @@
 			files = (
 				1B30D9A6192606400029F9E1 /* InfoPlist.strings in Resources */,
 				1B30D9AE192606400029F9E1 /* Images.xcassets in Resources */,
+				1B071EEE193200CA00F29D4A /* myriadpro.otf in Resources */,
+				1B5580AC1931F59C002BD897 /* ResultStoryboard.storyboard in Resources */,
 				F68A00831929AD480053F183 /* InitialStoryboard.storyboard in Resources */,
 				8CD27E3728595E2C1639273B /* .gitkeep in Resources */,
 				1B4F74AB192F992300AE86F7 /* CODE Bold.otf in Resources */,
@@ -446,6 +459,7 @@
 				1BF4FB121930914800C72B30 /* CMGameCategoryViewController.m in Sources */,
 				F6602F09192FB777007F83E1 /* Question.m in Sources */,
 				8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */,
+				1B5580AF1931F954002BD897 /* CMGameResultViewController.m in Sources */,
 				F6602EF4192F890A007F83E1 /* CMQuestionWithImageView.m in Sources */,
 				F67EC4BC193093B80024C1B8 /* CMSettingViewController.m in Sources */,
 			);
