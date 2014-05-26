@@ -10,10 +10,9 @@
 #import "CMGetReadyViewController.h"
 #import "Result.h"
 
-@interface CMGameCategoryViewController ()
-{
+@interface CMGameCategoryViewController () {
 @private
-    NSMutableDictionary *_gameDetailMutableDictionary;
+   NSMutableDictionary *_gameDetailMutableDictionary;
 }
 
 @end
@@ -22,54 +21,54 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+   if (self) {
+      // Custom initialization
+   }
+   return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self initButtonTitle];
-    _gameDetailMutableDictionary = [[NSMutableDictionary alloc] initWithDictionary:self.gameDetailDictionary];
+   [super viewDidLoad];
+   // Do any additional setup after loading the view.
+   [self initButtonTitle];
+   _gameDetailMutableDictionary = [[NSMutableDictionary alloc] initWithDictionary:self.gameDetailDictionary];
 
-    self.navigationItem.hidesBackButton = YES;
-    
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"MODE"
-                                                                   style:UIBarButtonItemStyleDone target:self action:@selector(backAction:)];
-    [leftButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                         [UIFont fontWithName:@"COCOGOOSE" size:17], NSFontAttributeName,
-                                         [UIColor blackColor], NSForegroundColorAttributeName,
-                                         nil]
-                               forState:UIControlStateNormal];
-    
-    [self.navigationItem setLeftBarButtonItem:leftButton];
+   self.navigationItem.hidesBackButton = YES;
+
+   UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"MODE"
+                                                                  style:UIBarButtonItemStyleDone target:self action:@selector(backAction:)];
+   [leftButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+         [UIFont fontWithName:@"COCOGOOSE" size:17], NSFontAttributeName,
+         [UIColor blackColor], NSForegroundColorAttributeName,
+         nil]
+                             forState:UIControlStateNormal];
+
+   [self.navigationItem setLeftBarButtonItem:leftButton];
 }
 
 - (void)backAction:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+   [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+   [super didReceiveMemoryWarning];
+   // Dispose of any resources that can be recreated.
 }
 
 - (void)initButtonTitle
 {
-    [[self.historyButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
-    [[self.programmingButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
-    self.programmingButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.programmingButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [self.programmingButton setTitle: @"programming\nlanguage" forState: UIControlStateNormal];
-    [[self.hardwareButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
-    [[self.networkingButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
-    [[self.digitalMediaButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
+   [[self.historyButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
+   [[self.programmingButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
+   self.programmingButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+   self.programmingButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+   [self.programmingButton setTitle:@"programming\nlanguage" forState:UIControlStateNormal];
+   [[self.hardwareButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
+   [[self.networkingButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
+   [[self.digitalMediaButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
 }
 
 
@@ -78,34 +77,29 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UIButton *)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    if ([[[self.historyButton titleLabel] text] isEqualToString:sender.titleLabel.text])
-    {
-        [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryHistory forKey:@"gameCategory"];
-    }
-    
-    else if ([[[self.programmingButton titleLabel] text] isEqualToString:sender.titleLabel.text])
-    {
-        [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryProgrammingLanguage forKey:@"gameCategory"];
-    }
-    
-    else if ([[[self.hardwareButton titleLabel] text] isEqualToString:sender.titleLabel.text])
-    {
-        [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryHardware forKey:@"gameCategory"];
-    }
-    
-    else if ([[[self.digitalMediaButton titleLabel] text] isEqualToString:sender.titleLabel.text])
-    {
-        [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryDigitalMedia forKey:@"gameCategory"];
-    }
-    else if ([[[self.networkingButton titleLabel] text] isEqualToString:sender.titleLabel.text])
-    {
-        [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryNetworking forKey:@"gameCategory"];
-    }
+   // Get the new view controller using [segue destinationViewController].
+   // Pass the selected object to the new view controller.
+   if ([[[self.historyButton titleLabel] text] isEqualToString:sender.titleLabel.text]) {
+      [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryHistory forKey:@"gameCategory"];
+   }
 
-    CMGetReadyViewController *getReadyVC = [segue destinationViewController];
-    [getReadyVC setGameDetailDictionary:[_gameDetailMutableDictionary copy]];
+   else if ([[[self.programmingButton titleLabel] text] isEqualToString:sender.titleLabel.text]) {
+      [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryProgrammingLanguage forKey:@"gameCategory"];
+   }
+
+   else if ([[[self.hardwareButton titleLabel] text] isEqualToString:sender.titleLabel.text]) {
+      [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryHardware forKey:@"gameCategory"];
+   }
+
+   else if ([[[self.digitalMediaButton titleLabel] text] isEqualToString:sender.titleLabel.text]) {
+      [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryDigitalMedia forKey:@"gameCategory"];
+   }
+   else if ([[[self.networkingButton titleLabel] text] isEqualToString:sender.titleLabel.text]) {
+      [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryNetworking forKey:@"gameCategory"];
+   }
+
+   CMGetReadyViewController *getReadyVC = [segue destinationViewController];
+   [getReadyVC setGameDetailDictionary:[_gameDetailMutableDictionary copy]];
 
 }
 

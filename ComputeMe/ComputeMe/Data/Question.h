@@ -13,11 +13,11 @@
 
 @interface Question : NSManagedObject
 
-@property (nonatomic, retain) NSString * category;
-@property (nonatomic, retain) NSString * content;
-@property (nonatomic, retain) NSData * image;
-@property (nonatomic, retain) NSNumber * isImage;
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) Options *options;
+@property(nonatomic, retain) NSString *category;
+@property(nonatomic, retain) NSString *content;
+@property(nonatomic, retain) NSData *image;
+@property(nonatomic, retain) NSNumber *isImage;
+@property(nonatomic, retain) NSString *title;
+@property(nonatomic, retain) Options *options;
 
 @end

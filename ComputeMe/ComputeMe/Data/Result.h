@@ -12,9 +12,9 @@
 
 @interface Result : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * correctAnswers;
-@property (nonatomic, retain) NSString * gameMode;
-@property (nonatomic, retain) NSString * gameCategory;
+@property(nonatomic, retain) NSNumber *correctAnswers;
+@property(nonatomic, retain) NSString *gameMode;
+@property(nonatomic, retain) NSString *gameCategory;
 
 @end
 

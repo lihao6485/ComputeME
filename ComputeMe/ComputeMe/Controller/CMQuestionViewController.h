@@ -11,11 +11,11 @@
 
 @interface CMQuestionViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIView *contentView;
-@property (weak, nonatomic) IBOutlet UIButton *option4Button;
-@property (weak, nonatomic) IBOutlet UIButton *option1Button;
-@property (weak, nonatomic) IBOutlet UIButton *option2Button;
-@property (weak, nonatomic) IBOutlet UIButton *option3Button;
+@property(weak, nonatomic) IBOutlet UIView *contentView;
+@property(weak, nonatomic) IBOutlet UIButton *option4Button;
+@property(weak, nonatomic) IBOutlet UIButton *option1Button;
+@property(weak, nonatomic) IBOutlet UIButton *option2Button;
+@property(weak, nonatomic) IBOutlet UIButton *option3Button;
 
 - (id)initWithCategory:(NSString *)category
                   mode:(NSString *)mode;

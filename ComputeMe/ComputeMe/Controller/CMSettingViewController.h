@@ -10,6 +10,6 @@
 
 @interface CMSettingViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *resetAllButton;
+@property(weak, nonatomic) IBOutlet UIButton *resetAllButton;
 
 @end
