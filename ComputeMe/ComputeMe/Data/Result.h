@@ -12,8 +12,17 @@
 
 @interface Result : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * correctAnswer;
+@property (nonatomic, retain) NSNumber * correctAnswers;
 @property (nonatomic, retain) NSString * gameMode;
 @property (nonatomic, retain) NSString * gameCategory;
 
 @end
+
+extern NSString *const ResultKeyGameModeChallenge;
+extern NSString *const ResultKeyGameModeClassic;
+extern NSString *const ResultKeyGameModeStory;
+extern NSString *const ResultKeyGameCategoryHistory;
+extern NSString *const ResultKeyGameCategoryDigitalMedia;
+extern NSString *const ResultKeyGameCategoryProgrammingLanguage;
+extern NSString *const ResultKeyGameCategoryNetworking;
+extern NSString *const ResultKeyGameCategoryHardware;

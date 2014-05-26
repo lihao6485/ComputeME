@@ -7,7 +7,8 @@
 //
 
 #import "CMGetReadyViewController.h"
-#undef MAX_COUNTDOWN
+#import "Result.h"
+#import "CMQuestionViewController.h"
 
 @interface CMGetReadyViewController ()
 {
@@ -40,12 +41,23 @@
 
 - (void)finishCounting:(NSTimer*)theTimer
 {
-    
-    if(_countingSecond <= 1)
+    if(_countingSecond == 1)
     {
-        
         [self.countDownLabel setFrame:CGRectMake(53.0f, 234.0f, 215.0f, 137.0f)];
         [self.countDownLabel setText:@"start"];
+        _countingSecond--;
+
+    }
+    else if (_countingSecond <=0)
+    {
+        [theTimer invalidate];
+        CMQuestionViewController *questionVC = [[CMQuestionViewController alloc] initWithCategory:self.gameDetailDictionary[@"gameCategory"] mode:self.gameDetailDictionary[@"gameMode"]];
+        
+        questionVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        
+        [self presentViewController:questionVC animated:YES completion:^{
+            [self.navigationController popToRootViewControllerAnimated:NO];
+        }];
     }
     else
     {
@@ -64,6 +76,22 @@
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.view setHidden:NO];
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.view setHidden:YES];
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 /*

@@ -7,9 +7,12 @@
 //
 
 @import UIKit;
+@class Result;
 
 @interface CMGetReadyViewController : UIViewController 
 @property (weak, nonatomic) IBOutlet UILabel *getReadyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countDownLabel;
+
+@property (copy, nonatomic) NSDictionary *gameDetailDictionary;
 
 @end

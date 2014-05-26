@@ -8,6 +8,8 @@
 
 #import "CMGameTypeViewController.h"
 #import "CMSettingViewController.h"
+#import "CMGameCategoryViewController.h"
+#import "Result.h"
 
 @interface CMGameTypeViewController ()
 
@@ -43,6 +45,11 @@
     self.navigationItem.rightBarButtonItem = rightButton;
 }
 
+- (void)resultAction:(id)sender
+{
+    
+}
+
 - (IBAction)settingAction:(id)sender
 {
     UIStoryboard *settingStoryboard = [UIStoryboard storyboardWithName:@"SettingStoryboard" bundle:nil];
@@ -63,15 +70,29 @@
     [[self.storyButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:35]];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UIButton *)button
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    CMGameCategoryViewController *gameCategoryVC = [segue destinationViewController];
+    if([self.challengeButton.titleLabel.text isEqualToString:button.titleLabel.text])
+    {
+        [gameCategoryVC setGameDetailDictionary:@{@"gameMode":ResultKeyGameModeChallenge}];
+    }
+    else if([self.classicButton.titleLabel.text isEqualToString:button.titleLabel.text])
+    {
+        [gameCategoryVC setGameDetailDictionary:@{@"gameMode":ResultKeyGameModeClassic}];
+    }
+    else if([self.storyButton.titleLabel.text isEqualToString:button.titleLabel.text])
+    {
+        [gameCategoryVC setGameDetailDictionary:@{@"gameMode":ResultKeyGameModeStory}];
+    }
+    
 }
-*/
+
 
 @end

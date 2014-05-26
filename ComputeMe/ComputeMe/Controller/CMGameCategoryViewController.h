@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *networkingButton;
 @property (weak, nonatomic) IBOutlet UIButton *digitalMediaButton;
 
+@property (copy, nonatomic) NSDictionary *gameDetailDictionary;
+
 @end

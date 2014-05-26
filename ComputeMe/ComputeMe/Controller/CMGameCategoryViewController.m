@@ -7,8 +7,14 @@
 //
 
 #import "CMGameCategoryViewController.h"
+#import "CMGetReadyViewController.h"
+#import "Result.h"
 
 @interface CMGameCategoryViewController ()
+{
+@private
+    NSMutableDictionary *_gameDetailMutableDictionary;
+}
 
 @end
 
@@ -28,6 +34,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initButtonTitle];
+    _gameDetailMutableDictionary = [[NSMutableDictionary alloc] initWithDictionary:self.gameDetailDictionary];
 
     self.navigationItem.hidesBackButton = YES;
     
@@ -63,19 +70,44 @@
     [[self.hardwareButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
     [[self.networkingButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
     [[self.digitalMediaButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
- 
 }
 
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UIButton *)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([[[self.historyButton titleLabel] text] isEqualToString:sender.titleLabel.text])
+    {
+        [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryHistory forKey:@"gameCategory"];
+    }
+    
+    else if ([[[self.programmingButton titleLabel] text] isEqualToString:sender.titleLabel.text])
+    {
+        [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryProgrammingLanguage forKey:@"gameCategory"];
+    }
+    
+    else if ([[[self.hardwareButton titleLabel] text] isEqualToString:sender.titleLabel.text])
+    {
+        [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryHardware forKey:@"gameCategory"];
+    }
+    
+    else if ([[[self.digitalMediaButton titleLabel] text] isEqualToString:sender.titleLabel.text])
+    {
+        [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryDigitalMedia forKey:@"gameCategory"];
+    }
+    else if ([[[self.networkingButton titleLabel] text] isEqualToString:sender.titleLabel.text])
+    {
+        [_gameDetailMutableDictionary setObject:ResultKeyGameCategoryNetworking forKey:@"gameCategory"];
+    }
+
+    CMGetReadyViewController *getReadyVC = [segue destinationViewController];
+    [getReadyVC setGameDetailDictionary:[_gameDetailMutableDictionary copy]];
+
 }
-*/
+
 
 @end

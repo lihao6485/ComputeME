@@ -6,7 +6,8 @@
 //  Copyright (c) 2014 Pointwelve. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+@class Result;
 
 @interface CMQuestionViewController : UIViewController
 
@@ -15,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *option1Button;
 @property (weak, nonatomic) IBOutlet UIButton *option2Button;
 @property (weak, nonatomic) IBOutlet UIButton *option3Button;
+
+- (id)initWithCategory:(NSString *)category
+                  mode:(NSString *)mode;
 
 @end

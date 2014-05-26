@@ -12,6 +12,7 @@
 #import "CMQuestionWithoutImageView.h"
 #import "Question.h"
 #import "Options.h"
+#import "Result.h"
 #import <QuartzCore/QuartzCore.h>
 #import <PTUIKitAdditions/PTUIKitAdditions.h>
 
@@ -23,6 +24,8 @@
     @private
     NSArray *_questions;
     NSUInteger _currentQuestion;
+    NSString * _gameMode;
+    NSString *_gameCategory;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -40,6 +43,8 @@
     UIStoryboard *questionStoryboard = [UIStoryboard storyboardWithName:@"QuestionStoryboard" bundle:[NSBundle mainBundle]];
     self = [questionStoryboard instantiateViewControllerWithIdentifier:@"CMQuestionViewController"];
     if (self) {
+        _gameMode = mode;
+        _gameCategory = category;
         [self loadDataByCategory:category];
     }
     return self;
@@ -49,6 +54,7 @@
 {
     [super viewDidLoad];
     
+    NSLog(@"%@ : %@",_gameMode,_gameCategory);
     // testing only remove when linking
     [self loadDataByCategory:@"History"];
     
@@ -193,6 +199,11 @@
     [self.contentView removeAllSubviewsExceptSubview:nil];
     [self.contentView addSubview:[self loadContentViewWithQuestion:question]];
     [self setUpOptionButtonWithOptions:question.options];
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 /*
