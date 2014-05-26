@@ -40,9 +40,10 @@
 
 - (void)finishCounting:(NSTimer*)theTimer
 {
+    
     if(_countingSecond <= 1)
     {
-        //TODO Go to quiz game page.
+        
         [self.countDownLabel setFrame:CGRectMake(53.0f, 234.0f, 215.0f, 137.0f)];
         [self.countDownLabel setText:@"start"];
     }

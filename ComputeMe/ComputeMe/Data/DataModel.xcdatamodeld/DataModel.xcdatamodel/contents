@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C1021" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Options" representedClassName="Options" syncable="YES">
         <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="option1" optional="YES" attributeType="String" syncable="YES"/>
@@ -16,8 +16,14 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="options" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Options" inverseName="question" inverseEntity="Options" syncable="YES"/>
     </entity>
+    <entity name="Result" representedClassName="Result" syncable="YES">
+        <attribute name="correctAnswers" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="gameCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameMode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Options" positionX="-1620" positionY="-756" width="128" height="133"/>
+        <element name="Options" positionX="-1620" positionY="-756" width="128" height="135"/>
         <element name="Question" positionX="-1827" positionY="-748" width="128" height="133"/>
+        <element name="Result" positionX="-1710" positionY="-585" width="128" height="88"/>
     </elements>
 </model>
