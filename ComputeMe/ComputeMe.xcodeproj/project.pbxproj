@@ -26,6 +26,7 @@
 		1B5580AA1931EC8C002BD897 /* CMGetReadyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5580A91931EC8C002BD897 /* CMGetReadyViewController.m */; };
 		1B5580AC1931F59C002BD897 /* ResultStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5580AB1931F59C002BD897 /* ResultStoryboard.storyboard */; };
 		1B5580AF1931F954002BD897 /* CMGameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5580AE1931F954002BD897 /* CMGameResultViewController.m */; };
+		1BDB6E6B19337C680026DB1A /* RCFadeInSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB6E6A19337C680026DB1A /* RCFadeInSegue.m */; };
 		1BF4FB121930914800C72B30 /* CMGameCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4FB111930914800C72B30 /* CMGameCategoryViewController.m */; };
 		5BBD01B0C1064E668AEB4DC9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7214806C06D34B39846C897D /* libPods.a */; };
 		8CD2771070F744904D02B4D9 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD27840ACC60CB5EA37BB17 /* .gitkeep */; };
@@ -86,6 +87,8 @@
 		1B5580AB1931F59C002BD897 /* ResultStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResultStoryboard.storyboard; sourceTree = "<group>"; };
 		1B5580AD1931F954002BD897 /* CMGameResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGameResultViewController.h; sourceTree = "<group>"; };
 		1B5580AE1931F954002BD897 /* CMGameResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGameResultViewController.m; sourceTree = "<group>"; };
+		1BDB6E6919337C670026DB1A /* RCFadeInSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFadeInSegue.h; sourceTree = "<group>"; };
+		1BDB6E6A19337C680026DB1A /* RCFadeInSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFadeInSegue.m; sourceTree = "<group>"; };
 		1BF4FB101930914800C72B30 /* CMGameCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGameCategoryViewController.h; sourceTree = "<group>"; };
 		1BF4FB111930914800C72B30 /* CMGameCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGameCategoryViewController.m; sourceTree = "<group>"; };
 		7214806C06D34B39846C897D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +185,8 @@
 		1B30D9A1192606400029F9E1 /* ComputeMe */ = {
 			isa = PBXGroup;
 			children = (
+				1BDB6E6919337C670026DB1A /* RCFadeInSegue.h */,
+				1BDB6E6A19337C680026DB1A /* RCFadeInSegue.m */,
 				1B30D9AD192606400029F9E1 /* Images.xcassets */,
 				8CD278F4E5C97EE3A5CA2132 /* AppDelegate */,
 				8CD277698415B9B86F0A4FF5 /* Controller */,
@@ -466,6 +471,7 @@
 				1B07D54419331ED40089B2E6 /* Result.m in Sources */,
 				F6602EF4192F890A007F83E1 /* CMQuestionWithImageView.m in Sources */,
 				F67EC4BC193093B80024C1B8 /* CMSettingViewController.m in Sources */,
+				1BDB6E6B19337C680026DB1A /* RCFadeInSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

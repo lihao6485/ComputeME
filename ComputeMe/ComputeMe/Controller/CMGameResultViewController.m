@@ -28,9 +28,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // Dummy data first for game mode (will be removed)
-    self.gameDetails = @{@"gameMode": @"CHALLENGE",
-                         @"correctAnswer" : @"16"
-                         };
     
     [self initTitle];
     
@@ -46,7 +43,7 @@
 {
     [self.gameModeLabel setFont:[UIFont fontWithName:@"COCOGOOSE" size:35]];
     [self.correctAnswerLabel setFont:[UIFont fontWithName:@"Myriad Pro" size:50]];
-    [self.correctAnswerLabel setText:self.gameDetails[@"correctAnswer"]];
+    [self.correctAnswerLabel setText:[self.gameDetails[@"correctAnswers"] stringValue]];
     
     
     if([self.gameDetails[@"gameMode"] isEqualToString:@"CLASSIC"])

@@ -10,11 +10,16 @@
 #import "CMAppDelegate.h"
 #import "CMQuestionWithImageView.h"
 #import "CMQuestionWithoutImageView.h"
+#import "CMGameResultViewController.h"
+#import "RCFadeInSegue.h"
 #import "Question.h"
 #import "Options.h"
 #import "Result.h"
 #import <QuartzCore/QuartzCore.h>
 #import <PTUIKitAdditions/PTUIKitAdditions.h>
+
+#undef MAX_SECONDS
+#define MAX_SECONDS 30
 
 @interface CMQuestionViewController ()
 
@@ -26,6 +31,8 @@
     NSUInteger _currentQuestion;
     NSString * _gameMode;
     NSString *_gameCategory;
+    NSUInteger _correctAnswers;
+    float countingSeconds;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -53,7 +60,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self initTimer];
     NSLog(@"%@ : %@",_gameMode,_gameCategory);
     // testing only remove when linking
     [self loadDataByCategory:@"History"];
@@ -72,6 +79,49 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Navigate to result page
+- (void)navigateToResultPage
+{
+    UIStoryboard *resultStoryboard = [UIStoryboard storyboardWithName:@"ResultStoryboard" bundle:nil];
+    CMGameResultViewController *gameResultVC = [resultStoryboard instantiateViewControllerWithIdentifier:@"CMGameResultViewController"];
+    [gameResultVC setGameDetails:@{
+                                   @"gameMode" : _gameMode,
+                                   @"gameCategory" : _gameCategory,
+                                   @"correctAnswers" : @(_correctAnswers)
+                                   }];
+    
+    RCFadeInSegue *segue = [[RCFadeInSegue alloc] initWithIdentifier:@"" source:self destination:gameResultVC];
+    [self prepareForSegue:segue sender:self];
+    [segue perform];
+}
+
+#pragma mark - Init Timer
+- (void)initTimer
+{
+     [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(finishCounting:) userInfo:nil repeats:YES];
+    countingSeconds = MAX_SECONDS;
+}
+
+- (void)finishCounting:(NSTimer *)timer
+{
+    countingSeconds -= 0.1f;
+    [self.countDownLabel setText:[NSString stringWithFormat:@"%.2f",countingSeconds]];
+    if(countingSeconds <=0)
+    {
+        [timer invalidate];
+        [self navigateToResultPage];
+    }
+    else if(countingSeconds <= 10)
+    {
+        
+        [self.countDownLabel setTextColor:[@"FF1300" toColor]];
+    }
+    else if(countingSeconds <= 15)
+    {
+        [self.countDownLabel setTextColor:[@"FF5E3A" toColor]];
+    }
+}
+
 #pragma mark - Load data from Core Data
 
 - (void)loadDataByCategory:(NSString *)category
@@ -86,8 +136,18 @@
     
     NSError *error;
     _questions = [[NSArray alloc] init];
-    _questions = [context executeFetchRequest:request error:&error];
+    NSMutableArray *tempQuestionArray = [[NSMutableArray alloc]initWithArray:[context executeFetchRequest:request error:&error]];
+    NSUInteger count = [tempQuestionArray count];
+    for (NSUInteger i = 0; i < count; ++i) {
+        // Select a random element between i and end of array to swap with.
+        NSInteger nElements = count - i;
+        NSInteger n = arc4random_uniform(nElements) + i;
+        [tempQuestionArray exchangeObjectAtIndex:i withObjectAtIndex:n];
+    }
+    
+    _questions = [tempQuestionArray copy];
     _currentQuestion = 0;
+    _correctAnswers = 0;
 }
 
 #pragma mark - Load content view
@@ -145,6 +205,7 @@
     if ([[[(UIButton *)sender titleLabel] text] isEqualToString:options.answer])
     {
         [(UIButton *)sender setBackgroundColor:[@"4CD964" toColor]];
+        _correctAnswers++;
     }
     
     else
@@ -189,7 +250,7 @@
     
     else
     {
-        // go to the result page and need result object.
+        [self navigateToResultPage];
     }
 }
 

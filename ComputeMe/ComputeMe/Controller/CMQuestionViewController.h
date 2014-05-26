@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *option1Button;
 @property (weak, nonatomic) IBOutlet UIButton *option2Button;
 @property (weak, nonatomic) IBOutlet UIButton *option3Button;
+@property (weak, nonatomic) IBOutlet UILabel *countDownLabel;
 
 - (id)initWithCategory:(NSString *)category
                   mode:(NSString *)mode;

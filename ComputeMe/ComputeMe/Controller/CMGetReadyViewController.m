@@ -9,6 +9,7 @@
 #import "CMGetReadyViewController.h"
 #import "Result.h"
 #import "CMQuestionViewController.h"
+#import "RCFadeInSegue.h"
 
 @interface CMGetReadyViewController ()
 {
@@ -53,11 +54,9 @@
         [theTimer invalidate];
         CMQuestionViewController *questionVC = [[CMQuestionViewController alloc] initWithCategory:self.gameDetailDictionary[@"gameCategory"] mode:self.gameDetailDictionary[@"gameMode"]];
         
-        questionVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-        
-        [self presentViewController:questionVC animated:YES completion:^{
-            [self.navigationController popToRootViewControllerAnimated:NO];
-        }];
+        RCFadeInSegue *segue = [[RCFadeInSegue alloc] initWithIdentifier:@"" source:self destination:questionVC];
+        [self prepareForSegue:segue sender:self];
+        [segue perform];
     }
     else
     {
@@ -94,15 +93,14 @@
     self.navigationController.navigationBar.hidden = NO;
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
-*/
+
 
 @end
