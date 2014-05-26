@@ -9,8 +9,8 @@
 @import UIKit;
 
 @interface CMStartViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *titleFirstLabel;
-@property (weak, nonatomic) IBOutlet UILabel *titleSecondLabel;
-@property (weak, nonatomic) IBOutlet UILabel *startLabel;
+@property(weak, nonatomic) IBOutlet UILabel *titleFirstLabel;
+@property(weak, nonatomic) IBOutlet UILabel *titleSecondLabel;
+@property(weak, nonatomic) IBOutlet UILabel *startLabel;
 
 @end

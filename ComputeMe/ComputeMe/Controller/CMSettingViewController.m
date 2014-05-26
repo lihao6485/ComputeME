@@ -16,39 +16,39 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+   if (self) {
+      // Custom initialization
+   }
+   return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    [self.resetAllButton setTintColor:[UIColor colorWithHue:357.0f saturation:79.0f brightness:74.0f alpha:1.0f]];
-    self.navigationItem.hidesBackButton = YES;
-    
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"MODE"
-                                                                   style:UIBarButtonItemStyleDone target:self action:@selector(backAction:)];
-    [leftButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                        [UIFont fontWithName:@"COCOGOOSE" size:17], NSFontAttributeName,
-                                        [UIColor blackColor], NSForegroundColorAttributeName,
-                                        nil]
-                              forState:UIControlStateNormal];
-    
-    [self.navigationItem setLeftBarButtonItem:leftButton];
+   [super viewDidLoad];
+   [self.resetAllButton setTintColor:[UIColor colorWithHue:357.0f saturation:79.0f brightness:74.0f alpha:1.0f]];
+   self.navigationItem.hidesBackButton = YES;
+
+   UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"MODE"
+                                                                  style:UIBarButtonItemStyleDone target:self action:@selector(backAction:)];
+   [leftButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+         [UIFont fontWithName:@"COCOGOOSE" size:17], NSFontAttributeName,
+         [UIColor blackColor], NSForegroundColorAttributeName,
+         nil]
+                             forState:UIControlStateNormal];
+
+   [self.navigationItem setLeftBarButtonItem:leftButton];
 }
 
 - (void)backAction:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+   [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+   [super didReceiveMemoryWarning];
+   // Dispose of any resources that can be recreated.
 }
 
 /*

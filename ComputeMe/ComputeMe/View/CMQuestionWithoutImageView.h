@@ -10,6 +10,6 @@
 
 @interface CMQuestionWithoutImageView : UIView
 
-@property (weak, nonatomic) IBOutlet UILabel *question;
+@property(weak, nonatomic) IBOutlet UILabel *question;
 
 @end

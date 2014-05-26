@@ -12,11 +12,11 @@
 
 @interface Options : NSManagedObject
 
-@property (nonatomic, retain) NSString * answer;
-@property (nonatomic, retain) NSString * option1;
-@property (nonatomic, retain) NSString * option2;
-@property (nonatomic, retain) NSString * option3;
-@property (nonatomic, retain) NSString * option4;
-@property (nonatomic, retain) NSManagedObject *question;
+@property(nonatomic, retain) NSString *answer;
+@property(nonatomic, retain) NSString *option1;
+@property(nonatomic, retain) NSString *option2;
+@property(nonatomic, retain) NSString *option3;
+@property(nonatomic, retain) NSString *option4;
+@property(nonatomic, retain) NSManagedObject *question;
 
 @end

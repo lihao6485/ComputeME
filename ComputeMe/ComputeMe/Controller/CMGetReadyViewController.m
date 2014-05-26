@@ -7,15 +7,13 @@
 //
 
 #import "CMGetReadyViewController.h"
-#import "Result.h"
 #import "CMQuestionViewController.h"
 #import "RCFadeInSegue.h"
 
-@interface CMGetReadyViewController ()
-{
+@interface CMGetReadyViewController () {
 @private
-    NSTimer *_timer;
-    NSInteger _countingSecond;
+   NSTimer *_timer;
+   NSInteger _countingSecond;
 }
 
 @end
@@ -24,31 +22,30 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+   if (self) {
+      // Custom initialization
+   }
+   return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self.getReadyLabel setFont:[UIFont fontWithName:@"COCOGOOSE" size:36]];
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(finishCounting:) userInfo:nil repeats:YES];
-    _countingSecond = 3;
+   [super viewDidLoad];
+   // Do any additional setup after loading the view.
+   [self.getReadyLabel setFont:[UIFont fontWithName:@"COCOGOOSE" size:36]];
+   _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(finishCounting:) userInfo:nil repeats:YES];
+   _countingSecond = 3;
 }
 
-- (void)finishCounting:(NSTimer*)theTimer
+- (void)finishCounting:(NSTimer *)theTimer
 {
-    if(_countingSecond == 1)
-    {
-        [self.countDownLabel setFrame:CGRectMake(53.0f, 234.0f, 215.0f, 137.0f)];
-        [self.countDownLabel setText:@"start"];
-        _countingSecond--;
+   if (_countingSecond == 1) {
+      [self.countDownLabel setFrame:CGRectMake(53.0f, 234.0f, 215.0f, 137.0f)];
+      [self.countDownLabel setText:@"start"];
+      _countingSecond--;
 
-    }
+   }
     else if (_countingSecond <=0)
     {
         [theTimer invalidate];
@@ -68,29 +65,29 @@
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+   [super didReceiveMemoryWarning];
+   // Dispose of any resources that can be recreated.
 }
 
 - (BOOL)prefersStatusBarHidden
 {
-    return YES;
+   return YES;
 }
 
--(void)viewWillAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
-    [self.view setHidden:NO];
-    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    self.navigationController.navigationBar.hidden = YES;
+   [super viewWillAppear:animated];
+   [self.view setHidden:NO];
+   self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+   self.navigationController.navigationBar.hidden = YES;
 }
 
--(void)viewWillDisappear:(BOOL)animated
+- (void)viewWillDisappear:(BOOL)animated
 {
-    [super viewWillDisappear:animated];
-    [self.view setHidden:YES];
-    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-    self.navigationController.navigationBar.hidden = NO;
+   [super viewWillDisappear:animated];
+   [self.view setHidden:YES];
+   self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+   self.navigationController.navigationBar.hidden = NO;
 }
 
 
@@ -100,6 +97,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     [self.navigationController popToRootViewControllerAnimated:YES];
+    // Pass the selected object to the new view controller.
 }
 
 

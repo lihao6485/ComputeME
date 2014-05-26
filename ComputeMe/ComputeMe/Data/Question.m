@@ -7,7 +7,6 @@
 //
 
 #import "Question.h"
-#import "Options.h"
 
 
 @implementation Question

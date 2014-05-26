@@ -9,8 +9,8 @@
 @import UIKit;
 
 @interface CMGameResultViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *gameModeLabel;
-@property (copy, nonatomic) NSDictionary *gameDetails;
-@property (weak, nonatomic) IBOutlet UILabel *correctAnswerLabel;
+@property(weak, nonatomic) IBOutlet UILabel *gameModeLabel;
+@property(copy, nonatomic) NSDictionary *gameDetails;
+@property(weak, nonatomic) IBOutlet UILabel *correctAnswerLabel;
 
 @end
