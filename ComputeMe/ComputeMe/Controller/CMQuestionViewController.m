@@ -12,6 +12,7 @@
 #import "CMQuestionWithoutImageView.h"
 #import "Question.h"
 #import "Options.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface CMQuestionViewController ()
 
@@ -54,6 +55,8 @@
     {
         Question *question = _questions[_currentQuestion];
         [self.contentView addSubview:[self loadContentViewWithQuestion:question]];
+        [self setUpOptionButtonWithOptions:question.options];
+        _currentQuestion++;
     }
 }
 
@@ -101,6 +104,23 @@
     [[questionView question] setText:question.content];
     
     return questionView;
+}
+
+- (void)setUpOptionButtonWithOptions:(Options *)options
+{
+    [self.option1Button setBackgroundColor:[UIColor whiteColor]];
+    [self.option2Button setBackgroundColor:[UIColor whiteColor]];
+    [self.option3Button setBackgroundColor:[UIColor whiteColor]];
+    [self.option4Button setBackgroundColor:[UIColor whiteColor]];
+    [self.option1Button.layer setCornerRadius:9.0f];
+    [self.option2Button.layer setCornerRadius:9.0f];
+    [self.option3Button.layer setCornerRadius:9.0f];
+    [self.option4Button.layer setCornerRadius:9.0f];
+    [self.option1Button setTitle:options.option1 forState:UIControlStateNormal];
+    [self.option2Button setTitle:options.option2 forState:UIControlStateNormal];
+    [self.option3Button setTitle:options.option3 forState:UIControlStateNormal];
+    [self.option4Button setTitle:options.option4 forState:UIControlStateNormal];
+    NSLog(@"%@", options.option2);
 }
 
 /*
