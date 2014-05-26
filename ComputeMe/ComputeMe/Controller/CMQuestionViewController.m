@@ -8,6 +8,7 @@
 
 #import "CMQuestionViewController.h"
 #import "CMAppDelegate.h"
+#import "CMQuestionWithImageView.h"
 #import "CMQuestionWithoutImageView.h"
 #import "Question.h"
 #import "Options.h"
@@ -37,7 +38,7 @@
     UIStoryboard *questionStoryboard = [UIStoryboard storyboardWithName:@"QuestionStoryboard" bundle:[NSBundle mainBundle]];
     self = [questionStoryboard instantiateViewControllerWithIdentifier:@"CMQuestionViewController"];
     if (self) {
-        
+        [self loadDataByCategory:category];
     }
     return self;
 }
@@ -46,26 +47,13 @@
 {
     [super viewDidLoad];
     
-    CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
-    [request setEntity:entity];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(category LIKE[c] %@)",@"Programming Language"];
-    [request setPredicate:predicate];
-    _questions = [[NSArray alloc] init];
-    NSError *error;
-    
-    _questions = [context executeFetchRequest:request error:&error];
-    _currentQuestion = 0;
+    // testing only remove when linking
+    [self loadDataByCategory:@"Programming Language"];
     
     if ([_questions count] != 0)
     {
-        NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"QuestionWithoutImageView" owner:self options:nil];
-        CMQuestionWithoutImageView *questionView = nibViews[0];
-        [self.contentView addSubview:questionView];
         Question *question = _questions[_currentQuestion];
-        [[questionView question] setText:question.content];
+        [self.contentView addSubview:[self loadContentViewWithQuestion:question]];
     }
 }
 
@@ -73,6 +61,46 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Load data from Core Data
+
+- (void)loadDataByCategory:(NSString *)category
+{
+    CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(category LIKE[c] %@)",@"Programming Language"];
+    [request setEntity:entity];
+    [request setPredicate:predicate];
+    
+    NSError *error;
+    _questions = [[NSArray alloc] init];
+    _questions = [context executeFetchRequest:request error:&error];
+    _currentQuestion = 0;
+}
+
+#pragma mark - Load content view
+
+- (UIView *)loadContentViewWithQuestion:(Question *)question
+{
+    if (![question isImage])
+    {
+        NSLog(@"%@", question.isImage);
+        NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"QuestionWithImageView" owner:self options:nil];
+        CMQuestionWithImageView *questionView = nibViews[0];
+        
+        // TODO: implement load image
+        
+        return questionView;
+    }
+    
+    NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"QuestionWithoutImageView" owner:self options:nil];
+    CMQuestionWithoutImageView *questionView = nibViews[0];
+    [[questionView question] setText:question.content];
+    
+    return questionView;
 }
 
 /*
