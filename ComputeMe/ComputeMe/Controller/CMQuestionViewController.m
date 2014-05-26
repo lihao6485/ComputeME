@@ -13,6 +13,7 @@
 #import "Question.h"
 #import "Options.h"
 #import <QuartzCore/QuartzCore.h>
+#import <PTUIKitAdditions/PTUIKitAdditions.h>
 
 @interface CMQuestionViewController ()
 
@@ -56,7 +57,6 @@
         Question *question = _questions[_currentQuestion];
         [self.contentView addSubview:[self loadContentViewWithQuestion:question]];
         [self setUpOptionButtonWithOptions:question.options];
-        _currentQuestion++;
     }
 }
 
@@ -108,6 +108,10 @@
 
 - (void)setUpOptionButtonWithOptions:(Options *)options
 {
+    [self.option1Button setEnabled:YES];
+    [self.option2Button setEnabled:YES];
+    [self.option3Button setEnabled:YES];
+    [self.option4Button setEnabled:YES];
     [self.option1Button setBackgroundColor:[UIColor whiteColor]];
     [self.option2Button setBackgroundColor:[UIColor whiteColor]];
     [self.option3Button setBackgroundColor:[UIColor whiteColor]];
@@ -120,7 +124,75 @@
     [self.option2Button setTitle:options.option2 forState:UIControlStateNormal];
     [self.option3Button setTitle:options.option3 forState:UIControlStateNormal];
     [self.option4Button setTitle:options.option4 forState:UIControlStateNormal];
-    NSLog(@"%@", options.option2);
+}
+
+- (IBAction)selectOption:(id)sender
+{
+    [self.option1Button setEnabled:NO];
+    [self.option2Button setEnabled:NO];
+    [self.option3Button setEnabled:NO];
+    [self.option4Button setEnabled:NO];
+    
+    Question *question = _questions[_currentQuestion];
+    Options *options = question.options;
+    
+    if ([[[(UIButton *)sender titleLabel] text] isEqualToString:options.answer])
+    {
+        [(UIButton *)sender setBackgroundColor:[@"4CD964" toColor]];
+    }
+    
+    else
+    {
+        [(UIButton *)sender setBackgroundColor:[@"FF6A6E" toColor]];
+        
+        if ([[[self.option1Button titleLabel] text] isEqualToString:options.answer])
+        {
+            [self.option1Button setBackgroundColor:[@"4CD964" toColor]];
+        }
+        
+        else if ([[[self.option2Button titleLabel] text] isEqualToString:options.answer])
+        {
+            [self.option2Button setBackgroundColor:[@"4CD964" toColor]];
+        }
+        
+        else if ([[[self.option3Button titleLabel] text] isEqualToString:options.answer])
+        {
+            [self.option3Button setBackgroundColor:[@"4CD964" toColor]];
+        }
+        
+        else if ([[[self.option4Button titleLabel] text] isEqualToString:options.answer])
+        {
+            [self.option4Button setBackgroundColor:[@"4CD964" toColor]];
+        }
+    }
+    
+    _currentQuestion++;
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(finishSelectedAnswer:) userInfo:nil repeats:NO];
+    
+}
+
+- (void)finishSelectedAnswer:(NSTimer *)sender
+{
+    if ([_questions count] > _currentQuestion)
+    {
+        [UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [self setUpNextQuestion];
+        } completion:nil];
+    }
+    
+    else
+    {
+        // go to the result page and need result object.
+    }
+}
+
+- (void)setUpNextQuestion
+{
+    Question *question = _questions[_currentQuestion];
+    [self.contentView removeAllSubviewsExceptSubview:nil];
+    [self.contentView addSubview:[self loadContentViewWithQuestion:question]];
+    [self setUpOptionButtonWithOptions:question.options];
 }
 
 /*

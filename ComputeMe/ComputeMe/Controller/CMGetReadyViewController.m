@@ -49,7 +49,7 @@
     else
     {
         _countingSecond--;
-        [self.countDownLabel setText:[NSString stringWithFormat:@"%ld",_countingSecond]];
+        [self.countDownLabel setText:[NSString stringWithFormat:@"%ld",(long)_countingSecond]];
     }
     
 }

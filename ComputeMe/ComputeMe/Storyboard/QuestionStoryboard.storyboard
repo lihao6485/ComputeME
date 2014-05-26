@@ -33,6 +33,9 @@
                                 <state key="normal" title="Option 4">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectOption:" destination="dUZ-Ea-XhU" eventType="touchUpInside" id="Fhq-hT-Ywy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvY-Sk-guE">
                                 <rect key="frame" x="10" y="432" width="300" height="54"/>
@@ -41,6 +44,9 @@
                                 <state key="normal" title="Option 3">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectOption:" destination="dUZ-Ea-XhU" eventType="touchUpInside" id="SFf-Nw-gjo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iL-iG-rds">
                                 <rect key="frame" x="10" y="370" width="300" height="54"/>
@@ -49,6 +55,9 @@
                                 <state key="normal" title="Option 2">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectOption:" destination="dUZ-Ea-XhU" eventType="touchUpInside" id="JVQ-co-Bch"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf4-fm-ggF">
                                 <rect key="frame" x="10" y="308" width="300" height="54"/>
@@ -57,6 +66,9 @@
                                 <state key="normal" title="Option 1">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectOption:" destination="dUZ-Ea-XhU" eventType="touchUpInside" id="PMd-dC-q11"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.15294118225574493" green="0.15686275064945221" blue="0.13333334028720856" alpha="1" colorSpace="deviceRGB"/>
