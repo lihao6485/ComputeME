@@ -49,7 +49,7 @@
     [super viewDidLoad];
     
     // testing only remove when linking
-    [self loadDataByCategory:@"Programming Language"];
+    [self loadDataByCategory:@"History"];
     
     if ([_questions count] != 0)
     {
@@ -74,7 +74,7 @@
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc]init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(category LIKE[c] %@)",@"Programming Language"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(category LIKE[c] %@)",category];
     [request setEntity:entity];
     [request setPredicate:predicate];
     

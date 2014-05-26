@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B071EEE193200CA00F29D4A /* myriadpro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B071EED193200CA00F29D4A /* myriadpro.otf */; };
+		1B07D54419331ED40089B2E6 /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B07D54319331ED40089B2E6 /* Result.m */; };
 		1B30D99C1926063F0029F9E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B30D99B1926063F0029F9E1 /* Foundation.framework */; };
 		1B30D99E1926063F0029F9E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B30D99D1926063F0029F9E1 /* CoreGraphics.framework */; };
 		1B30D9A0192606400029F9E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B30D99F192606400029F9E1 /* UIKit.framework */; };
@@ -32,7 +33,6 @@
 		8CD27E3728595E2C1639273B /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8CD274B8E2EE26756D95BBD6 /* .gitkeep */; };
 		8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27CACC5E1A53C02AC9DCF /* CMAppDelegate.m */; };
 		F6369E3C1932262A00B619AF /* CMQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6369E3B1932262A00B619AF /* CMQuestionViewController.m */; };
-		F64DF00E192FCAB5004DDFFB /* ImportUtility.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F64DF00D192FCAB5004DDFFB /* ImportUtility.sqlite */; };
 		F6602EEF192F882D007F83E1 /* QuestionWithoutImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6602EEE192F882D007F83E1 /* QuestionWithoutImageView.xib */; };
 		F6602EF1192F88CE007F83E1 /* QuestionWithImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6602EF0192F88CE007F83E1 /* QuestionWithImageView.xib */; };
 		F6602EF4192F890A007F83E1 /* CMQuestionWithImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602EF3192F890A007F83E1 /* CMQuestionWithImageView.m */; };
@@ -61,6 +61,9 @@
 
 /* Begin PBXFileReference section */
 		1B071EED193200CA00F29D4A /* myriadpro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = myriadpro.otf; sourceTree = "<group>"; };
+		1B07D54219331ED40089B2E6 /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
+		1B07D54319331ED40089B2E6 /* Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
+		1B07D54519331FC20089B2E6 /* ImportUtility.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ImportUtility.sqlite; sourceTree = "<group>"; };
 		1B30D9981926063F0029F9E1 /* ComputeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComputeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B30D99B1926063F0029F9E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B30D99D1926063F0029F9E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,7 +97,6 @@
 		DC41B8A13C784DD2905DC7AF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F6369E3A1932262A00B619AF /* CMQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMQuestionViewController.h; sourceTree = "<group>"; };
 		F6369E3B1932262A00B619AF /* CMQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQuestionViewController.m; sourceTree = "<group>"; };
-		F64DF00D192FCAB5004DDFFB /* ImportUtility.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ImportUtility.sqlite; sourceTree = "<group>"; };
 		F6602EEE192F882D007F83E1 /* QuestionWithoutImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionWithoutImageView.xib; sourceTree = "<group>"; };
 		F6602EF0192F88CE007F83E1 /* QuestionWithImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionWithImageView.xib; sourceTree = "<group>"; };
 		F6602EF2192F890A007F83E1 /* CMQuestionWithImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMQuestionWithImageView.h; sourceTree = "<group>"; };
@@ -196,8 +198,8 @@
 		1B30D9A2192606400029F9E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1B07D54519331FC20089B2E6 /* ImportUtility.sqlite */,
 				1B071EED193200CA00F29D4A /* myriadpro.otf */,
-				F64DF00D192FCAB5004DDFFB /* ImportUtility.sqlite */,
 				1B4F74A6192F981900AE86F7 /* COCOGOOSE.otf */,
 				1B4F74A7192F981900AE86F7 /* CODE Bold.otf */,
 				1B4F74A8192F981900AE86F7 /* CODE Light.otf */,
@@ -299,6 +301,8 @@
 				F6602F08192FB777007F83E1 /* Question.m */,
 				F6602F04192FB777007F83E1 /* Options.h */,
 				F6602F05192FB777007F83E1 /* Options.m */,
+				1B07D54219331ED40089B2E6 /* Result.h */,
+				1B07D54319331ED40089B2E6 /* Result.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -395,7 +399,6 @@
 				8CD2771070F744904D02B4D9 /* .gitkeep in Resources */,
 				F6602EF1192F88CE007F83E1 /* QuestionWithImageView.xib in Resources */,
 				1B4F74AA192F992100AE86F7 /* CODE Light.otf in Resources */,
-				F64DF00E192FCAB5004DDFFB /* ImportUtility.sqlite in Resources */,
 				F6602EEF192F882D007F83E1 /* QuestionWithoutImageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +463,7 @@
 				8CD27F9DC1F1532431DEE6E2 /* CMAppDelegate.m in Sources */,
 				F6369E3C1932262A00B619AF /* CMQuestionViewController.m in Sources */,
 				1B5580AF1931F954002BD897 /* CMGameResultViewController.m in Sources */,
+				1B07D54419331ED40089B2E6 /* Result.m in Sources */,
 				F6602EF4192F890A007F83E1 /* CMQuestionWithImageView.m in Sources */,
 				F67EC4BC193093B80024C1B8 /* CMSettingViewController.m in Sources */,
 			);
