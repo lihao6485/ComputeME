@@ -11,7 +11,8 @@
 #import "Result.h"
 #import "UIFont+CMFont.h"
 
-@interface CMGameCategoryViewController () {
+@interface CMGameCategoryViewController ()
+{
 @private
    NSMutableDictionary *_gameDetailMutableDictionary;
 }

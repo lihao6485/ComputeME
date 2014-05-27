@@ -55,48 +55,47 @@
 
 - (IBAction)resetAllAction:(id)sender
 {
-    UIAlertView *alert = [[UIAlertView alloc]
-                          
-                          initWithTitle:@"Reset All"
-                          message:@"Are you sure want to reset all score?"
-                          delegate:self
-                          cancelButtonTitle:@"Cancel"
-                          otherButtonTitles:@"Ok", nil];
-    
-    [alert show];
+   UIAlertView *alert = [[UIAlertView alloc]
+
+         initWithTitle:@"Reset All"
+               message:@"Are you sure want to reset all score?"
+              delegate:self
+     cancelButtonTitle:@"Cancel"
+     otherButtonTitles:@"Ok", nil];
+
+   [alert show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if(buttonIndex == 1)
-    {
-        [self deleteAllObjects:@"Result"];
-        [self.backgroundMusicSwitch setOn:YES animated:YES];
-        [self.soundEffectSwitch setOn:NO animated:YES];
-    }
+   if (buttonIndex == 1) {
+      [self deleteAllObjects:@"Result"];
+      [self.backgroundMusicSwitch setOn:YES animated:YES];
+      [self.soundEffectSwitch setOn:NO animated:YES];
+   }
 }
 
-- (void)deleteAllObjects: (NSString *) entityDescription
+- (void)deleteAllObjects:(NSString *)entityDescription
 {
-    
-    CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:entityDescription inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
-    
 
-    NSError *error;
-    NSArray *items = [context executeFetchRequest:fetchRequest error:&error];
-    
-    for (NSManagedObject *managedObject in items) {
-    	[context deleteObject:managedObject];
-    }
-    if (![context save:&error]) {
-    	NSLog(@"Error deleting %@ - error:%@",entityDescription,error);
-    }
-    
+   CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+   NSManagedObjectContext *context = [appDelegate managedObjectContext];
+   NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+
+   NSEntityDescription *entity = [NSEntityDescription entityForName:entityDescription inManagedObjectContext:context];
+   [fetchRequest setEntity:entity];
+
+
+   NSError *error;
+   NSArray *items = [context executeFetchRequest:fetchRequest error:&error];
+
+   for (NSManagedObject *managedObject in items) {
+      [context deleteObject:managedObject];
+   }
+   if (![context save:&error]) {
+      NSLog(@"Error deleting %@ - error:%@", entityDescription, error);
+   }
+
 }
 
 /*

@@ -23,7 +23,8 @@
 
 @end
 
-@implementation CMQuestionViewController {
+@implementation CMQuestionViewController
+{
 @private
    NSArray *_questions;
    NSUInteger _currentQuestion;
@@ -31,8 +32,8 @@
    NSString *_gameCategory;
    NSUInteger _correctAnswers;
    float _countingSeconds;
-    NSUInteger _lifeCount;
-    NSArray *_lifeArrayImage;
+   NSUInteger _lifeCount;
+   NSArray *_lifeArrayImage;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -60,14 +61,12 @@
 - (void)viewDidLoad
 {
    [super viewDidLoad];
-    if([_gameMode isEqualToString:ResultKeyGameModeChallenge])
-    {
-        [self initChallenge];
-    }
-    else if([_gameMode isEqualToString:ResultKeyGameModeClassic])
-    {
-        [self initClassic];
-    }
+   if ([_gameMode isEqualToString:ResultKeyGameModeChallenge]) {
+      [self initChallenge];
+   }
+   else if ([_gameMode isEqualToString:ResultKeyGameModeClassic]) {
+      [self initClassic];
+   }
 
    if ([_questions count] != 0) {
       Question *question = _questions[_currentQuestion];
@@ -94,16 +93,16 @@
          @"gameCategory" : _gameCategory,
          @"correctAnswers" : @(_correctAnswers)
    }];
-    
-    CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    self.result = [NSEntityDescription insertNewObjectForEntityForName:@"Result" inManagedObjectContext:context];
-    self.result.gameCategory = _gameCategory;
-    self.result.gameMode = _gameMode;
-    self.result.correctAnswers = [NSNumber numberWithInteger:_correctAnswers];
-    
-    NSError *error;
-    [context save:&error];
+
+   CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+   NSManagedObjectContext *context = [appDelegate managedObjectContext];
+   self.result = [NSEntityDescription insertNewObjectForEntityForName:@"Result" inManagedObjectContext:context];
+   self.result.gameCategory = _gameCategory;
+   self.result.gameMode = _gameMode;
+   self.result.correctAnswers = [NSNumber numberWithInteger:_correctAnswers];
+
+   NSError *error;
+   [context save:&error];
 
    RCFadeInSegue *segue = [[RCFadeInSegue alloc] initWithIdentifier:@"" source:self destination:gameResultVC];
    [self prepareForSegue:segue sender:self];
@@ -116,8 +115,8 @@
 {
    [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(finishCounting:) userInfo:nil repeats:YES];
    _countingSeconds = MAX_SECONDS;
-    [self.challengeView setHidden:NO];
-    [self.classicView setHidden:YES];
+   [self.challengeView setHidden:NO];
+   [self.classicView setHidden:YES];
 }
 
 - (void)finishCounting:(NSTimer *)timer
@@ -140,20 +139,19 @@
 
 - (void)initClassic
 {
-    _lifeCount = 3;
-    [self.challengeView setHidden:YES];
-    [self.classicView setHidden:NO];
-    _lifeArrayImage = @[self.lifeImageView0,self.lifeImageView1,self.lifeImageView2];
+   _lifeCount = 3;
+   [self.challengeView setHidden:YES];
+   [self.classicView setHidden:NO];
+   _lifeArrayImage = @[self.lifeImageView0, self.lifeImageView1, self.lifeImageView2];
 }
 
 - (void)minusLifeOnClassicMode
 {
-    _lifeCount--;
-    [((UIImageView *)_lifeArrayImage[_lifeCount]) setImage:[UIImage imageNamed:@"Cross"]];
-    if(_lifeCount == 0)
-    {
-        [self navigateToResultPage];
-    }
+   _lifeCount--;
+   [((UIImageView *) _lifeArrayImage[_lifeCount]) setImage:[UIImage imageNamed:@"Cross"]];
+   if (_lifeCount == 0) {
+      [self navigateToResultPage];
+   }
 
 }
 
@@ -189,12 +187,12 @@
 
 - (UIView *)loadContentViewWithQuestion:(Question *)question
 {
-   if ([question.isImage  isEqual: @YES]) {
+   if ([question.isImage isEqual:@YES]) {
       NSLog(@"%@", question.isImage);
       NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"QuestionWithImageView" owner:self options:nil];
       CMQuestionWithImageView *questionView = nibViews[0];
       [[questionView question] setText:question.content];
-       [[questionView questionImageView] setImage:[UIImage imageWithData:question.image]];
+      [[questionView questionImageView] setImage:[UIImage imageWithData:question.image]];
 
       return questionView;
    }
@@ -224,10 +222,10 @@
    [self.option2Button setTitle:options.option2 forState:UIControlStateNormal];
    [self.option3Button setTitle:options.option3 forState:UIControlStateNormal];
    [self.option4Button setTitle:options.option4 forState:UIControlStateNormal];
-    [self.option1Button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
-    [self.option2Button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
-    [self.option3Button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
-    [self.option4Button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
+   [self.option1Button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
+   [self.option2Button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
+   [self.option3Button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
+   [self.option4Button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
 }
 
 - (IBAction)selectOption:(id)sender
@@ -262,8 +260,8 @@
       else if ([[[self.option4Button titleLabel] text] isEqualToString:options.answer]) {
          [self.option4Button setBackgroundColor:[@"4CD964" toColor]];
       }
-       
-       [self minusLifeOnClassicMode];
+
+      [self minusLifeOnClassicMode];
    }
 
    _currentQuestion++;
@@ -276,7 +274,7 @@
 {
    if ([_questions count] > _currentQuestion) {
       [UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-          [self setUpNextQuestion];
+         [self setUpNextQuestion];
       }                completion:nil];
    }
 
