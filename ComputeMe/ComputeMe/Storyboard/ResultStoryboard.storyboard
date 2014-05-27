@@ -41,8 +41,8 @@
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eef-WX-msL">
-                                <rect key="frame" x="180" y="287" width="26" height="35"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eef-WX-msL">
+                                <rect key="frame" x="180" y="287" width="13" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="25"/>
                                 <nil key="highlightedColor"/>
@@ -71,6 +71,7 @@
                         <color key="backgroundColor" red="0.0" green="0.61960786581039429" blue="0.67843139171600342" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
+                        <outlet property="bestResultLabel" destination="Eef-WX-msL" id="fCe-uM-yo1"/>
                         <outlet property="correctAnswerLabel" destination="DwB-K0-ET2" id="1r1-xi-WST"/>
                         <outlet property="gameModeLabel" destination="sxz-VF-CJC" id="aNe-VE-cBd"/>
                     </connections>
