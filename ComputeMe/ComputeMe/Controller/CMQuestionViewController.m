@@ -214,6 +214,10 @@
    [self.option2Button setTitle:options.option2 forState:UIControlStateNormal];
    [self.option3Button setTitle:options.option3 forState:UIControlStateNormal];
    [self.option4Button setTitle:options.option4 forState:UIControlStateNormal];
+    [self.option1Button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
+    [self.option2Button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
+    [self.option3Button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
+    [self.option4Button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
 }
 
 - (IBAction)selectOption:(id)sender
