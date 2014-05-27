@@ -49,6 +49,7 @@
 		F68A008B1929AD7D0053F183 /* CMGameTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */; };
 		F68A008D192A18790053F183 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68A008C192A18790053F183 /* CoreData.framework */; };
 		F68A0091192A19180053F183 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F68A008F192A19180053F183 /* DataModel.xcdatamodeld */; };
+		F6DDA6621934BB8000C66554 /* CMAllResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DDA6611934BB8000C66554 /* CMAllResultsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,8 @@
 		F68A008A1929AD7D0053F183 /* CMGameTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGameTypeViewController.m; sourceTree = "<group>"; };
 		F68A008C192A18790053F183 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F68A0090192A19180053F183 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		F6DDA6601934BB8000C66554 /* CMAllResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAllResultsViewController.h; sourceTree = "<group>"; };
+		F6DDA6611934BB8000C66554 /* CMAllResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMAllResultsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +279,8 @@
 				1B5580AE1931F954002BD897 /* CMGameResultViewController.m */,
 				F6369E3A1932262A00B619AF /* CMQuestionViewController.h */,
 				F6369E3B1932262A00B619AF /* CMQuestionViewController.m */,
+				F6DDA6601934BB8000C66554 /* CMAllResultsViewController.h */,
+				F6DDA6611934BB8000C66554 /* CMAllResultsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -479,6 +484,7 @@
 				F6369E3C1932262A00B619AF /* CMQuestionViewController.m in Sources */,
 				1B5580AF1931F954002BD897 /* CMGameResultViewController.m in Sources */,
 				1B07D54419331ED40089B2E6 /* Result.m in Sources */,
+				F6DDA6621934BB8000C66554 /* CMAllResultsViewController.m in Sources */,
 				F6602EF4192F890A007F83E1 /* CMQuestionWithImageView.m in Sources */,
 				F67EC4BC193093B80024C1B8 /* CMSettingViewController.m in Sources */,
 				1BDB6E6B19337C680026DB1A /* RCFadeInSegue.m in Sources */,
