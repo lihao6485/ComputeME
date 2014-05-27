@@ -40,6 +40,7 @@
 		F6602EFA192F896A007F83E1 /* CMQuestionWithoutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602EF9192F896A007F83E1 /* CMQuestionWithoutImageView.m */; };
 		F6602F06192FB777007F83E1 /* Options.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602F05192FB777007F83E1 /* Options.m */; };
 		F6602F09192FB777007F83E1 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602F08192FB777007F83E1 /* Question.m */; };
+		F6637A14193425D6000D7F25 /* ImportUtility.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1B07D54519331FC20089B2E6 /* ImportUtility.sqlite */; };
 		F67EC4B9193091520024C1B8 /* SettingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67EC4B8193091520024C1B8 /* SettingStoryboard.storyboard */; };
 		F67EC4BC193093B80024C1B8 /* CMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EC4BB193093B80024C1B8 /* CMSettingViewController.m */; };
 		F68A00831929AD480053F183 /* InitialStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68A00821929AD480053F183 /* InitialStoryboard.storyboard */; };
@@ -390,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6637A14193425D6000D7F25 /* ImportUtility.sqlite in Resources */,
 				1B30D9A6192606400029F9E1 /* InfoPlist.strings in Resources */,
 				1B30D9AE192606400029F9E1 /* Images.xcassets in Resources */,
 				1B071EEE193200CA00F29D4A /* myriadpro.otf in Resources */,
