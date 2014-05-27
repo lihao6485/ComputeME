@@ -16,27 +16,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-   NSManagedObjectContext *context = [self managedObjectContext];
-//    NSManagedObject *question = [NSEntityDescription
-//                                 insertNewObjectForEntityForName:@"Question"
-//                                 inManagedObjectContext:context];
-//    [question setValue:@"Programming Language" forKey:@"category"];
-//    [question setValue:@"The \"const\" feature can be applied to " forKey:@"content"];
-//    [question setValue:@NO forKey:@"isImage"];
-//    NSManagedObject *options = [NSEntityDescription
-//                                insertNewObjectForEntityForName:@"Options"
-//                                inManagedObjectContext:context];
-//    [options setValue:@"all of the above" forKey:@"answer"];
-//    [options setValue:@"an identifier " forKey:@"option1"];
-//    [options setValue:@"an array" forKey:@"option2"];
-//    [options setValue:@"an array argument" forKey:@"option3"];
-//    [options setValue:@"all of the above" forKey:@"option4"];
-//    [question setValue:options forKey:@"options"];
-//    [options setValue:question forKey:@"question"];
-//    NSError *error;
-//    if (![context save:&error]) {
-//        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-//    }
+   [self managedObjectContext];
+    NSString *soundFilePath = [NSString stringWithFormat:@"%@/YOURFILENAME",
+                               [[NSBundle mainBundle] resourcePath]];
+    NSLog(@"%@",soundFilePath);
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+    self.player.numberOfLoops = -1; //infinite
+    
+    [self.player play];
    return YES;
 }
 
