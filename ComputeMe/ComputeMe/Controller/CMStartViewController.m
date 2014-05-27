@@ -50,7 +50,7 @@
                          delay:0.0f
                        options:UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat | UIViewAnimationOptionAllowUserInteraction
                     animations:^{
-       [self.startLabel setAlpha:1.0f];
+      [self.startLabel setAlpha:1.0f];
    }
                     completion:nil];
 }
