@@ -86,7 +86,9 @@
                         <color key="backgroundColor" red="0.71764707565307617" green="0.93333339691162109" blue="0.9803922176361084" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundMusicSwitch" destination="6Ab-1z-spk" id="r5K-rr-MF2"/>
                         <outlet property="resetAllButton" destination="o0Y-2K-vFr" id="qjC-pg-4U3"/>
+                        <outlet property="soundEffectSwitch" destination="D6o-fg-4SW" id="SAJ-rB-GGp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fcd-nT-Qt1" userLabel="First Responder" sceneMemberID="firstResponder"/>

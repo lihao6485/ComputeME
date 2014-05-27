@@ -66,14 +66,13 @@
     [alert show];
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex == 0)
-    {
-        NSLog(@"cancel button");
-    }
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
     if(buttonIndex == 1)
     {
-        NSLog(@"ok button");
+        [self deleteAllObjects:@"Result"];
+        [self.backgroundMusicSwitch setOn:YES animated:YES];
+        [self.soundEffectSwitch setOn:NO animated:YES];
     }
 }
 
@@ -93,7 +92,6 @@
     
     for (NSManagedObject *managedObject in items) {
     	[context deleteObject:managedObject];
-    	NSLog(@"%@ object deleted",entityDescription);
     }
     if (![context save:&error]) {
     	NSLog(@"Error deleting %@ - error:%@",entityDescription,error);

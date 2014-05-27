@@ -11,5 +11,7 @@
 @interface CMSettingViewController : UIViewController
 
 @property(weak, nonatomic) IBOutlet UIButton *resetAllButton;
+@property (weak, nonatomic) IBOutlet UISwitch *soundEffectSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *backgroundMusicSwitch;
 
 @end
