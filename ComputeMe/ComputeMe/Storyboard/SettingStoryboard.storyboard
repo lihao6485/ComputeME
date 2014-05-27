@@ -78,6 +78,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="resetAllAction:" destination="Wfd-pM-IJm" eventType="touchUpInside" id="W4g-d7-V21"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.71764707565307617" green="0.93333339691162109" blue="0.9803922176361084" alpha="1" colorSpace="deviceRGB"/>

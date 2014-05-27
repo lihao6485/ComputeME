@@ -8,8 +8,9 @@
 
 #import "CMSettingViewController.h"
 #import "UIFont+CMFont.h"
+#import "CMAppDelegate.h"
 
-@interface CMSettingViewController ()
+@interface CMSettingViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -50,6 +51,54 @@
 {
    [super didReceiveMemoryWarning];
    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)resetAllAction:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          
+                          initWithTitle:@"Reset All"
+                          message:@"Are you sure want to reset all score?"
+                          delegate:self
+                          cancelButtonTitle:@"Cancel"
+                          otherButtonTitles:@"Ok", nil];
+    
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0)
+    {
+        NSLog(@"cancel button");
+    }
+    if(buttonIndex == 1)
+    {
+        NSLog(@"ok button");
+    }
+}
+
+- (void)deleteAllObjects: (NSString *) entityDescription
+{
+    
+    CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityDescription inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    
+
+    NSError *error;
+    NSArray *items = [context executeFetchRequest:fetchRequest error:&error];
+    
+    for (NSManagedObject *managedObject in items) {
+    	[context deleteObject:managedObject];
+    	NSLog(@"%@ object deleted",entityDescription);
+    }
+    if (![context save:&error]) {
+    	NSLog(@"Error deleting %@ - error:%@",entityDescription,error);
+    }
+    
 }
 
 /*
