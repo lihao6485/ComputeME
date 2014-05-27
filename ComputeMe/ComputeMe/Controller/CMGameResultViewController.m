@@ -8,6 +8,7 @@
 
 #import "CMGameResultViewController.h"
 #import "UIFont+CMFont.h"
+#import "Result.h"
 
 @interface CMGameResultViewController ()
 
@@ -47,11 +48,11 @@
    [self.correctAnswerLabel setText:[self.gameDetails[@"correctAnswers"] stringValue]];
 
 
-   if ([self.gameDetails[@"gameMode"] isEqualToString:@"CLASSIC"]) {
+   if ([self.gameDetails[@"gameMode"] isEqualToString:ResultKeyGameModeClassic]) {
       [self.gameModeLabel setText:@"CLASSIC"];
       [self.gameModeLabel setFrame:CGRectMake(83.0f, 79.0f, 156.0f, 45.0f)];
    }
-   else {
+   else if([self.gameDetails[@"gameMode"] isEqualToString:ResultKeyGameModeChallenge]){
       // is Challenge mode
       [self.gameModeLabel setText:@"CHALLENGE"];
       [self.gameModeLabel setFrame:CGRectMake(50, 79.0f, 223.0f, 45.0f)];

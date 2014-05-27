@@ -17,6 +17,11 @@
 @property(weak, nonatomic) IBOutlet UIButton *option2Button;
 @property(weak, nonatomic) IBOutlet UIButton *option3Button;
 @property(weak, nonatomic) IBOutlet UILabel *countDownLabel;
+@property (weak, nonatomic) IBOutlet UIView *challengeView;
+@property (weak, nonatomic) IBOutlet UIImageView *lifeImageView0;
+@property (weak, nonatomic) IBOutlet UIImageView *lifeImageView1;
+@property (weak, nonatomic) IBOutlet UIImageView *lifeImageView2;
+@property (weak, nonatomic) IBOutlet UIView *classicView;
 
 - (id)initWithCategory:(NSString *)category
                   mode:(NSString *)mode;

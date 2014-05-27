@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNI-B9-aQx">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNI-B9-aQx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -79,12 +79,36 @@
                                     <action selector="selectOption:" destination="dUZ-Ea-XhU" eventType="touchUpInside" id="PMd-dC-q11"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-XZ-xuz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="Zz3-IH-cJL">
+                                        <rect key="frame" x="99" y="0.0" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="hgo-Hy-tbt">
+                                        <rect key="frame" x="147" y="0.0" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="Goz-um-uM0">
+                                        <rect key="frame" x="195" y="0.0" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11372549831867218" green="0.11764706671237946" blue="0.098039224743843079" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.15294118225574493" green="0.15686275064945221" blue="0.13333334028720856" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
+                        <outlet property="challengeView" destination="hNI-B9-aQx" id="Pwy-aV-vgj"/>
+                        <outlet property="classicView" destination="ws4-XZ-xuz" id="Ckk-ye-aDk"/>
                         <outlet property="contentView" destination="glz-ct-dH6" id="s7R-Mk-LgO"/>
                         <outlet property="countDownLabel" destination="mND-PR-iV3" id="opz-VX-Pyi"/>
+                        <outlet property="lifeImageView0" destination="Zz3-IH-cJL" id="tZD-LM-8IB"/>
+                        <outlet property="lifeImageView1" destination="hgo-Hy-tbt" id="voj-wB-4Oi"/>
+                        <outlet property="lifeImageView2" destination="Goz-um-uM0" id="aTp-XK-Xnd"/>
                         <outlet property="option1Button" destination="nf4-fm-ggF" id="3AW-DT-qXw"/>
                         <outlet property="option2Button" destination="3iL-iG-rds" id="Dmn-UD-E0P"/>
                         <outlet property="option3Button" destination="WvY-Sk-guE" id="P6F-h7-GgF"/>
@@ -96,6 +120,9 @@
             <point key="canvasLocation" x="364" y="21"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Heart" width="20" height="18"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
