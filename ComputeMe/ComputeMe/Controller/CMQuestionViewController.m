@@ -14,6 +14,7 @@
 #import "RCFadeInSegue.h"
 #import "Question.h"
 #import "Options.h"
+#import "Result.h"
 
 #undef MAX_SECONDS
 #define MAX_SECONDS 5
@@ -29,7 +30,9 @@
    NSString *_gameMode;
    NSString *_gameCategory;
    NSUInteger _correctAnswers;
-   float countingSeconds;
+   float _countingSeconds;
+    NSUInteger _lifeCount;
+    NSArray *_lifeArrayImage;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -57,7 +60,14 @@
 - (void)viewDidLoad
 {
    [super viewDidLoad];
-   [self initTimer];
+    if([_gameMode isEqualToString:ResultKeyGameModeChallenge])
+    {
+        [self initChallenge];
+    }
+    else if([_gameMode isEqualToString:ResultKeyGameModeClassic])
+    {
+        [self initClassic];
+    }
 
    if ([_questions count] != 0) {
       Question *question = _questions[_currentQuestion];
@@ -90,28 +100,51 @@
    [segue perform];
 }
 
-#pragma mark - Init Timer
+#pragma mark - Init Challenge
 
-- (void)initTimer
+- (void)initChallenge
 {
    [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(finishCounting:) userInfo:nil repeats:YES];
-   countingSeconds = MAX_SECONDS;
+   _countingSeconds = MAX_SECONDS;
+    [self.challengeView setHidden:NO];
+    [self.classicView setHidden:YES];
 }
 
 - (void)finishCounting:(NSTimer *)timer
 {
-   countingSeconds -= 0.1f;
-   [self.countDownLabel setText:[NSString stringWithFormat:@"%.2f", countingSeconds]];
-   if (countingSeconds <= 0) {
+   _countingSeconds -= 0.1f;
+   [self.countDownLabel setText:[NSString stringWithFormat:@"%.2f", _countingSeconds]];
+   if (_countingSeconds <= 0) {
       [timer invalidate];
       [self navigateToResultPage];
    }
-   else if (countingSeconds <= 10) {
+   else if (_countingSeconds <= 10) {
       [self.countDownLabel setTextColor:[@"FF1300" toColor]];
    }
-   else if (countingSeconds <= 15) {
+   else if (_countingSeconds <= 15) {
       [self.countDownLabel setTextColor:[@"FF5E3A" toColor]];
    }
+}
+
+#pragma mark - Init Challenge
+
+- (void)initClassic
+{
+    _lifeCount = 3;
+    [self.challengeView setHidden:YES];
+    [self.classicView setHidden:NO];
+    _lifeArrayImage = @[self.lifeImageView0,self.lifeImageView1,self.lifeImageView2];
+}
+
+- (void)minusLifeOnClassicMode
+{
+    _lifeCount--;
+    [((UIImageView *)_lifeArrayImage[_lifeCount]) setImage:[UIImage imageNamed:@"Cross"]];
+    if(_lifeCount == 0)
+    {
+        [self navigateToResultPage];
+    }
+
 }
 
 #pragma mark - Load data from Core Data
@@ -219,6 +252,8 @@
       else if ([[[self.option4Button titleLabel] text] isEqualToString:options.answer]) {
          [self.option4Button setBackgroundColor:[@"4CD964" toColor]];
       }
+       
+       [self minusLifeOnClassicMode];
    }
 
    _currentQuestion++;
