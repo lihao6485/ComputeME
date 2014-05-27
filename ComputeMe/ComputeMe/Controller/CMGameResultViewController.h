@@ -12,6 +12,6 @@
 @property(weak, nonatomic) IBOutlet UILabel *gameModeLabel;
 @property(copy, nonatomic) NSDictionary *gameDetails;
 @property(weak, nonatomic) IBOutlet UILabel *correctAnswerLabel;
-@property (weak, nonatomic) IBOutlet UILabel *bestResultLabel;
+@property(weak, nonatomic) IBOutlet UILabel *bestResultLabel;
 
 @end

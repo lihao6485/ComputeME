@@ -26,6 +26,7 @@
 		1B5580AA1931EC8C002BD897 /* CMGetReadyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5580A91931EC8C002BD897 /* CMGetReadyViewController.m */; };
 		1B5580AC1931F59C002BD897 /* ResultStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5580AB1931F59C002BD897 /* ResultStoryboard.storyboard */; };
 		1B5580AF1931F954002BD897 /* CMGameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5580AE1931F954002BD897 /* CMGameResultViewController.m */; };
+		1B5788841934C57C00C0026F /* ImportUtility.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1B5788831934C57C00C0026F /* ImportUtility.sqlite */; };
 		1BDB6E6B19337C680026DB1A /* RCFadeInSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB6E6A19337C680026DB1A /* RCFadeInSegue.m */; };
 		1BF4FB121930914800C72B30 /* CMGameCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4FB111930914800C72B30 /* CMGameCategoryViewController.m */; };
 		5BBD01B0C1064E668AEB4DC9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7214806C06D34B39846C897D /* libPods.a */; };
@@ -40,7 +41,6 @@
 		F6602EFA192F896A007F83E1 /* CMQuestionWithoutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602EF9192F896A007F83E1 /* CMQuestionWithoutImageView.m */; };
 		F6602F06192FB777007F83E1 /* Options.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602F05192FB777007F83E1 /* Options.m */; };
 		F6602F09192FB777007F83E1 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F6602F08192FB777007F83E1 /* Question.m */; };
-		F6637A14193425D6000D7F25 /* ImportUtility.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1B07D54519331FC20089B2E6 /* ImportUtility.sqlite */; };
 		F67EC4B9193091520024C1B8 /* SettingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67EC4B8193091520024C1B8 /* SettingStoryboard.storyboard */; };
 		F67EC4BC193093B80024C1B8 /* CMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EC4BB193093B80024C1B8 /* CMSettingViewController.m */; };
 		F68A00831929AD480053F183 /* InitialStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68A00821929AD480053F183 /* InitialStoryboard.storyboard */; };
@@ -66,7 +66,6 @@
 		1B071EED193200CA00F29D4A /* myriadpro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = myriadpro.otf; sourceTree = "<group>"; };
 		1B07D54219331ED40089B2E6 /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
 		1B07D54319331ED40089B2E6 /* Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
-		1B07D54519331FC20089B2E6 /* ImportUtility.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ImportUtility.sqlite; sourceTree = "<group>"; };
 		1B30D9981926063F0029F9E1 /* ComputeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComputeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B30D99B1926063F0029F9E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B30D99D1926063F0029F9E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,6 +88,7 @@
 		1B5580AB1931F59C002BD897 /* ResultStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResultStoryboard.storyboard; sourceTree = "<group>"; };
 		1B5580AD1931F954002BD897 /* CMGameResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGameResultViewController.h; sourceTree = "<group>"; };
 		1B5580AE1931F954002BD897 /* CMGameResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGameResultViewController.m; sourceTree = "<group>"; };
+		1B5788831934C57C00C0026F /* ImportUtility.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ImportUtility.sqlite; sourceTree = "<group>"; };
 		1BDB6E6919337C670026DB1A /* RCFadeInSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFadeInSegue.h; sourceTree = "<group>"; };
 		1BDB6E6A19337C680026DB1A /* RCFadeInSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFadeInSegue.m; sourceTree = "<group>"; };
 		1BF4FB101930914800C72B30 /* CMGameCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGameCategoryViewController.h; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 		1B30D9A2192606400029F9E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1B07D54519331FC20089B2E6 /* ImportUtility.sqlite */,
+				1B5788831934C57C00C0026F /* ImportUtility.sqlite */,
 				1B071EED193200CA00F29D4A /* myriadpro.otf */,
 				1B4F74A6192F981900AE86F7 /* COCOGOOSE.otf */,
 				1B4F74A7192F981900AE86F7 /* CODE Bold.otf */,
@@ -405,7 +405,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6637A14193425D6000D7F25 /* ImportUtility.sqlite in Resources */,
 				1B30D9A6192606400029F9E1 /* InfoPlist.strings in Resources */,
 				1B30D9AE192606400029F9E1 /* Images.xcassets in Resources */,
 				1B071EEE193200CA00F29D4A /* myriadpro.otf in Resources */,
@@ -419,6 +418,7 @@
 				8CD2771070F744904D02B4D9 /* .gitkeep in Resources */,
 				F6602EF1192F88CE007F83E1 /* QuestionWithImageView.xib in Resources */,
 				1B4F74AA192F992100AE86F7 /* CODE Light.otf in Resources */,
+				1B5788841934C57C00C0026F /* ImportUtility.sqlite in Resources */,
 				F6602EEF192F882D007F83E1 /* QuestionWithoutImageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

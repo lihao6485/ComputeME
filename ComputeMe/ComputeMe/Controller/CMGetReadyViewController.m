@@ -11,7 +11,8 @@
 #import "RCFadeInSegue.h"
 #import "UIFont+CMFont.h"
 
-@interface CMGetReadyViewController () {
+@interface CMGetReadyViewController ()
+{
 @private
    NSTimer *_timer;
    NSInteger _countingSecond;
@@ -34,16 +35,16 @@
 {
    [super viewDidLoad];
    // Do any additional setup after loading the view.
-    [self.getReadyLabel setFont:[UIFont cocogooseFontWithSize:36.0f]];
-   
+   [self.getReadyLabel setFont:[UIFont cocogooseFontWithSize:36.0f]];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(finishCounting:) userInfo:nil repeats:YES];
-    [self.countDownLabel setText:@"3"];
-    _countingSecond = 3;
+   [super viewDidAppear:animated];
+   _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(finishCounting:) userInfo:nil repeats:YES];
+   [self.countDownLabel setText:@"3"];
+   _countingSecond = 3;
 }
 
 - (void)finishCounting:(NSTimer *)theTimer
@@ -90,7 +91,7 @@
    [self.view setHidden:NO];
    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
    self.navigationController.navigationBar.hidden = YES;
-   
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated

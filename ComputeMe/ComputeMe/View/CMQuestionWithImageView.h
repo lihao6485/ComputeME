@@ -10,8 +10,8 @@
 
 @interface CMQuestionWithImageView : UIView
 
-@property (weak, nonatomic) IBOutlet UILabel *question;
-@property (weak, nonatomic) IBOutlet UIImageView *questionImageView;
+@property(weak, nonatomic) IBOutlet UILabel *question;
+@property(weak, nonatomic) IBOutlet UIImageView *questionImageView;
 
 
 @end

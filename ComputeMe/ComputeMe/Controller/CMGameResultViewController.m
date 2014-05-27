@@ -31,7 +31,7 @@
    [super viewDidLoad];
 
    [self initTitle];
-    [self loadBestResult];
+   [self loadBestResult];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,19 +42,19 @@
 
 - (void)loadBestResult
 {
-    CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSArray *results = [[NSArray alloc] init];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Result" inManagedObjectContext:context];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"gameCategory LIKE[c] %@ AND gameMode LIKE[c] %@",_gameDetails[@"gameCategory"], _gameDetails[@"gameMode"]];
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"correctAnswers" ascending:YES];
-    [request setEntity:entity];
-    [request setPredicate:predicate];
-    [request setSortDescriptors:@[sortDescriptor]];
-    NSError *error;
-    results = [context executeFetchRequest:request error:&error];
-    [self.bestResultLabel setText:[((Result *)results.lastObject).correctAnswers stringValue]];
+   CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+   NSManagedObjectContext *context = [appDelegate managedObjectContext];
+   NSArray *results = [[NSArray alloc] init];
+   NSFetchRequest *request = [[NSFetchRequest alloc] init];
+   NSEntityDescription *entity = [NSEntityDescription entityForName:@"Result" inManagedObjectContext:context];
+   NSPredicate *predicate = [NSPredicate predicateWithFormat:@"gameCategory LIKE[c] %@ AND gameMode LIKE[c] %@", _gameDetails[@"gameCategory"], _gameDetails[@"gameMode"]];
+   NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"correctAnswers" ascending:YES];
+   [request setEntity:entity];
+   [request setPredicate:predicate];
+   [request setSortDescriptors:@[sortDescriptor]];
+   NSError *error;
+   results = [context executeFetchRequest:request error:&error];
+   [self.bestResultLabel setText:[((Result *) results.lastObject).correctAnswers stringValue]];
 }
 
 - (void)initTitle
@@ -68,7 +68,7 @@
       [self.gameModeLabel setText:@"CLASSIC"];
       [self.gameModeLabel setFrame:CGRectMake(83.0f, 79.0f, 156.0f, 45.0f)];
    }
-   else if([self.gameDetails[@"gameMode"] isEqualToString:ResultKeyGameModeChallenge]){
+   else if ([self.gameDetails[@"gameMode"] isEqualToString:ResultKeyGameModeChallenge]) {
       // is Challenge mode
       [self.gameModeLabel setText:@"CHALLENGE"];
       [self.gameModeLabel setFrame:CGRectMake(50, 79.0f, 223.0f, 45.0f)];
@@ -78,13 +78,13 @@
 
 - (IBAction)exitButton:(id)sender
 {
-    [((UINavigationController *)self.presentingViewController.presentingViewController) popToRootViewControllerAnimated:NO];
-    [self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+   [((UINavigationController *) self.presentingViewController.presentingViewController) popToRootViewControllerAnimated:NO];
+   [self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (IBAction)restartButton:(id)sender
 {
-    [((UINavigationController *)self.presentingViewController.presentingViewController).viewControllers.firstObject dismissViewControllerAnimated:NO completion:nil];
+   [((UINavigationController *) self.presentingViewController.presentingViewController).viewControllers.firstObject dismissViewControllerAnimated:NO completion:nil];
 }
 
 @end
