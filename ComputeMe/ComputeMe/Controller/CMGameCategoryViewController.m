@@ -9,6 +9,7 @@
 #import "CMGameCategoryViewController.h"
 #import "CMGetReadyViewController.h"
 #import "Result.h"
+#import "UIFont+CMFont.h"
 
 @interface CMGameCategoryViewController () {
 @private
@@ -38,9 +39,12 @@
    self.navigationItem.hidesBackButton = YES;
 
    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"MODE"
-                                                                  style:UIBarButtonItemStyleDone target:self action:@selector(backAction:)];
+                                                                  style:UIBarButtonItemStyleDone
+                                                                 target:self
+                                                                 action:@selector(backAction:)];
+
    [leftButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-         [UIFont fontWithName:@"COCOGOOSE" size:17], NSFontAttributeName,
+         [UIFont cocogooseFontWithSize:17.0f], NSFontAttributeName,
          [UIColor blackColor], NSForegroundColorAttributeName,
          nil]
                              forState:UIControlStateNormal];
@@ -61,14 +65,14 @@
 
 - (void)initButtonTitle
 {
-   [[self.historyButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
-   [[self.programmingButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
+   [[self.historyButton titleLabel] setFont:[UIFont cocogooseFontWithSize:25.0f]];
+   [[self.programmingButton titleLabel] setFont:[UIFont cocogooseFontWithSize:25.0f]];
    self.programmingButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
    self.programmingButton.titleLabel.textAlignment = NSTextAlignmentCenter;
    [self.programmingButton setTitle:@"programming\nlanguage" forState:UIControlStateNormal];
-   [[self.hardwareButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
-   [[self.networkingButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
-   [[self.digitalMediaButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:25]];
+   [[self.hardwareButton titleLabel] setFont:[UIFont cocogooseFontWithSize:25.0f]];
+   [[self.networkingButton titleLabel] setFont:[UIFont cocogooseFontWithSize:25.0f]];
+   [[self.digitalMediaButton titleLabel] setFont:[UIFont cocogooseFontWithSize:25.0f]];
 }
 
 

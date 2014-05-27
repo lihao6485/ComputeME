@@ -10,6 +10,7 @@
 #import "CMSettingViewController.h"
 #import "CMGameCategoryViewController.h"
 #import "Result.h"
+#import "UIFont+CMFont.h"
 
 @interface CMGameTypeViewController ()
 
@@ -36,9 +37,12 @@
    self.navigationController.navigationBar.translucent = YES;
    self.navigationController.view.backgroundColor = [UIColor clearColor];
    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"RESULT"
-                                                                   style:UIBarButtonItemStyleDone target:self action:@selector(resultAction:)];
+                                                                   style:UIBarButtonItemStyleDone
+                                                                  target:self
+                                                                  action:@selector(resultAction:)];
+
    [rightButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-         [UIFont fontWithName:@"COCOGOOSE" size:17], NSFontAttributeName,
+         [UIFont cocogooseFontWithSize:17.0f], NSFontAttributeName,
          [UIColor blackColor], NSForegroundColorAttributeName,
          nil]
                               forState:UIControlStateNormal];
@@ -65,9 +69,9 @@
 
 - (void)initButtonTitle
 {
-   [[self.challengeButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:35]];
-   [[self.classicButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:35]];
-   [[self.storyButton titleLabel] setFont:[UIFont fontWithName:@"COCOGOOSE" size:35]];
+   [[self.challengeButton titleLabel] setFont:[UIFont cocogooseFontWithSize:35.0f]];
+   [[self.classicButton titleLabel] setFont:[UIFont cocogooseFontWithSize:35.0f]];
+   [[self.storyButton titleLabel] setFont:[UIFont cocogooseFontWithSize:35.0f]];
 }
 
 

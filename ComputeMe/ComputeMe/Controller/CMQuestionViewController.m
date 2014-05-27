@@ -14,9 +14,6 @@
 #import "RCFadeInSegue.h"
 #import "Question.h"
 #import "Options.h"
-#import "Result.h"
-#import <QuartzCore/QuartzCore.h>
-#import <PTUIKitAdditions/PTUIKitAdditions.h>
 
 #undef MAX_SECONDS
 #define MAX_SECONDS 30
@@ -27,12 +24,12 @@
 
 @implementation CMQuestionViewController {
 @private
-    NSArray *_questions;
-    NSUInteger _currentQuestion;
-    NSString *_gameMode;
-    NSString *_gameCategory;
-    NSUInteger _correctAnswers;
-    float countingSeconds;
+   NSArray *_questions;
+   NSUInteger _currentQuestion;
+   NSString *_gameMode;
+   NSString *_gameCategory;
+   NSUInteger _correctAnswers;
+   float countingSeconds;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -59,10 +56,10 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    [self initTimer];
-    
-    if ([_questions count] != 0) {
+   [super viewDidLoad];
+   [self initTimer];
+
+   if ([_questions count] != 0) {
       Question *question = _questions[_currentQuestion];
       [self.contentView addSubview:[self loadContentViewWithQuestion:question]];
       [self setUpOptionButtonWithOptions:question.options];
@@ -76,74 +73,73 @@
 }
 
 #pragma mark - Navigate to result page
+
 - (void)navigateToResultPage
 {
-    UIStoryboard *resultStoryboard = [UIStoryboard storyboardWithName:@"ResultStoryboard" bundle:nil];
-    NSLog(@"%lu",_correctAnswers);
-    CMGameResultViewController *gameResultVC = [resultStoryboard instantiateViewControllerWithIdentifier:@"CMGameResultViewController"];
-    [gameResultVC setGameDetails:@{
-                                   @"gameMode" : _gameMode,
-                                   @"gameCategory" : _gameCategory,
-                                   @"correctAnswers" : @(_correctAnswers)
-                                   }];
-    
-    RCFadeInSegue *segue = [[RCFadeInSegue alloc] initWithIdentifier:@"" source:self destination:gameResultVC];
-    [self prepareForSegue:segue sender:self];
-    [segue perform];
+   UIStoryboard *resultStoryboard = [UIStoryboard storyboardWithName:@"ResultStoryboard" bundle:nil];
+   NSLog(@"%lu", (unsigned long) _correctAnswers);
+   CMGameResultViewController *gameResultVC = [resultStoryboard instantiateViewControllerWithIdentifier:@"CMGameResultViewController"];
+   [gameResultVC setGameDetails:@{
+         @"gameMode" : _gameMode,
+         @"gameCategory" : _gameCategory,
+         @"correctAnswers" : @(_correctAnswers)
+   }];
+
+   RCFadeInSegue *segue = [[RCFadeInSegue alloc] initWithIdentifier:@"" source:self destination:gameResultVC];
+   [self prepareForSegue:segue sender:self];
+   [segue perform];
 }
 
 #pragma mark - Init Timer
+
 - (void)initTimer
 {
-     [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(finishCounting:) userInfo:nil repeats:YES];
-    countingSeconds = MAX_SECONDS;
+   [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(finishCounting:) userInfo:nil repeats:YES];
+   countingSeconds = MAX_SECONDS;
 }
 
 - (void)finishCounting:(NSTimer *)timer
 {
-    countingSeconds -= 0.1f;
-    [self.countDownLabel setText:[NSString stringWithFormat:@"%.2f",countingSeconds]];
-    if(countingSeconds <=0)
-    {
-        [timer invalidate];
-        [self navigateToResultPage];
-    }
-    else if(countingSeconds <= 10)
-    {
-        [self.countDownLabel setTextColor:[@"FF1300" toColor]];
-    }
-    else if(countingSeconds <= 15)
-    {
-        [self.countDownLabel setTextColor:[@"FF5E3A" toColor]];
-    }
+   countingSeconds -= 0.1f;
+   [self.countDownLabel setText:[NSString stringWithFormat:@"%.2f", countingSeconds]];
+   if (countingSeconds <= 0) {
+      [timer invalidate];
+      [self navigateToResultPage];
+   }
+   else if (countingSeconds <= 10) {
+      [self.countDownLabel setTextColor:[@"FF1300" toColor]];
+   }
+   else if (countingSeconds <= 15) {
+      [self.countDownLabel setTextColor:[@"FF5E3A" toColor]];
+   }
 }
 
 #pragma mark - Load data from Core Data
 
 - (void)loadDataByCategory:(NSString *)category
 {
-    CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(category LIKE[c] %@)",category];
-    [request setEntity:entity];
-    [request setPredicate:predicate];
-    
-    NSError *error;
-    _questions = [[NSArray alloc] init];
-    NSMutableArray *tempQuestionArray = [[NSMutableArray alloc]initWithArray:[context executeFetchRequest:request error:&error]];
-    NSUInteger count = [tempQuestionArray count];
-    for (NSUInteger i = 0; i < count; ++i) {
-        // Select a random element between i and end of array to swap with.
-        NSInteger nElements = count - i;
-        NSInteger n = arc4random_uniform(nElements) + i;
-        [tempQuestionArray exchangeObjectAtIndex:i withObjectAtIndex:n];
-    }
-    
-    _questions = [tempQuestionArray copy];
-    _currentQuestion = 0;
-    _correctAnswers = 0;
+   CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+   NSManagedObjectContext *context = [appDelegate managedObjectContext];
+   NSFetchRequest *request = [[NSFetchRequest alloc] init];
+   NSEntityDescription *entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
+   NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(category LIKE[c] %@)", category];
+   [request setEntity:entity];
+   [request setPredicate:predicate];
+
+   NSError *error;
+   _questions = [[NSArray alloc] init];
+   NSMutableArray *tempQuestionArray = [[NSMutableArray alloc] initWithArray:[context executeFetchRequest:request error:&error]];
+   NSUInteger count = [tempQuestionArray count];
+   for (NSUInteger i = 0; i < count; ++i) {
+      // Select a random element between i and end of array to swap with.
+      NSInteger nElements = count - i;
+      NSInteger n = arc4random_uniform((u_int32_t) nElements) + i;
+      [tempQuestionArray exchangeObjectAtIndex:i withObjectAtIndex:n];
+   }
+
+   _questions = [tempQuestionArray copy];
+   _currentQuestion = 0;
+   _correctAnswers = 0;
 }
 
 #pragma mark - Load content view
@@ -153,18 +149,18 @@
    if (![question isImage]) {
       NSLog(@"%@", question.isImage);
       NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"QuestionWithImageView" owner:self options:nil];
-      CMQuestionWithImageView *questionView = nibViews[0];
+      CMQuestionWithImageView *questionWithImageView = nibViews[0];
 
       // TODO: implement load image
 
-      return questionView;
+      return questionWithImageView;
    }
 
    NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"QuestionWithoutImageView" owner:self options:nil];
-   CMQuestionWithoutImageView *questionView = nibViews[0];
-   [[questionView question] setText:question.content];
+   CMQuestionWithoutImageView *questionWithoutImageView = nibViews[0];
+   [[questionWithoutImageView question] setText:question.content];
 
-   return questionView;
+   return questionWithoutImageView;
 }
 
 - (void)setUpOptionButtonWithOptions:(Options *)options
@@ -198,8 +194,8 @@
    Options *options = question.options;
 
    if ([[[(UIButton *) sender titleLabel] text] isEqualToString:options.answer]) {
-        [(UIButton *)sender setBackgroundColor:[@"4CD964" toColor]];
-        _correctAnswers++;
+      [(UIButton *) sender setBackgroundColor:[@"4CD964" toColor]];
+      _correctAnswers++;
    }
    else {
       [(UIButton *) sender setBackgroundColor:[@"FF6A6E" toColor]];
@@ -237,9 +233,9 @@
 
    else {
       // go to the result page and need result object.
-    {
-        [self navigateToResultPage];
-   }
+      {
+         [self navigateToResultPage];
+      }
    }
 }
 
