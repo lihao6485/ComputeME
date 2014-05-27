@@ -7,6 +7,7 @@
 //
 
 #import "CMSettingViewController.h"
+#import "UIFont+CMFont.h"
 
 @interface CMSettingViewController ()
 
@@ -32,7 +33,7 @@
    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"MODE"
                                                                   style:UIBarButtonItemStyleDone target:self action:@selector(backAction:)];
    [leftButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-         [UIFont fontWithName:@"COCOGOOSE" size:17], NSFontAttributeName,
+         [UIFont cocogooseFontWithSize:17.0f], NSFontAttributeName,
          [UIColor blackColor], NSForegroundColorAttributeName,
          nil]
                              forState:UIControlStateNormal];

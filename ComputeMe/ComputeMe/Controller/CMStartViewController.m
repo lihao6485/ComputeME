@@ -7,6 +7,7 @@
 //
 
 #import "CMStartViewController.h"
+#import "UIFont+CMFont.h"
 
 @interface CMStartViewController ()
 
@@ -40,8 +41,8 @@
 
 - (void)initTitleLabel
 {
-   self.titleFirstLabel.font = [UIFont fontWithName:@"CODE Light" size:40];
-   self.titleSecondLabel.font = [UIFont fontWithName:@"CODE Light" size:60];
+   self.titleFirstLabel.font = [UIFont codeLightFontWithSize:40.0f];
+   self.titleSecondLabel.font = [UIFont codeLightFontWithSize:60.0f];
 
    [self.startLabel setAlpha:0.2f];
 

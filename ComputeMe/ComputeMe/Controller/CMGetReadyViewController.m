@@ -9,6 +9,7 @@
 #import "CMGetReadyViewController.h"
 #import "CMQuestionViewController.h"
 #import "RCFadeInSegue.h"
+#import "UIFont+CMFont.h"
 
 @interface CMGetReadyViewController () {
 @private
@@ -33,7 +34,7 @@
 {
    [super viewDidLoad];
    // Do any additional setup after loading the view.
-   [self.getReadyLabel setFont:[UIFont fontWithName:@"COCOGOOSE" size:36]];
+   [self.getReadyLabel setFont:[UIFont cocogooseFontWithSize:36.0f]];
    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(finishCounting:) userInfo:nil repeats:YES];
    _countingSecond = 3;
 }
@@ -46,21 +47,23 @@
       _countingSecond--;
 
    }
-    else if (_countingSecond <=0)
-    {
-        [theTimer invalidate];
-        CMQuestionViewController *questionVC = [[CMQuestionViewController alloc] initWithCategory:self.gameDetailDictionary[@"gameCategory"] mode:self.gameDetailDictionary[@"gameMode"]];
-        
-        RCFadeInSegue *segue = [[RCFadeInSegue alloc] initWithIdentifier:@"" source:self destination:questionVC];
-        [self prepareForSegue:segue sender:self];
-        [segue perform];
-    }
-    else
-    {
-        _countingSecond--;
-        [self.countDownLabel setText:[NSString stringWithFormat:@"%ld",(long)_countingSecond]];
-    }
-    
+   else if (_countingSecond <= 0) {
+      [theTimer invalidate];
+      CMQuestionViewController *questionVC = [[CMQuestionViewController alloc] initWithCategory:self.gameDetailDictionary[@"gameCategory"]
+                                                                                           mode:self.gameDetailDictionary[@"gameMode"]];
+
+      RCFadeInSegue *segue = [[RCFadeInSegue alloc] initWithIdentifier:@""
+                                                                source:self
+                                                           destination:questionVC];
+      [self prepareForSegue:segue
+                     sender:self];
+      [segue perform];
+   }
+   else {
+      _countingSecond--;
+      [self.countDownLabel setText:[NSString stringWithFormat:@"%ld", (long) _countingSecond]];
+   }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,8 +99,8 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
-    // Pass the selected object to the new view controller.
+   [self.navigationController popToRootViewControllerAnimated:YES];
+   // Pass the selected object to the new view controller.
 }
 
 

@@ -7,6 +7,7 @@
 //
 
 #import "CMGameResultViewController.h"
+#import "UIFont+CMFont.h"
 
 @interface CMGameResultViewController ()
 
@@ -41,12 +42,12 @@
 
 - (void)initTitle
 {
-    [self.gameModeLabel setFont:[UIFont fontWithName:@"COCOGOOSE" size:35]];
-    [self.correctAnswerLabel setFont:[UIFont fontWithName:@"Myriad Pro" size:50]];
-    [self.correctAnswerLabel setText:[self.gameDetails[@"correctAnswers"] stringValue]];
-    
-    
-    if([self.gameDetails[@"gameMode"] isEqualToString:@"CLASSIC"]) {
+   [self.gameModeLabel setFont:[UIFont cocogooseFontWithSize:35.0f]];
+   [self.correctAnswerLabel setFont:[UIFont myriadProFontWithSize:50.0f]];
+   [self.correctAnswerLabel setText:[self.gameDetails[@"correctAnswers"] stringValue]];
+
+
+   if ([self.gameDetails[@"gameMode"] isEqualToString:@"CLASSIC"]) {
       [self.gameModeLabel setText:@"CLASSIC"];
       [self.gameModeLabel setFrame:CGRectMake(83.0f, 79.0f, 156.0f, 45.0f)];
    }
@@ -57,16 +58,5 @@
    }
 
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
