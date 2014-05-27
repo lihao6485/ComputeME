@@ -153,7 +153,7 @@
       [[questionView question] setText:question.content];
        [[questionView questionImageView] setImage:[UIImage imageWithData:question.image]];
 
-      return questionWithImageView;
+      return questionView;
    }
 
    NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"QuestionWithoutImageView" owner:self options:nil];
