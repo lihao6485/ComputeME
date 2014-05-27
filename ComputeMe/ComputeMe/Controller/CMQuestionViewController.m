@@ -16,7 +16,7 @@
 #import "Options.h"
 
 #undef MAX_SECONDS
-#define MAX_SECONDS 30
+#define MAX_SECONDS 5
 
 @interface CMQuestionViewController ()
 

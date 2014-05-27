@@ -59,4 +59,10 @@
 
 }
 
+- (IBAction)exitButton:(id)sender
+{
+    [((UINavigationController *)self.presentingViewController.presentingViewController) popToRootViewControllerAnimated:NO];
+    [self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+}
+
 @end
