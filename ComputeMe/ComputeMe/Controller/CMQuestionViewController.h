@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *lifeImageView1;
 @property (weak, nonatomic) IBOutlet UIImageView *lifeImageView2;
 @property (weak, nonatomic) IBOutlet UIView *classicView;
+@property (strong, nonatomic) Result *result;
 
 - (id)initWithCategory:(NSString *)category
                   mode:(NSString *)mode;

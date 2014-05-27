@@ -7,6 +7,7 @@
 //
 
 #import "CMGameResultViewController.h"
+#import "CMAppDelegate.h"
 #import "UIFont+CMFont.h"
 #import "Result.h"
 
@@ -28,17 +29,32 @@
 - (void)viewDidLoad
 {
    [super viewDidLoad];
-   // Do any additional setup after loading the view.
-   // Dummy data first for game mode (will be removed)
 
    [self initTitle];
-
+    [self loadBestResult];
 }
 
 - (void)didReceiveMemoryWarning
 {
    [super didReceiveMemoryWarning];
    // Dispose of any resources that can be recreated.
+}
+
+- (void)loadBestResult
+{
+    CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSArray *results = [[NSArray alloc] init];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Result" inManagedObjectContext:context];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"gameCategory LIKE[c] %@ AND gameMode LIKE[c] %@",_gameDetails[@"gameCategory"], _gameDetails[@"gameMode"]];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"correctAnswers" ascending:YES];
+    [request setEntity:entity];
+    [request setPredicate:predicate];
+    [request setSortDescriptors:@[sortDescriptor]];
+    NSError *error;
+    results = [context executeFetchRequest:request error:&error];
+    [self.bestResultLabel setText:[((Result *)results.lastObject).correctAnswers stringValue]];
 }
 
 - (void)initTitle
@@ -64,6 +80,11 @@
 {
     [((UINavigationController *)self.presentingViewController.presentingViewController) popToRootViewControllerAnimated:NO];
     [self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+}
+
+- (IBAction)restartButton:(id)sender
+{
+    [((UINavigationController *)self.presentingViewController.presentingViewController).viewControllers.firstObject dismissViewControllerAnimated:NO completion:nil];
 }
 
 @end

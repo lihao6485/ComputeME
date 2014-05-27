@@ -17,7 +17,7 @@
 #import "Result.h"
 
 #undef MAX_SECONDS
-#define MAX_SECONDS 5
+#define MAX_SECONDS 30
 
 @interface CMQuestionViewController ()
 
@@ -94,6 +94,16 @@
          @"gameCategory" : _gameCategory,
          @"correctAnswers" : @(_correctAnswers)
    }];
+    
+    CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    self.result = [NSEntityDescription insertNewObjectForEntityForName:@"Result" inManagedObjectContext:context];
+    self.result.gameCategory = _gameCategory;
+    self.result.gameMode = _gameMode;
+    self.result.correctAnswers = [NSNumber numberWithInteger:_correctAnswers];
+    
+    NSError *error;
+    [context save:&error];
 
    RCFadeInSegue *segue = [[RCFadeInSegue alloc] initWithIdentifier:@"" source:self destination:gameResultVC];
    [self prepareForSegue:segue sender:self];
