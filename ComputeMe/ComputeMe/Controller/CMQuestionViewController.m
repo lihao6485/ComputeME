@@ -79,7 +79,7 @@
 - (void)navigateToResultPage
 {
     UIStoryboard *resultStoryboard = [UIStoryboard storyboardWithName:@"ResultStoryboard" bundle:nil];
-    NSLog(@"%lu",_correctAnswers);
+    NSLog(@"%lu",(unsigned long)_correctAnswers);
     CMGameResultViewController *gameResultVC = [resultStoryboard instantiateViewControllerWithIdentifier:@"CMGameResultViewController"];
     [gameResultVC setGameDetails:@{
                                    @"gameMode" : _gameMode,
@@ -150,12 +150,12 @@
 
 - (UIView *)loadContentViewWithQuestion:(Question *)question
 {
-   if (![question isImage]) {
+   if ([question.isImage  isEqual: @YES]) {
       NSLog(@"%@", question.isImage);
       NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"QuestionWithImageView" owner:self options:nil];
       CMQuestionWithImageView *questionView = nibViews[0];
-
-      // TODO: implement load image
+      [[questionView question] setText:question.content];
+       [[questionView questionImageView] setImage:[UIImage imageWithData:question.image]];
 
       return questionView;
    }
