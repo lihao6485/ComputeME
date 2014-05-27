@@ -63,6 +63,9 @@
                                 <state key="normal" image="Restart">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="restartButton:" destination="QfA-p4-G8m" eventType="touchUpInside" id="vkn-tJ-8jk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.61960786581039429" blue="0.67843139171600342" alpha="1" colorSpace="deviceRGB"/>

@@ -66,4 +66,9 @@
     [self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
 }
 
+- (IBAction)restartButton:(id)sender
+{
+    [((UINavigationController *)self.presentingViewController.presentingViewController).viewControllers.firstObject dismissViewControllerAnimated:NO completion:nil];
+}
+
 @end
