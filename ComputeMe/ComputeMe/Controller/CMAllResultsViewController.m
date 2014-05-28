@@ -28,29 +28,67 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self loadResultsData];
+    [self loadResultsData:@"Challenge"];
+    [self.challengeAndClassicSegmentedControl addTarget:self action:@selector(segmentedControlAction:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (void)loadResultsData
+- (void)segmentedControlAction:(id)sender
 {
-    NSArray *challengePL = [self loadResultWithCategory:@"Programming Language" mode:@"Challenge"];
-    NSLog(@"%@",challengePL.lastObject);
-    NSArray *challengeHI = [self loadResultWithCategory:@"History" mode:@"Challenge"];
-    NSLog(@"%@",challengeHI.lastObject);
-    NSArray *challengeHW = [self loadResultWithCategory:@"Hardware" mode:@"Challenge"];
-    NSLog(@"%@",challengeHW.lastObject);
-    NSArray *classicPL = [self loadResultWithCategory:@"Programming Language" mode:@"Classic"];
-    NSLog(@"%@",classicPL.lastObject);
-    NSArray *classicHI = [self loadResultWithCategory:@"History" mode:@"Classic"];
-    NSLog(@"%@",classicHI.lastObject);
-    NSArray *classicHW = [self loadResultWithCategory:@"Hardware" mode:@"Classic"];
-    NSLog(@"%@",classicHW.lastObject);
+    UISegmentedControl *control = (UISegmentedControl *)sender;
+    
+    if (control.selectedSegmentIndex == 0)
+    {
+        [self loadResultsData:@"Challenge"];
+    }
+    
+    else if (control.selectedSegmentIndex == 1)
+    {
+        [self loadResultsData:@"Classic"];
+    }
+}
+
+- (void)loadResultsData:(NSString *)category
+{
+    NSArray *challengePL = [self loadResultWithCategory:@"Programming Language" mode:category];
+    
+    if (challengePL.count != 0)
+    {
+        [self.programmingScores setText:((Result *)challengePL.lastObject).correctAnswers.stringValue];
+    }
+    
+    else
+    {
+        [self.programmingScores setText:@"0"];
+    }
+    
+    NSArray *challengeHI = [self loadResultWithCategory:@"History" mode:category];
+    
+    if (challengeHI.count != 0)
+    {
+        [self.historyScores setText:((Result *)challengeHI.lastObject).correctAnswers.stringValue];
+    }
+    
+    else
+    {
+        [self.historyScores setText:@"0"];
+    }
+    
+    NSArray *challengeHW = [self loadResultWithCategory:@"Hardware" mode:category];
+    
+    if (challengeHW.count != 0)
+    {
+        [self.hardwareScores setText:((Result *)challengeHW.lastObject).correctAnswers.stringValue];
+    }
+    
+    else
+    {
+        [self.hardwareScores setText:@"0"];
+    }
 }
 
 - (NSArray *)loadResultWithCategory:(NSString *)category

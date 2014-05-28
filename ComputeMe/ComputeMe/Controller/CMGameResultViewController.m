@@ -55,6 +55,7 @@
    NSError *error;
    results = [context executeFetchRequest:request error:&error];
    [self.bestResultLabel setText:[((Result *) results.lastObject).correctAnswers stringValue]];
+    NSLog(@"Result: %@", [((Result *) results.lastObject).correctAnswers stringValue]);
 }
 
 - (void)initTitle
