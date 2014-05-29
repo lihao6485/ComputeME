@@ -9,6 +9,7 @@
 #import "CMGameTypeViewController.h"
 #import "CMSettingViewController.h"
 #import "CMGameCategoryViewController.h"
+#import "CMAllResultsViewController.h"
 #import "Result.h"
 #import "UIFont+CMFont.h"
 
@@ -51,7 +52,9 @@
 
 - (void)resultAction:(id)sender
 {
-
+    UIStoryboard *resultStoryboard = [UIStoryboard storyboardWithName:@"ResultStoryboard" bundle:nil];
+    CMAllResultsViewController *resultVC = [resultStoryboard instantiateViewControllerWithIdentifier:@"AllResultViewController"];
+    [self.navigationController pushViewController:resultVC animated:YES];
 }
 
 - (IBAction)settingAction:(id)sender

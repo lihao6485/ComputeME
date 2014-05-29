@@ -83,7 +83,7 @@
         <!--All Results View Controller-->
         <scene sceneID="F7a-Wo-Z6J">
             <objects>
-                <viewController id="Iiw-oN-KtD" customClass="CMAllResultsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllResultViewController" id="Iiw-oN-KtD" customClass="CMAllResultsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lqz-Iu-pXe"/>
                         <viewControllerLayoutGuide type="bottom" id="Uj7-qU-oqW"/>

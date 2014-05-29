@@ -36,7 +36,7 @@
 		<string>audio</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
-	<string>ResultStoryboard</string>
+	<string>InitialStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

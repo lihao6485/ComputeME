@@ -8,6 +8,7 @@
 
 #import "CMGameCategoryViewController.h"
 #import "CMGetReadyViewController.h"
+#import "CMAllResultsViewController.h"
 #import "Result.h"
 #import "UIFont+CMFont.h"
 
@@ -51,6 +52,25 @@
                              forState:UIControlStateNormal];
 
    [self.navigationItem setLeftBarButtonItem:leftButton];
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"RESULT"
+                                                                    style:UIBarButtonItemStyleDone
+                                                                   target:self
+                                                                   action:@selector(resultAction:)];
+    
+    [rightButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                         [UIFont cocogooseFontWithSize:17.0f], NSFontAttributeName,
+                                         [UIColor blackColor], NSForegroundColorAttributeName,
+                                         nil]
+                               forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem = rightButton;
+}
+
+- (void)resultAction:(id)sender
+{
+    UIStoryboard *resultStoryboard = [UIStoryboard storyboardWithName:@"ResultStoryboard" bundle:nil];
+    CMAllResultsViewController *resultVC = [resultStoryboard instantiateViewControllerWithIdentifier:@"AllResultViewController"];
+    [self.navigationController pushViewController:resultVC animated:YES];
 }
 
 - (void)backAction:(id)sender
