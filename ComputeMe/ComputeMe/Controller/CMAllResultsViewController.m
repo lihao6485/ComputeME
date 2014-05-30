@@ -9,6 +9,7 @@
 #import "CMAllResultsViewController.h"
 #import "CMAppDelegate.h"
 #import "Result.h"
+#import "UIFont+CMFont.h"
 
 @interface CMAllResultsViewController ()
 
@@ -30,6 +31,23 @@
     [super viewDidLoad];
     [self loadResultsData:@"Challenge"];
     [self.challengeAndClassicSegmentedControl addTarget:self action:@selector(segmentedControlAction:) forControlEvents:UIControlEventValueChanged];
+    
+    self.navigationItem.hidesBackButton = YES;
+    
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"MODE"
+                                                                   style:UIBarButtonItemStyleDone target:self action:@selector(backAction:)];
+    [leftButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                        [UIFont cocogooseFontWithSize:17.0f], NSFontAttributeName,
+                                        [UIColor blackColor], NSForegroundColorAttributeName,
+                                        nil]
+                              forState:UIControlStateNormal];
+    
+    [self.navigationItem setLeftBarButtonItem:leftButton];
+}
+
+- (void)backAction:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning
