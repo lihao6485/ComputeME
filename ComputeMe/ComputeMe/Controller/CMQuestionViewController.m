@@ -237,13 +237,25 @@
 
    Question *question = _questions[_currentQuestion];
    Options *options = question.options;
+    
+    CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 
    if ([[[(UIButton *) sender titleLabel] text] isEqualToString:options.answer]) {
       [(UIButton *) sender setBackgroundColor:[@"4CD964" toColor]];
       _correctAnswers++;
+       
+       if(appDelegate.isSoundEffectOn)
+       {
+           [self playSoundEffect:@"Ka-Ching" fileFormat:@"wav"];
+       }
+       
    }
    else {
       [(UIButton *) sender setBackgroundColor:[@"FF6A6E" toColor]];
+       if(appDelegate.isSoundEffectOn)
+       {
+           [self playSoundEffect:@"Comedy Wap" fileFormat:@"caf"];
+       }
 
       if ([[[self.option1Button titleLabel] text] isEqualToString:options.answer]) {
          [self.option1Button setBackgroundColor:[@"4CD964" toColor]];
@@ -297,6 +309,14 @@
 - (BOOL)prefersStatusBarHidden
 {
    return YES;
+}
+
+- (void)playSoundEffect:(NSString *)fileName fileFormat:(NSString *)fileFormat
+{
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:fileName ofType:fileFormat];
+    SystemSoundID soundID;
+    AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain([NSURL fileURLWithPath: soundPath]), &soundID);
+    AudioServicesPlaySystemSound(soundID);
 }
 
 /*

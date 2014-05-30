@@ -17,14 +17,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
    [self managedObjectContext];
-    NSString *soundFilePath = [NSString stringWithFormat:@"%@/YOURFILENAME",
+    NSString *soundFilePath = [NSString stringWithFormat:@"%@/Mining by Moonlight.mp3",
                                [[NSBundle mainBundle] resourcePath]];
-    NSLog(@"%@",soundFilePath);
     NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
-    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
-    self.player.numberOfLoops = -1; //infinite
-    
-    [self.player play];
+    self.bgmPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+    self.bgmPlayer.numberOfLoops = -1; //infinite
+    self.isSoundEffectOn = NO;
+    [self.bgmPlayer play];
    return YES;
 }
 

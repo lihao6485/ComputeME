@@ -58,7 +58,7 @@
    UIAlertView *alert = [[UIAlertView alloc]
 
          initWithTitle:@"Reset All"
-               message:@"Are you sure want to reset all score?"
+               message:@"Are you sure want to reset all scores and settings?"
               delegate:self
      cancelButtonTitle:@"Cancel"
      otherButtonTitles:@"Ok", nil];
@@ -70,8 +70,8 @@
 {
    if (buttonIndex == 1) {
       [self deleteAllObjects:@"Result"];
-      [self.backgroundMusicSwitch setOn:YES animated:YES];
-      [self.soundEffectSwitch setOn:NO animated:YES];
+      [self.backgroundMusicSwitch setOn:YES animated:NO];
+      [self.soundEffectSwitch setOn:YES animated:NO];
    }
 }
 
@@ -96,6 +96,25 @@
       NSLog(@"Error deleting %@ - error:%@", entityDescription, error);
    }
 
+}
+- (IBAction)bgmSwitchChanged:(UISwitch *)sender
+{
+    CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    if(sender.isOn)
+    {
+        [appDelegate.bgmPlayer play];
+    }
+    else
+    {
+        [appDelegate.bgmPlayer stop];
+    }
+    
+}
+
+- (IBAction)soundEffectSwitchChanged:(UISwitch *)sender
+{
+    CMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate setIsSoundEffectOn:sender.isOn];
 }
 
 /*

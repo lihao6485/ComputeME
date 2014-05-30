@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B06091419385D5500866667 /* Mining by Moonlight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B06091319385D5500866667 /* Mining by Moonlight.mp3 */; };
+		1B060918193861E500866667 /* Ka-Ching.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B060916193861E500866667 /* Ka-Ching.wav */; };
+		1B06091C1938675B00866667 /* Comedy Wap.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1B06091B1938675B00866667 /* Comedy Wap.caf */; };
 		1B071EEE193200CA00F29D4A /* myriadpro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B071EED193200CA00F29D4A /* myriadpro.otf */; };
 		1B07D54419331ED40089B2E6 /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B07D54319331ED40089B2E6 /* Result.m */; };
 		1B30D99C1926063F0029F9E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B30D99B1926063F0029F9E1 /* Foundation.framework */; };
@@ -63,6 +66,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B06091319385D5500866667 /* Mining by Moonlight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mining by Moonlight.mp3"; sourceTree = "<group>"; };
+		1B060916193861E500866667 /* Ka-Ching.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Ka-Ching.wav"; sourceTree = "<group>"; };
+		1B06091B1938675B00866667 /* Comedy Wap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comedy Wap.caf"; sourceTree = "<group>"; };
 		1B071EED193200CA00F29D4A /* myriadpro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = myriadpro.otf; sourceTree = "<group>"; };
 		1B07D54219331ED40089B2E6 /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
 		1B07D54319331ED40089B2E6 /* Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
@@ -208,6 +214,9 @@
 		1B30D9A2192606400029F9E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1B06091B1938675B00866667 /* Comedy Wap.caf */,
+				1B060916193861E500866667 /* Ka-Ching.wav */,
+				1B06091319385D5500866667 /* Mining by Moonlight.mp3 */,
 				1B5788831934C57C00C0026F /* ImportUtility.sqlite */,
 				1B071EED193200CA00F29D4A /* myriadpro.otf */,
 				1B4F74A6192F981900AE86F7 /* COCOGOOSE.otf */,
@@ -408,6 +417,7 @@
 				1B30D9A6192606400029F9E1 /* InfoPlist.strings in Resources */,
 				1B30D9AE192606400029F9E1 /* Images.xcassets in Resources */,
 				1B071EEE193200CA00F29D4A /* myriadpro.otf in Resources */,
+				1B06091419385D5500866667 /* Mining by Moonlight.mp3 in Resources */,
 				1B5580AC1931F59C002BD897 /* ResultStoryboard.storyboard in Resources */,
 				F68A00831929AD480053F183 /* InitialStoryboard.storyboard in Resources */,
 				8CD27E3728595E2C1639273B /* .gitkeep in Resources */,
@@ -415,8 +425,10 @@
 				F68A00851929AD560053F183 /* QuestionStoryboard.storyboard in Resources */,
 				F67EC4B9193091520024C1B8 /* SettingStoryboard.storyboard in Resources */,
 				1B4F74A9192F991F00AE86F7 /* COCOGOOSE.otf in Resources */,
+				1B06091C1938675B00866667 /* Comedy Wap.caf in Resources */,
 				8CD2771070F744904D02B4D9 /* .gitkeep in Resources */,
 				F6602EF1192F88CE007F83E1 /* QuestionWithImageView.xib in Resources */,
+				1B060918193861E500866667 /* Ka-Ching.wav in Resources */,
 				1B4F74AA192F992100AE86F7 /* CODE Light.otf in Resources */,
 				1B5788841934C57C00C0026F /* ImportUtility.sqlite in Resources */,
 				F6602EEF192F882D007F83E1 /* QuestionWithoutImageView.xib in Resources */,
