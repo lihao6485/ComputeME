@@ -22,7 +22,7 @@
     NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
     self.bgmPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
     self.bgmPlayer.numberOfLoops = -1; //infinite
-    self.isSoundEffectOn = NO;
+    self.isSoundEffectOn = YES;
     [self.bgmPlayer play];
    return YES;
 }
