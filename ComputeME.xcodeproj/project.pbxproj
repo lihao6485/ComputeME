@@ -12,6 +12,13 @@
 		6D0C9CDC199CEDA40052902F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D0C9CDA199CEDA40052902F /* Main.storyboard */; };
 		6D0C9CDE199CEDA40052902F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D0C9CDD199CEDA40052902F /* Images.xcassets */; };
 		6D0C9CEA199CEDA40052902F /* ComputeMETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C9CE9199CEDA40052902F /* ComputeMETests.swift */; };
+		6D18A465199CF1FE009E7F59 /* COCOGOOSE.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A45D199CF1FE009E7F59 /* COCOGOOSE.otf */; };
+		6D18A466199CF1FE009E7F59 /* CODE Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A45E199CF1FE009E7F59 /* CODE Bold.otf */; };
+		6D18A467199CF1FE009E7F59 /* CODE Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A45F199CF1FE009E7F59 /* CODE Light.otf */; };
+		6D18A468199CF1FE009E7F59 /* myriadpro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A460199CF1FE009E7F59 /* myriadpro.otf */; };
+		6D18A469199CF1FE009E7F59 /* Comedy Wap.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A462199CF1FE009E7F59 /* Comedy Wap.caf */; };
+		6D18A46A199CF1FE009E7F59 /* Ka-Ching.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A463199CF1FE009E7F59 /* Ka-Ching.wav */; };
+		6D18A46B199CF1FE009E7F59 /* Mining by Moonlight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A464199CF1FE009E7F59 /* Mining by Moonlight.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,13 @@
 		6D0C9CE3199CEDA40052902F /* ComputeMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComputeMETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0C9CE8199CEDA40052902F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D0C9CE9199CEDA40052902F /* ComputeMETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputeMETests.swift; sourceTree = "<group>"; };
+		6D18A45D199CF1FE009E7F59 /* COCOGOOSE.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = COCOGOOSE.otf; sourceTree = "<group>"; };
+		6D18A45E199CF1FE009E7F59 /* CODE Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE Bold.otf"; sourceTree = "<group>"; };
+		6D18A45F199CF1FE009E7F59 /* CODE Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE Light.otf"; sourceTree = "<group>"; };
+		6D18A460199CF1FE009E7F59 /* myriadpro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = myriadpro.otf; sourceTree = "<group>"; };
+		6D18A462199CF1FE009E7F59 /* Comedy Wap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comedy Wap.caf"; sourceTree = "<group>"; };
+		6D18A463199CF1FE009E7F59 /* Ka-Ching.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Ka-Ching.wav"; sourceTree = "<group>"; };
+		6D18A464199CF1FE009E7F59 /* Mining by Moonlight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mining by Moonlight.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +100,8 @@
 		6D0C9CD4199CEDA40052902F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6D18A45C199CF1FE009E7F59 /* Fonts */,
+				6D18A461199CF1FE009E7F59 /* Sounds */,
 				6D0C9CD5199CEDA40052902F /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -123,6 +139,27 @@
 				6D0C9CD8199CEDA40052902F /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		6D18A45C199CF1FE009E7F59 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6D18A45D199CF1FE009E7F59 /* COCOGOOSE.otf */,
+				6D18A45E199CF1FE009E7F59 /* CODE Bold.otf */,
+				6D18A45F199CF1FE009E7F59 /* CODE Light.otf */,
+				6D18A460199CF1FE009E7F59 /* myriadpro.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6D18A461199CF1FE009E7F59 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				6D18A462199CF1FE009E7F59 /* Comedy Wap.caf */,
+				6D18A463199CF1FE009E7F59 /* Ka-Ching.wav */,
+				6D18A464199CF1FE009E7F59 /* Mining by Moonlight.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,8 +243,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D18A466199CF1FE009E7F59 /* CODE Bold.otf in Resources */,
+				6D18A46B199CF1FE009E7F59 /* Mining by Moonlight.mp3 in Resources */,
 				6D0C9CDC199CEDA40052902F /* Main.storyboard in Resources */,
+				6D18A46A199CF1FE009E7F59 /* Ka-Ching.wav in Resources */,
 				6D0C9CDE199CEDA40052902F /* Images.xcassets in Resources */,
+				6D18A465199CF1FE009E7F59 /* COCOGOOSE.otf in Resources */,
+				6D18A467199CF1FE009E7F59 /* CODE Light.otf in Resources */,
+				6D18A468199CF1FE009E7F59 /* myriadpro.otf in Resources */,
+				6D18A469199CF1FE009E7F59 /* Comedy Wap.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +462,7 @@
 				6D0C9CEF199CEDA40052902F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D0C9CF0199CEDA40052902F /* Build configuration list for PBXNativeTarget "ComputeMETests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +471,7 @@
 				6D0C9CF2199CEDA40052902F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
