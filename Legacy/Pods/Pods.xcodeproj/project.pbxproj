@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C919A9C115F4CD9BAEB7C71 /* UIControl+PTUIKitAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E98C87168461385403201 /* UIControl+PTUIKitAddition.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		15C355E008864534AE604B2A /* NSString+HexToColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B282275F0A4797B3B6852B /* NSString+HexToColor.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		2508FFD30F0344A4ADE45362 /* UIView+PTUIKitAdditon.h in Headers */ = {isa = PBXBuildFile; fileRef = 99723E798CB54F6DAB9892A9 /* UIView+PTUIKitAdditon.h */; };
+		283C748ACA754A668BCAAC78 /* UIScrollView+PTUIKitAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D412BD5485784A42B5FEA9EE /* UIScrollView+PTUIKitAddition.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		2C64FB8F2B634624979181B2 /* UIViewController+PTUIKitAdditon.h in Headers */ = {isa = PBXBuildFile; fileRef = 17FA66D8395F4349B39C97D7 /* UIViewController+PTUIKitAdditon.h */; };
+		2C75B783CB584C0A9D23A92A /* UIImage+PTUIKitAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D25E427F89E44B8BA4A1965 /* UIImage+PTUIKitAddition.h */; };
+		35A85A61108A47048992D8B9 /* UIFont+PTUIKitAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC9F7B0EDB94E25979987A4 /* UIFont+PTUIKitAddition.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		3B82865A0B834995B3C86F44 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF046B03E2064F6987A4D84F /* CoreGraphics.framework */; };
+		42A6E73694F4477E8E833D70 /* UIScreen+PTUIKitAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AF7D099BDA432D87969D8E /* UIScreen+PTUIKitAddition.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		4CC109CCB1A14EF1BA9AB277 /* PTUIKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BAFAC26B79D94DC5ADCF6D8D /* PTUIKitAdditions.h */; };
+		51FFE326417C4327AD99B23B /* UIImage+PTUIKitAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 295EA38369174C5CAB31C28E /* UIImage+PTUIKitAddition.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		5556D0F9A13A4529B0C16AC5 /* UIScrollView+PTUIKitAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = 64A4755125094E1B940A4A7B /* UIScrollView+PTUIKitAddition.h */; };
+		73BBE249744147DE904CF0B9 /* UIColor+PTUIKitAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A9F7AE0C074542A91F43D8 /* UIColor+PTUIKitAddition.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		7407ED7B81AF4C56BCD27061 /* UIColor+PTUIKitAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = 436B00BA12F347609D3CC369 /* UIColor+PTUIKitAddition.h */; };
+		7FFD20CC543F4B709C922693 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8680B3D509F4ED598B81821 /* UIKit.framework */; };
+		9057ADACF6DB49DF9B1722FA /* libPods-PTUIKitAdditions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DA5ED5F9D3464294C47A22 /* libPods-PTUIKitAdditions.a */; };
+		9F2D1F426BB1424BAF81B2E4 /* UIControl+PTUIKitAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D994EC7534843DBB720EA5D /* UIControl+PTUIKitAddition.h */; };
+		A03BC45ED0A543BABAB4D309 /* UIView+PTUIKitAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = B8652D3B1E97427BA6B6F4B6 /* UIView+PTUIKitAdditon.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		B6D41ECEC5CF449EA8F62B38 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3310A07578AF4DC681A0407E /* Pods-dummy.m */; };
+		B81002E0AAC248AC9C37D33C /* UIViewController+PTUIKitAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B77C9E7EE47418262FDD7 /* UIViewController+PTUIKitAdditon.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		BD442B44266E484987E01B68 /* UIScreen+PTUIKitAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = 633C9969487C4C42876E3F0C /* UIScreen+PTUIKitAddition.h */; };
+		BE8AF9858C8A49AB906D6B93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C2CA7E0C0F4C9AB3949800 /* Foundation.framework */; };
+		CD03C87D130143D5BE2377D2 /* Pods-PTUIKitAdditions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A96A70577F9C499E96358350 /* Pods-PTUIKitAdditions-dummy.m */; };
+		D5616AADDF30426DB479E745 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57D39D87D1B42E09ECD2B78 /* QuartzCore.framework */; };
+		DA81C524C8BC4CCB93C40423 /* UIFont+PTUIKitAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = C0AFF225500648F591005E3A /* UIFont+PTUIKitAddition.h */; };
+		E6CC2ECA921B475CB367A792 /* NSString+HexToColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 71757030825A4668B2C84AE1 /* NSString+HexToColor.h */; };
+		E72773234AAA4F25AC30E65C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C2CA7E0C0F4C9AB3949800 /* Foundation.framework */; };
+		FB132B33762641B089DEEA73 /* UIDevice+PTUIKitAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = 33809A925B2C40FDA1349548 /* UIDevice+PTUIKitAddition.h */; };
+		FE945EE1BAE94D458A84380C /* UIDevice+PTUIKitAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1EA3C6302B453DB5F81EF3 /* UIDevice+PTUIKitAddition.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		578318B9BDAA4EF0ADCE1722 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4D671089BBC4757AE0C9E2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FE7836CB1A5401BB424CFF0;
+			remoteInfo = "Pods-PTUIKitAdditions";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09FE52BAF5D74F01A89810CA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		17FA66D8395F4349B39C97D7 /* UIViewController+PTUIKitAdditon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+PTUIKitAdditon.h"; path = "Classes/UIViewController+PTUIKitAdditon.h"; sourceTree = "<group>"; };
+		1D4E98C87168461385403201 /* UIControl+PTUIKitAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+PTUIKitAddition.m"; path = "Classes/UIControl+PTUIKitAddition.m"; sourceTree = "<group>"; };
+		295EA38369174C5CAB31C28E /* UIImage+PTUIKitAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+PTUIKitAddition.m"; path = "Classes/UIImage+PTUIKitAddition.m"; sourceTree = "<group>"; };
+		2E97F9860D93406F9C8C1395 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3310A07578AF4DC681A0407E /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		33809A925B2C40FDA1349548 /* UIDevice+PTUIKitAddition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+PTUIKitAddition.h"; path = "Classes/UIDevice+PTUIKitAddition.h"; sourceTree = "<group>"; };
+		375E81D47D3F42E98AF2D6EB /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		436B00BA12F347609D3CC369 /* UIColor+PTUIKitAddition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+PTUIKitAddition.h"; path = "Classes/UIColor+PTUIKitAddition.h"; sourceTree = "<group>"; };
+		4B5FEAA1CFB04E21B039DDBD /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		55C2C780DC964F3CB41E226A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.xcconfig; sourceTree = "<group>"; };
+		633C9969487C4C42876E3F0C /* UIScreen+PTUIKitAddition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScreen+PTUIKitAddition.h"; path = "Classes/UIScreen+PTUIKitAddition.h"; sourceTree = "<group>"; };
+		64A4755125094E1B940A4A7B /* UIScrollView+PTUIKitAddition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+PTUIKitAddition.h"; path = "Classes/UIScrollView+PTUIKitAddition.h"; sourceTree = "<group>"; };
+		6D1EA3C6302B453DB5F81EF3 /* UIDevice+PTUIKitAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+PTUIKitAddition.m"; path = "Classes/UIDevice+PTUIKitAddition.m"; sourceTree = "<group>"; };
+		6D25E427F89E44B8BA4A1965 /* UIImage+PTUIKitAddition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+PTUIKitAddition.h"; path = "Classes/UIImage+PTUIKitAddition.h"; sourceTree = "<group>"; };
+		71757030825A4668B2C84AE1 /* NSString+HexToColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+HexToColor.h"; path = "Classes/NSString+HexToColor.h"; sourceTree = "<group>"; };
+		8F88AEF04CCA45F0B2B3BFFD /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		99723E798CB54F6DAB9892A9 /* UIView+PTUIKitAdditon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+PTUIKitAdditon.h"; path = "Classes/UIView+PTUIKitAdditon.h"; sourceTree = "<group>"; };
+		9BDA47A2F8C54F5EA57DB166 /* Pods-PTUIKitAdditions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PTUIKitAdditions-prefix.pch"; sourceTree = "<group>"; };
+		9D994EC7534843DBB720EA5D /* UIControl+PTUIKitAddition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+PTUIKitAddition.h"; path = "Classes/UIControl+PTUIKitAddition.h"; sourceTree = "<group>"; };
+		A5C2CA7E0C0F4C9AB3949800 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A8680B3D509F4ED598B81821 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A8B282275F0A4797B3B6852B /* NSString+HexToColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+HexToColor.m"; path = "Classes/NSString+HexToColor.m"; sourceTree = "<group>"; };
+		A96A70577F9C499E96358350 /* Pods-PTUIKitAdditions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PTUIKitAdditions-dummy.m"; sourceTree = "<group>"; };
+		AD6118FF71A249379B4C3622 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		B3AF7D099BDA432D87969D8E /* UIScreen+PTUIKitAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+PTUIKitAddition.m"; path = "Classes/UIScreen+PTUIKitAddition.m"; sourceTree = "<group>"; };
+		B83B77C9E7EE47418262FDD7 /* UIViewController+PTUIKitAdditon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+PTUIKitAdditon.m"; path = "Classes/UIViewController+PTUIKitAdditon.m"; sourceTree = "<group>"; };
+		B8652D3B1E97427BA6B6F4B6 /* UIView+PTUIKitAdditon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+PTUIKitAdditon.m"; path = "Classes/UIView+PTUIKitAdditon.m"; sourceTree = "<group>"; };
+		BAFAC26B79D94DC5ADCF6D8D /* PTUIKitAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTUIKitAdditions.h; path = Classes/PTUIKitAdditions.h; sourceTree = "<group>"; };
+		BEC9F7B0EDB94E25979987A4 /* UIFont+PTUIKitAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+PTUIKitAddition.m"; path = "Classes/UIFont+PTUIKitAddition.m"; sourceTree = "<group>"; };
+		C0AFF225500648F591005E3A /* UIFont+PTUIKitAddition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+PTUIKitAddition.h"; path = "Classes/UIFont+PTUIKitAddition.h"; sourceTree = "<group>"; };
+		C5073933976642D58AF8C3BB /* Pods-PTUIKitAdditions-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PTUIKitAdditions-Private.xcconfig"; sourceTree = "<group>"; };
+		D2DA5ED5F9D3464294C47A22 /* libPods-PTUIKitAdditions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PTUIKitAdditions.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D412BD5485784A42B5FEA9EE /* UIScrollView+PTUIKitAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+PTUIKitAddition.m"; path = "Classes/UIScrollView+PTUIKitAddition.m"; sourceTree = "<group>"; };
+		DF17A75077A848FCBA16E03A /* Pods-PTUIKitAdditions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PTUIKitAdditions.xcconfig"; sourceTree = "<group>"; };
+		E0A9F7AE0C074542A91F43D8 /* UIColor+PTUIKitAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+PTUIKitAddition.m"; path = "Classes/UIColor+PTUIKitAddition.m"; sourceTree = "<group>"; };
+		E57D39D87D1B42E09ECD2B78 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		FF046B03E2064F6987A4D84F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACF631F14A484B49BDEF4EA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72773234AAA4F25AC30E65C /* Foundation.framework in Frameworks */,
+				9057ADACF6DB49DF9B1722FA /* libPods-PTUIKitAdditions.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E896CC25CB4145298B8742DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B82865A0B834995B3C86F44 /* CoreGraphics.framework in Frameworks */,
+				BE8AF9858C8A49AB906D6B93 /* Foundation.framework in Frameworks */,
+				D5616AADDF30426DB479E745 /* QuartzCore.framework in Frameworks */,
+				7FFD20CC543F4B709C922693 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F81721D84C94D4892261927 = {
+			isa = PBXGroup;
+			children = (
+				375E81D47D3F42E98AF2D6EB /* Podfile */,
+				36C2A3C56148415A9CE5506F /* Frameworks */,
+				D7E0BBE72CCC4472B46E0C2C /* Pods */,
+				344F8CAB97654D779939B9F8 /* Products */,
+				8EE750CA6D5E4C7483AB9047 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		22E729CF570A41AEA52C987C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF17A75077A848FCBA16E03A /* Pods-PTUIKitAdditions.xcconfig */,
+				C5073933976642D58AF8C3BB /* Pods-PTUIKitAdditions-Private.xcconfig */,
+				A96A70577F9C499E96358350 /* Pods-PTUIKitAdditions-dummy.m */,
+				9BDA47A2F8C54F5EA57DB166 /* Pods-PTUIKitAdditions-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		344F8CAB97654D779939B9F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09FE52BAF5D74F01A89810CA /* libPods.a */,
+				D2DA5ED5F9D3464294C47A22 /* libPods-PTUIKitAdditions.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36C2A3C56148415A9CE5506F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC1D5D41A61749228ED5A4C2 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EE750CA6D5E4C7483AB9047 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB0EEAD25762424890CB0CFA /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D7E0BBE72CCC4472B46E0C2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E141F077F0BD4C35920FF08D /* PTUIKitAdditions */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB0EEAD25762424890CB0CFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55C2C780DC964F3CB41E226A /* Pods.xcconfig */,
+				2E97F9860D93406F9C8C1395 /* Pods-acknowledgements.markdown */,
+				8F88AEF04CCA45F0B2B3BFFD /* Pods-acknowledgements.plist */,
+				3310A07578AF4DC681A0407E /* Pods-dummy.m */,
+				4B5FEAA1CFB04E21B039DDBD /* Pods-environment.h */,
+				AD6118FF71A249379B4C3622 /* Pods-resources.sh */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E141F077F0BD4C35920FF08D /* PTUIKitAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				71757030825A4668B2C84AE1 /* NSString+HexToColor.h */,
+				A8B282275F0A4797B3B6852B /* NSString+HexToColor.m */,
+				BAFAC26B79D94DC5ADCF6D8D /* PTUIKitAdditions.h */,
+				436B00BA12F347609D3CC369 /* UIColor+PTUIKitAddition.h */,
+				E0A9F7AE0C074542A91F43D8 /* UIColor+PTUIKitAddition.m */,
+				9D994EC7534843DBB720EA5D /* UIControl+PTUIKitAddition.h */,
+				1D4E98C87168461385403201 /* UIControl+PTUIKitAddition.m */,
+				33809A925B2C40FDA1349548 /* UIDevice+PTUIKitAddition.h */,
+				6D1EA3C6302B453DB5F81EF3 /* UIDevice+PTUIKitAddition.m */,
+				C0AFF225500648F591005E3A /* UIFont+PTUIKitAddition.h */,
+				BEC9F7B0EDB94E25979987A4 /* UIFont+PTUIKitAddition.m */,
+				6D25E427F89E44B8BA4A1965 /* UIImage+PTUIKitAddition.h */,
+				295EA38369174C5CAB31C28E /* UIImage+PTUIKitAddition.m */,
+				633C9969487C4C42876E3F0C /* UIScreen+PTUIKitAddition.h */,
+				B3AF7D099BDA432D87969D8E /* UIScreen+PTUIKitAddition.m */,
+				64A4755125094E1B940A4A7B /* UIScrollView+PTUIKitAddition.h */,
+				D412BD5485784A42B5FEA9EE /* UIScrollView+PTUIKitAddition.m */,
+				99723E798CB54F6DAB9892A9 /* UIView+PTUIKitAdditon.h */,
+				B8652D3B1E97427BA6B6F4B6 /* UIView+PTUIKitAdditon.m */,
+				17FA66D8395F4349B39C97D7 /* UIViewController+PTUIKitAdditon.h */,
+				B83B77C9E7EE47418262FDD7 /* UIViewController+PTUIKitAdditon.m */,
+				22E729CF570A41AEA52C987C /* Support Files */,
+			);
+			name = PTUIKitAdditions;
+			path = PTUIKitAdditions;
+			sourceTree = "<group>";
+		};
+		EC1D5D41A61749228ED5A4C2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FF046B03E2064F6987A4D84F /* CoreGraphics.framework */,
+				A5C2CA7E0C0F4C9AB3949800 /* Foundation.framework */,
+				E57D39D87D1B42E09ECD2B78 /* QuartzCore.framework */,
+				A8680B3D509F4ED598B81821 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3F44EBA0046344DD995B74E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6CC2ECA921B475CB367A792 /* NSString+HexToColor.h in Headers */,
+				4CC109CCB1A14EF1BA9AB277 /* PTUIKitAdditions.h in Headers */,
+				7407ED7B81AF4C56BCD27061 /* UIColor+PTUIKitAddition.h in Headers */,
+				9F2D1F426BB1424BAF81B2E4 /* UIControl+PTUIKitAddition.h in Headers */,
+				FB132B33762641B089DEEA73 /* UIDevice+PTUIKitAddition.h in Headers */,
+				DA81C524C8BC4CCB93C40423 /* UIFont+PTUIKitAddition.h in Headers */,
+				2C75B783CB584C0A9D23A92A /* UIImage+PTUIKitAddition.h in Headers */,
+				BD442B44266E484987E01B68 /* UIScreen+PTUIKitAddition.h in Headers */,
+				5556D0F9A13A4529B0C16AC5 /* UIScrollView+PTUIKitAddition.h in Headers */,
+				2508FFD30F0344A4ADE45362 /* UIView+PTUIKitAdditon.h in Headers */,
+				2C64FB8F2B634624979181B2 /* UIViewController+PTUIKitAdditon.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5FE7836CB1A5401BB424CFF0 /* Pods-PTUIKitAdditions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36BD80D468F04882835C388B /* Build configuration list for PBXNativeTarget "Pods-PTUIKitAdditions" */;
+			buildPhases = (
+				5A0DBE5DD1E24ACB94BFA9A7 /* Sources */,
+				E896CC25CB4145298B8742DD /* Frameworks */,
+				3F44EBA0046344DD995B74E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PTUIKitAdditions";
+			productName = "Pods-PTUIKitAdditions";
+			productReference = D2DA5ED5F9D3464294C47A22 /* libPods-PTUIKitAdditions.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E6DAC44C3BBA487AA7A872EF /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A515E1604C6D4ABEB3501EE2 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				AF3233E8C69F4F8083BCC805 /* Sources */,
+				ACF631F14A484B49BDEF4EA3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F97EEDEEBEC84666874288E8 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 09FE52BAF5D74F01A89810CA /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4D671089BBC4757AE0C9E2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = EB5B9B0827A240C9882DD842 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1F81721D84C94D4892261927;
+			productRefGroup = 344F8CAB97654D779939B9F8 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+			);
+			projectRoot = "";
+			targets = (
+				E6DAC44C3BBA487AA7A872EF /* Pods */,
+				5FE7836CB1A5401BB424CFF0 /* Pods-PTUIKitAdditions */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A0DBE5DD1E24ACB94BFA9A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C355E008864534AE604B2A /* NSString+HexToColor.m in Sources */,
+				CD03C87D130143D5BE2377D2 /* Pods-PTUIKitAdditions-dummy.m in Sources */,
+				73BBE249744147DE904CF0B9 /* UIColor+PTUIKitAddition.m in Sources */,
+				0C919A9C115F4CD9BAEB7C71 /* UIControl+PTUIKitAddition.m in Sources */,
+				FE945EE1BAE94D458A84380C /* UIDevice+PTUIKitAddition.m in Sources */,
+				35A85A61108A47048992D8B9 /* UIFont+PTUIKitAddition.m in Sources */,
+				51FFE326417C4327AD99B23B /* UIImage+PTUIKitAddition.m in Sources */,
+				42A6E73694F4477E8E833D70 /* UIScreen+PTUIKitAddition.m in Sources */,
+				283C748ACA754A668BCAAC78 /* UIScrollView+PTUIKitAddition.m in Sources */,
+				A03BC45ED0A543BABAB4D309 /* UIView+PTUIKitAdditon.m in Sources */,
+				B81002E0AAC248AC9C37D33C /* UIViewController+PTUIKitAdditon.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF3233E8C69F4F8083BCC805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6D41ECEC5CF449EA8F62B38 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F97EEDEEBEC84666874288E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FE7836CB1A5401BB424CFF0 /* Pods-PTUIKitAdditions */;
+			targetProxy = 578318B9BDAA4EF0ADCE1722 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2784D917133E40EB8357F8AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5073933976642D58AF8C3BB /* Pods-PTUIKitAdditions-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-PTUIKitAdditions-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		47DBDB27CB7C45E19CB04ABC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		6E1D8E131A474498B115D699 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55C2C780DC964F3CB41E226A /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A37DD662F4324B4EB557EE57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4069E25529941C7875C6C31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5073933976642D58AF8C3BB /* Pods-PTUIKitAdditions-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-PTUIKitAdditions-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0C05F4B74374B38B5860BE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55C2C780DC964F3CB41E226A /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36BD80D468F04882835C388B /* Build configuration list for PBXNativeTarget "Pods-PTUIKitAdditions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2784D917133E40EB8357F8AE /* Debug */,
+				B4069E25529941C7875C6C31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A515E1604C6D4ABEB3501EE2 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0C05F4B74374B38B5860BE4 /* Debug */,
+				6E1D8E131A474498B115D699 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB5B9B0827A240C9882DD842 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47DBDB27CB7C45E19CB04ABC /* Debug */,
+				A37DD662F4324B4EB557EE57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4D671089BBC4757AE0C9E2F /* Project object */;
+}
