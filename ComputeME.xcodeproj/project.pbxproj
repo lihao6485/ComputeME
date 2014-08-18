@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6D0C9CD7199CEDA40052902F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C9CD6199CEDA40052902F /* AppDelegate.swift */; };
-		6D0C9CD9199CEDA40052902F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C9CD8199CEDA40052902F /* ViewController.swift */; };
 		6D0C9CDC199CEDA40052902F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D0C9CDA199CEDA40052902F /* Main.storyboard */; };
 		6D0C9CDE199CEDA40052902F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D0C9CDD199CEDA40052902F /* Images.xcassets */; };
 		6D0C9CEA199CEDA40052902F /* ComputeMETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0C9CE9199CEDA40052902F /* ComputeMETests.swift */; };
@@ -19,6 +18,7 @@
 		6D18A469199CF1FE009E7F59 /* Comedy Wap.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A462199CF1FE009E7F59 /* Comedy Wap.caf */; };
 		6D18A46A199CF1FE009E7F59 /* Ka-Ching.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A463199CF1FE009E7F59 /* Ka-Ching.wav */; };
 		6D18A46B199CF1FE009E7F59 /* Mining by Moonlight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A464199CF1FE009E7F59 /* Mining by Moonlight.mp3 */; };
+		F6128FC819A264610095920A /* StartSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6128FC719A264610095920A /* StartSceneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,6 @@
 		6D0C9CD1199CEDA40052902F /* ComputeME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComputeME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0C9CD5199CEDA40052902F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D0C9CD6199CEDA40052902F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6D0C9CD8199CEDA40052902F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6D0C9CDB199CEDA40052902F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D0C9CDD199CEDA40052902F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6D0C9CE3199CEDA40052902F /* ComputeMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComputeMETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +47,7 @@
 		6D18A462199CF1FE009E7F59 /* Comedy Wap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comedy Wap.caf"; sourceTree = "<group>"; };
 		6D18A463199CF1FE009E7F59 /* Ka-Ching.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Ka-Ching.wav"; sourceTree = "<group>"; };
 		6D18A464199CF1FE009E7F59 /* Mining by Moonlight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mining by Moonlight.mp3"; sourceTree = "<group>"; };
+		F6128FC719A264610095920A /* StartSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartSceneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,7 @@
 		6D0C9CF6199CEE810052902F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6D0C9CD8199CEDA40052902F /* ViewController.swift */,
+				F6128FC719A264610095920A /* StartSceneViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D0C9CD9199CEDA40052902F /* ViewController.swift in Sources */,
+				F6128FC819A264610095920A /* StartSceneViewController.swift in Sources */,
 				6D0C9CD7199CEDA40052902F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
