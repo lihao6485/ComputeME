@@ -15,4 +15,10 @@ class GameModeSceneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func selectMode(sender: UIButton!) {
+        let categoryViewController: CategorySceneViewController = self.storyboard.instantiateViewControllerWithIdentifier("CategorySelectionScene") as CategorySceneViewController
+        categoryViewController.selectedCategory = sender.titleLabel.text
+        self.navigationController.pushViewController(categoryViewController, animated: true)
+    }
 }

@@ -10,6 +10,11 @@
             <string>COCOGOOSE</string>
             <string>COCOGOOSE</string>
             <string>COCOGOOSE</string>
+            <string>COCOGOOSE</string>
+            <string>COCOGOOSE</string>
+            <string>COCOGOOSE</string>
+            <string>COCOGOOSE</string>
+            <string>COCOGOOSE</string>
         </mutableArray>
         <mutableArray key="CODE Light.otf">
             <string>Code-Light</string>
@@ -50,6 +55,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectMode:" destination="Smm-yb-gIQ" eventType="touchUpInside" id="a6c-hf-eDu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wea-XG-faZ">
                                 <rect key="frame" x="16" y="208" width="568" height="44"/>
@@ -58,6 +66,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectMode:" destination="Smm-yb-gIQ" eventType="touchUpInside" id="Fmg-ei-ejr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQd-VB-3Xv">
                                 <rect key="frame" x="16" y="262" width="568" height="44"/>
@@ -99,7 +110,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Hao-iv-co3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e8U-qE-S8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="0O9-5p-QvJ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rGU-Qm-Uva">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -109,6 +119,7 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Vuy-CO-6BV"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8U-qE-S8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-290" y="222"/>
         </scene>
@@ -163,6 +174,7 @@
                             <constraint firstAttribute="centerX" secondItem="RC5-73-dUg" secondAttribute="centerX" id="Nfu-9Z-rK3"/>
                             <constraint firstItem="NWw-2j-UYP" firstAttribute="leading" secondItem="oeZ-75-Dau" secondAttribute="trailing" id="O67-ut-VG1"/>
                             <constraint firstItem="nQF-5O-V6U" firstAttribute="top" secondItem="oeZ-75-Dau" secondAttribute="bottom" constant="8" id="UNV-pA-aln"/>
+                            <constraint firstItem="NWw-2j-UYP" firstAttribute="top" secondItem="RC5-73-dUg" secondAttribute="bottom" constant="2" id="fJF-nY-y68"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="YhD-Bq-sY3" secondAttribute="bottom" constant="20" id="mNy-qO-ZO5"/>
                             <constraint firstAttribute="centerX" secondItem="oeZ-75-Dau" secondAttribute="centerX" constant="41" id="mUC-Qq-bZt"/>
                             <constraint firstAttribute="centerX" secondItem="NWw-2j-UYP" secondAttribute="centerX" constant="-84" id="wcw-nK-moE"/>
@@ -184,6 +196,101 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="443" y="222"/>
+        </scene>
+        <!--CategorySceneViewController-->
+        <scene sceneID="qXO-ix-dM9">
+            <objects>
+                <viewController storyboardIdentifier="CategorySelectionScene" title="CategorySceneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZZB-QQ-g3Y" customClass="CategorySceneViewController" customModule="ComputeME" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qJp-j4-wmb"/>
+                        <viewControllerLayoutGuide type="bottom" id="ROk-B5-A8z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CaP-31-0V1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose a category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdZ-E0-aLH">
+                                <rect key="frame" x="16" y="88" width="568" height="35"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPy-Rh-sfR">
+                                <rect key="frame" x="16" y="158" width="568" height="30"/>
+                                <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="25"/>
+                                <state key="normal" title="hardware">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8z8-Tf-GpJ">
+                                <rect key="frame" x="534" y="530" width="50" height="50"/>
+                                <state key="normal" image="Setting"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkU-Bz-uBV">
+                                <rect key="frame" x="16" y="28" width="88" height="30"/>
+                                <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="17"/>
+                                <state key="normal" title="MODE">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToModeSelectionScene:" destination="ZZB-QQ-g3Y" eventType="touchUpInside" id="cQE-gR-dEd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4tZ-9e-txr">
+                                <rect key="frame" x="16" y="198" width="568" height="60"/>
+                                <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="25"/>
+                                <state key="normal">
+                                    <string key="title">programming
+language</string>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-TW-lQz">
+                                <rect key="frame" x="16" y="268" width="568" height="30"/>
+                                <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="25"/>
+                                <state key="normal" title="history">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlE-CL-fRh">
+                                <rect key="frame" x="16" y="308" width="568" height="30"/>
+                                <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="25"/>
+                                <state key="normal" title="networking">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.58823529409999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="IdZ-E0-aLH" secondAttribute="centerX" id="2Xa-mh-RkR"/>
+                            <constraint firstAttribute="centerX" secondItem="zPy-Rh-sfR" secondAttribute="centerX" id="32W-iP-P9z"/>
+                            <constraint firstAttribute="centerX" secondItem="4tZ-9e-txr" secondAttribute="centerX" id="4e3-Ta-fxV"/>
+                            <constraint firstItem="OlE-CL-fRh" firstAttribute="top" secondItem="7vv-TW-lQz" secondAttribute="bottom" constant="10" id="GFR-Xg-Qct"/>
+                            <constraint firstItem="BkU-Bz-uBV" firstAttribute="leading" secondItem="CaP-31-0V1" secondAttribute="leadingMargin" id="LYC-JQ-khh"/>
+                            <constraint firstAttribute="centerX" secondItem="OlE-CL-fRh" secondAttribute="centerX" id="LrF-mJ-fFd"/>
+                            <constraint firstItem="zPy-Rh-sfR" firstAttribute="top" secondItem="IdZ-E0-aLH" secondAttribute="bottom" constant="35" id="O2O-F1-d8b"/>
+                            <constraint firstItem="ROk-B5-A8z" firstAttribute="top" secondItem="8z8-Tf-GpJ" secondAttribute="bottom" constant="20" id="S9Y-5H-6dU"/>
+                            <constraint firstAttribute="centerX" secondItem="7vv-TW-lQz" secondAttribute="centerX" id="VP2-sw-7cV"/>
+                            <constraint firstItem="IdZ-E0-aLH" firstAttribute="top" secondItem="BkU-Bz-uBV" secondAttribute="bottom" constant="30" id="bry-S2-0np"/>
+                            <constraint firstItem="8z8-Tf-GpJ" firstAttribute="trailing" secondItem="CaP-31-0V1" secondAttribute="trailingMargin" id="f3m-3u-pNV"/>
+                            <constraint firstItem="BkU-Bz-uBV" firstAttribute="top" secondItem="qJp-j4-wmb" secondAttribute="bottom" constant="8" id="hHW-rt-2JY"/>
+                            <constraint firstItem="7vv-TW-lQz" firstAttribute="top" secondItem="4tZ-9e-txr" secondAttribute="bottom" constant="10" id="q0e-ro-RD2"/>
+                            <constraint firstItem="4tZ-9e-txr" firstAttribute="top" secondItem="zPy-Rh-sfR" secondAttribute="bottom" constant="10" id="rYI-se-edx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="programmingButton" destination="4tZ-9e-txr" id="9qj-jL-hjh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPi-fB-gld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877" y="222"/>
         </scene>
     </scenes>
     <resources>

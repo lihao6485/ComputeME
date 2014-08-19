@@ -30,6 +30,7 @@
 		6D7C596819A243A4005A618E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C596719A243A4005A618E /* Extension.swift */; };
 		F6128FC819A264610095920A /* StartSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6128FC719A264610095920A /* StartSceneViewController.swift */; };
 		F6A9FCB519A35872004F41C1 /* GameModeSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A9FCB419A35872004F41C1 /* GameModeSceneViewController.swift */; };
+		F6A9FCB719A3A291004F41C1 /* CategorySceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A9FCB619A3A291004F41C1 /* CategorySceneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		6D7C596719A243A4005A618E /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F6128FC719A264610095920A /* StartSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartSceneViewController.swift; sourceTree = "<group>"; };
 		F6A9FCB419A35872004F41C1 /* GameModeSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModeSceneViewController.swift; sourceTree = "<group>"; };
+		F6A9FCB619A3A291004F41C1 /* CategorySceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySceneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			children = (
 				F6128FC719A264610095920A /* StartSceneViewController.swift */,
 				F6A9FCB419A35872004F41C1 /* GameModeSceneViewController.swift */,
+				F6A9FCB619A3A291004F41C1 /* CategorySceneViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				6D7C596419A2429F005A618E /* Option.swift in Sources */,
 				6D7C596219A241D4005A618E /* Question.swift in Sources */,
 				6D7C596819A243A4005A618E /* Extension.swift in Sources */,
+				F6A9FCB719A3A291004F41C1 /* CategorySceneViewController.swift in Sources */,
 				6D7C596619A24352005A618E /* OptionSet.swift in Sources */,
 				6D0C9CD7199CEDA40052902F /* AppDelegate.swift in Sources */,
 			);
