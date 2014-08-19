@@ -1,19 +1,121 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0O9-5p-QvJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="COCOGOOSE.otf">
+            <string>COCOGOOSE</string>
+            <string>COCOGOOSE</string>
+            <string>COCOGOOSE</string>
+            <string>COCOGOOSE</string>
+        </mutableArray>
         <mutableArray key="CODE Light.otf">
             <string>Code-Light</string>
             <string>Code-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Start Scene View Controller-->
+        <!--GameModeSceneViewController-->
+        <scene sceneID="0hh-QP-Esm">
+            <objects>
+                <viewController storyboardIdentifier="GameModeSelectionScene" title="GameModeSceneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Smm-yb-gIQ" customClass="GameModeSceneViewController" customModule="ComputeME" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Ee-R2-H3c"/>
+                        <viewControllerLayoutGuide type="bottom" id="3H0-sV-kZ9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zW5-YF-C41">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose a mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmp-zM-av7">
+                                <rect key="frame" x="16" y="88" width="568" height="31"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKJ-Pw-2Bd">
+                                <rect key="frame" x="496" y="28" width="88" height="30"/>
+                                <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="17"/>
+                                <state key="normal" title="RESULT">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-vC-Vtc">
+                                <rect key="frame" x="16" y="154" width="568" height="44"/>
+                                <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="34"/>
+                                <state key="normal" title="challenge">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wea-XG-faZ">
+                                <rect key="frame" x="16" y="208" width="568" height="44"/>
+                                <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="34"/>
+                                <state key="normal" title="classic">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQd-VB-3Xv">
+                                <rect key="frame" x="16" y="262" width="568" height="44"/>
+                                <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="34"/>
+                                <state key="normal" title="story">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma4-eg-wMh">
+                                <rect key="frame" x="534" y="530" width="50" height="50"/>
+                                <state key="normal" image="Setting"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17254901960784313" green="0.58823529411764708" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zmp-zM-av7" firstAttribute="top" secondItem="vKJ-Pw-2Bd" secondAttribute="bottom" constant="30" id="5Uu-f7-KHQ"/>
+                            <constraint firstItem="Ma4-eg-wMh" firstAttribute="trailing" secondItem="zW5-YF-C41" secondAttribute="trailingMargin" id="BDE-Qy-1f4"/>
+                            <constraint firstAttribute="centerX" secondItem="wea-XG-faZ" secondAttribute="centerX" id="C7C-ef-mth"/>
+                            <constraint firstItem="wea-XG-faZ" firstAttribute="top" secondItem="bnW-vC-Vtc" secondAttribute="bottom" constant="10" id="E9u-Ou-jmz"/>
+                            <constraint firstItem="vKJ-Pw-2Bd" firstAttribute="trailing" secondItem="zW5-YF-C41" secondAttribute="trailingMargin" id="EDb-vO-CVB"/>
+                            <constraint firstItem="VQd-VB-3Xv" firstAttribute="top" secondItem="wea-XG-faZ" secondAttribute="bottom" constant="10" id="KKi-Zr-bPB"/>
+                            <constraint firstAttribute="centerX" secondItem="bnW-vC-Vtc" secondAttribute="centerX" id="RqT-Iz-R1U"/>
+                            <constraint firstItem="3H0-sV-kZ9" firstAttribute="top" secondItem="Ma4-eg-wMh" secondAttribute="bottom" constant="20" id="Vby-K2-M8K"/>
+                            <constraint firstAttribute="centerX" secondItem="Zmp-zM-av7" secondAttribute="centerX" id="a1y-Fc-Zjl"/>
+                            <constraint firstItem="vKJ-Pw-2Bd" firstAttribute="top" secondItem="2Ee-R2-H3c" secondAttribute="bottom" constant="8" id="lhR-9E-j7C"/>
+                            <constraint firstItem="bnW-vC-Vtc" firstAttribute="top" secondItem="Zmp-zM-av7" secondAttribute="bottom" constant="35" id="ngp-Vw-ETV"/>
+                            <constraint firstAttribute="centerX" secondItem="VQd-VB-3Xv" secondAttribute="centerX" id="tpd-wH-nux"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="storyButton" destination="VQd-VB-3Xv" id="Th5-KA-fNi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxI-V0-RXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184" y="222"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hao-iv-co3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8U-qE-S8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="0O9-5p-QvJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rGU-Qm-Uva">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Vuy-CO-6BV"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-290" y="222"/>
+        </scene>
+        <!--StartSceneViewController-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="StartSceneViewController" customModule="ComputeME" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="StartSceneViewController" id="vXZ-lx-hvc" customClass="StartSceneViewController" customModule="ComputeME" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -50,7 +152,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.1803921568627451" green="0.64313725490196083" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.19215686274509805" green="0.69019607843137254" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="YhD-Bq-sY3" secondAttribute="centerX" id="3LP-xe-jRF"/>
                             <constraint firstAttribute="centerX" secondItem="nQF-5O-V6U" secondAttribute="centerX" id="5VQ-Rk-Xsu"/>
@@ -64,16 +167,27 @@
                             <constraint firstAttribute="centerX" secondItem="oeZ-75-Dau" secondAttribute="centerX" constant="41" id="mUC-Qq-bZt"/>
                             <constraint firstAttribute="centerX" secondItem="NWw-2j-UYP" secondAttribute="centerX" constant="-84" id="wcw-nK-moE"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WNs-Le-VXl" appends="YES" id="IAP-LN-l0q"/>
+                            <outletCollection property="gestureRecognizers" destination="WNs-Le-VXl" appends="YES" id="MGI-tK-6QA"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="EA3-LF-Ms5"/>
                     <connections>
                         <outlet property="startLabel" destination="nQF-5O-V6U" id="juh-KN-iDy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WNs-Le-VXl">
+                    <connections>
+                        <action selector="handleTap:" destination="vXZ-lx-hvc" id="eit-57-uqR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
     <resources>
         <image name="Logo" width="200" height="200"/>
+        <image name="Setting" width="25" height="25"/>
     </resources>
 </document>
