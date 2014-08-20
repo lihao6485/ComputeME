@@ -7,15 +7,29 @@
 //
 
 import UIKit
+import AVFoundation
+import AudioToolbox
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
-
+    
+    var bgmPlayer: AVAudioPlayer!
+    
+    var isSoundEffectOn: Bool {
+        get {
+            if self.bgmPlayer != nil {
+                return self.bgmPlayer.playing
+            }
+            return false
+        }
+    }
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-        // Override point for customization after application launch.
+        self.bgmPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: "\(NSBundle.mainBundle().resourcePath)/Mining by Moonlight.mp3"), error: nil)
+        self.bgmPlayer.numberOfLoops = -1
+        self.bgmPlayer.play()
         return true
     }
 
@@ -41,6 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func applicationDocumentsDirectory() -> NSURL? {
+        return NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as? NSURL
+    }
 }
 

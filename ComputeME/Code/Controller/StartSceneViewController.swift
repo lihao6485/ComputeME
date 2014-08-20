@@ -15,10 +15,10 @@ class StartSceneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController.navigationBarHidden = true
-        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.Repeat|UIViewAnimationOptions.Autoreverse,
-            animations: { () -> Void in
-            self.startLabel.alpha = 0.0}, completion: nil)
+        UIView.animateWithDuration(0.5, options: .Repeat | .Autoreverse | .AllowUserInteraction | .CurveEaseIn) {
+            () in
+            self.startLabel.alpha = 0.0
+        }
     }
     
     override func didReceiveMemoryWarning() {
