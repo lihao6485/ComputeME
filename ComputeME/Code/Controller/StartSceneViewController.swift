@@ -26,7 +26,7 @@ class StartSceneViewController: UIViewController {
     }
     
     @IBAction func handleTap(recognizer: UITapGestureRecognizer) {
-        let gameModeSceneViewController: GameModeSceneViewController = self.storyboard.instantiateViewControllerWithIdentifier("GameModeSelectionScene") as GameModeSceneViewController
+        let gameModeSceneViewController = self.storyboard.instantiateViewControllerWithIdentifier("GameModeSelectionScene") as GameModeSceneViewController
         self.navigationController.pushViewController(gameModeSceneViewController, animated: true)
     }
 }

@@ -15,7 +15,7 @@ class CategorySceneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        programmingButton.titleLabel.textAlignment = NSTextAlignment.Center
+        programmingButton.titleLabel.textAlignment = .Center
     }
 
     @IBAction func backToModeSelectionScene(sender: UIButton!) {
