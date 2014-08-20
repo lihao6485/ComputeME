@@ -24,3 +24,11 @@ extension Array
         return self[index]
     }
 }
+
+extension UIView {
+    
+    class func animateWithDuration(duration: NSTimeInterval, options: UIViewAnimationOptions, animations: () -> Void) {
+        self.animateWithDuration(duration, delay: 0, options: options, animations: animations, completion: nil)
+    }
+
+}
