@@ -15,6 +15,7 @@
             <string>COCOGOOSE</string>
             <string>COCOGOOSE</string>
             <string>COCOGOOSE</string>
+            <string>COCOGOOSE</string>
         </mutableArray>
         <mutableArray key="CODE Light.otf">
             <string>Code-Light</string>
@@ -223,6 +224,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectCategory:" destination="ZZB-QQ-g3Y" eventType="touchUpInside" id="Rop-Gr-nwE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8z8-Tf-GpJ">
                                 <rect key="frame" x="534" y="530" width="50" height="50"/>
@@ -248,6 +252,9 @@ language</string>
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectCategory:" destination="ZZB-QQ-g3Y" eventType="touchUpInside" id="7gJ-qz-IIl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-TW-lQz">
                                 <rect key="frame" x="16" y="268" width="568" height="30"/>
@@ -256,6 +263,9 @@ language</string>
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectCategory:" destination="ZZB-QQ-g3Y" eventType="touchUpInside" id="rE0-VP-PeW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlE-CL-fRh">
                                 <rect key="frame" x="16" y="308" width="568" height="30"/>
@@ -264,6 +274,9 @@ language</string>
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectCategory:" destination="ZZB-QQ-g3Y" eventType="touchUpInside" id="IhN-eD-IgW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.17254901959999999" green="0.58823529409999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -291,6 +304,47 @@ language</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPi-fB-gld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1877" y="222"/>
+        </scene>
+        <!--Get Ready Scene View Controller-->
+        <scene sceneID="jw5-Vy-fVs">
+            <objects>
+                <viewController storyboardIdentifier="GetReadyScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fwe-3v-z3k" customClass="GetReadySceneViewController" customModule="ComputeME" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yc8-BO-DX8"/>
+                        <viewControllerLayoutGuide type="bottom" id="SRv-0e-aeU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zh8-Rc-Syv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="get ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pO-cV-mX4">
+                                <rect key="frame" x="16" y="150" width="568" height="45"/>
+                                <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg1-mx-qDG">
+                                <rect key="frame" x="16" y="250" width="568" height="100"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="100"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="8pO-cV-mX4" secondAttribute="centerX" id="JO9-Jk-NZQ"/>
+                            <constraint firstAttribute="centerY" secondItem="fg1-mx-qDG" secondAttribute="centerY" id="gx6-nd-09f"/>
+                            <constraint firstItem="8pO-cV-mX4" firstAttribute="top" secondItem="yc8-BO-DX8" secondAttribute="bottom" constant="130" id="paf-EQ-hcE"/>
+                            <constraint firstAttribute="centerX" secondItem="fg1-mx-qDG" secondAttribute="centerX" id="sTy-g9-gm2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="fg1-mx-qDG" id="R1n-yD-FOa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUe-1c-EFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2590" y="222"/>
         </scene>
     </scenes>
     <resources>

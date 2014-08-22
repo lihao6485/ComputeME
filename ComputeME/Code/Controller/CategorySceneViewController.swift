@@ -10,7 +10,7 @@ import UIKit
 
 class CategorySceneViewController: UIViewController {
     
-    var selectedCategory: String?
+    var selectedGameMode: String?
     @IBOutlet var programmingButton: UIButton!
     
     override func viewDidLoad() {
@@ -20,5 +20,12 @@ class CategorySceneViewController: UIViewController {
 
     @IBAction func backToModeSelectionScene(sender: UIButton!) {
         self.navigationController.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func selectCategory(sender: UIButton!) {
+        let getReadyViewController = self.storyboard.instantiateViewControllerWithIdentifier("GetReadyScene") as GetReadySceneViewController
+        getReadyViewController.selectedCatergory = sender.titleLabel.text
+        getReadyViewController.selectedGameMode = selectedGameMode
+        self.navigationController.pushViewController(getReadyViewController, animated: true)
     }
 }

@@ -17,8 +17,8 @@ class GameModeSceneViewController: UIViewController {
     }
     
     @IBAction func selectMode(sender: UIButton!) {
-        let categoryViewController: CategorySceneViewController = self.storyboard.instantiateViewControllerWithIdentifier("CategorySelectionScene") as CategorySceneViewController
-        categoryViewController.selectedCategory = sender.titleLabel.text
+        let categoryViewController = self.storyboard.instantiateViewControllerWithIdentifier("CategorySelectionScene") as CategorySceneViewController
+        categoryViewController.selectedGameMode = sender.titleLabel.text
         self.navigationController.pushViewController(categoryViewController, animated: true)
     }
 }
