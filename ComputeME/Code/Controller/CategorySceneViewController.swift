@@ -17,15 +17,22 @@ class CategorySceneViewController: UIViewController {
         super.viewDidLoad()
         programmingButton.titleLabel.textAlignment = .Center
     }
-
+    
     @IBAction func backToModeSelectionScene(sender: UIButton!) {
         self.navigationController.popViewControllerAnimated(true)
     }
     
     @IBAction func selectCategory(sender: UIButton!) {
-        let getReadyViewController = self.storyboard.instantiateViewControllerWithIdentifier("GetReadyScene") as GetReadySceneViewController
-        getReadyViewController.selectedCatergory = sender.titleLabel.text
-        getReadyViewController.selectedGameMode = selectedGameMode
-        self.navigationController.pushViewController(getReadyViewController, animated: true)
+        self.performSegueWithIdentifier("GameGetReadySegue", sender: sender)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if segue.identifier == "GameGetReadySegue" {
+            if let button = sender as? UIButton {
+                let getReadyViewController = self.storyboard.instantiateViewControllerWithIdentifier("GetReadyScene") as GetReadySceneViewController
+                getReadyViewController.selectedCatergory = button.titleLabel.text
+                getReadyViewController.selectedGameMode = selectedGameMode
+            }
+        }
     }
 }

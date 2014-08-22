@@ -27,9 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-        self.bgmPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: "\(NSBundle.mainBundle().resourcePath)/Mining by Moonlight.mp3"), error: nil)
-        self.bgmPlayer.numberOfLoops = -1
-        self.bgmPlayer.play()
+//        self.bgmPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: "\(NSBundle.mainBundle().resourcePath)/Mining by Moonlight.mp3"), error: nil)
+//        self.bgmPlayer.numberOfLoops = -1
+//        self.bgmPlayer.play()
         return true
     }
 
