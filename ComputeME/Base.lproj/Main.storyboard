@@ -347,8 +347,105 @@ language</string>
             </objects>
             <point key="canvasLocation" x="2590" y="222"/>
         </scene>
+        <!--Question Scene View Controller-->
+        <scene sceneID="oZy-PC-hx3">
+            <objects>
+                <viewController storyboardIdentifier="QuestionScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KPm-wS-EIV" customClass="QuestionSceneViewController" customModule="ComputeME" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j4j-bl-rWB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xz9-8p-5G5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="12U-MC-tds">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZX-VW-udO" userLabel="Classic View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWD-eB-Vdh">
+                                        <rect key="frame" x="270" y="8" width="70" height="44"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bk-nH-1U7" userLabel="Challenge View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="dT8-O7-lf4" userLabel="life1">
+                                        <rect key="frame" x="170" y="0.0" width="60" height="60"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="lgZ-Zg-lqw" userLabel="life3">
+                                        <rect key="frame" x="390" y="0.0" width="60" height="60"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="Due-I6-YG2" userLabel="life2">
+                                        <rect key="frame" x="279" y="0.0" width="60" height="60"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzL-U7-NYf" userLabel="Option 2">
+                                <rect key="frame" x="0.0" y="410" width="600" height="50"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Option 2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyC-mr-8AP" userLabel="Option 3">
+                                <rect key="frame" x="0.0" y="460" width="600" height="50"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Option 3">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obU-qw-lVL" userLabel="Option 4">
+                                <rect key="frame" x="0.0" y="510" width="600" height="50"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Option 4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aci-PZ-c67" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="60" width="600" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkk-M0-2Y5">
+                                <rect key="frame" x="0.0" y="360" width="600" height="50"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Option 1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="challengeView" destination="2Bk-nH-1U7" id="Q3K-6P-YhE"/>
+                        <outlet property="classicView" destination="gZX-VW-udO" id="CzP-9H-cz1"/>
+                        <outlet property="contentView" destination="aci-PZ-c67" id="54k-vQ-diS"/>
+                        <outlet property="countDownLabel" destination="aWD-eB-Vdh" id="M6l-x4-qsY"/>
+                        <outlet property="lifeImageView0" destination="dT8-O7-lf4" id="45m-hS-zwW"/>
+                        <outlet property="lifeImageView1" destination="Due-I6-YG2" id="y6U-sI-QHV"/>
+                        <outlet property="lifeImageView2" destination="lgZ-Zg-lqw" id="vPP-rT-LEs"/>
+                        <outlet property="option1Button" destination="hkk-M0-2Y5" id="SSY-5a-YJq"/>
+                        <outlet property="option2Button" destination="hzL-U7-NYf" id="sew-Ps-XJs"/>
+                        <outlet property="option3Button" destination="pyC-mr-8AP" id="mHn-ZA-e4y"/>
+                        <outlet property="option4Button" destination="obU-qw-lVL" id="QiM-gz-LBE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfy-H4-HNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3238" y="213"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Heart" width="20" height="18"/>
         <image name="Logo" width="200" height="200"/>
         <image name="Setting" width="25" height="25"/>
     </resources>

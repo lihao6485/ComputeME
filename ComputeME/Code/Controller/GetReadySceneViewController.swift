@@ -10,8 +10,8 @@ import UIKit
 
 class GetReadySceneViewController: UIViewController {
     
-    var selectedCatergory: String?
-    var selectedGameMode: String?
+    var selectedCatergory: String!
+    var selectedGameMode: String!
     private var _timer: NSTimer!
     private var _currentTime = 3
     @IBOutlet var timeLabel: UILabel!
@@ -27,11 +27,15 @@ class GetReadySceneViewController: UIViewController {
         
         if (_currentTime == 0) {
             timeLabel.text = "start"
-            _timer.invalidate()
+            
         }
             
         else if (_currentTime == -1) {
-            // push to question scene
+            _timer.invalidate()
+            let questionViewController = self.storyboard.instantiateViewControllerWithIdentifier("QuestionScene") as QuestionSceneViewController
+            questionViewController.selectedGameMode = selectedGameMode
+            questionViewController.selectedCatergory = selectedCatergory
+            self.navigationController.pushViewController(questionViewController, animated: true)
         }
         
         else {

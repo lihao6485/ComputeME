@@ -10,7 +10,7 @@ import UIKit
 
 class CategorySceneViewController: UIViewController {
     
-    var selectedGameMode: String?
+    var selectedGameMode: String!
     @IBOutlet var programmingButton: UIButton!
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class CategorySceneViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         if segue.identifier == "GameGetReadySegue" {
             if let button = sender as? UIButton {
-                let getReadyViewController = self.storyboard.instantiateViewControllerWithIdentifier("GetReadyScene") as GetReadySceneViewController
+                let getReadyViewController = segue.destinationViewController as GetReadySceneViewController
                 getReadyViewController.selectedCatergory = button.titleLabel.text
                 getReadyViewController.selectedGameMode = selectedGameMode
             }
