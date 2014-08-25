@@ -17,7 +17,6 @@ class StartSceneViewController: UIViewController {
         self.navigationController.navigationBarHidden = true
         
         UIView.animateWithDuration(0.5, options: .Repeat | .Autoreverse | .AllowUserInteraction | .CurveEaseIn) {
-            () in
             self.startLabel.alpha = 0.0
         }
     }
