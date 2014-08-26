@@ -10,36 +10,39 @@ import UIKit
 
 class GetReadySceneViewController: UIViewController {
     
-    var selectedCatergory: String!
-    var selectedGameMode: String!
-    private var _timer: NSTimer!
-    private var _currentTime = 3
+    var selectedCategory: QuestionCategory!
+    var selectedGameMode: GameMode!
+    private var timer: NSTimer!
+    private var currentTime = 3
     @IBOutlet var timeLabel: UILabel!
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        _timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "countingTime:", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "countingTime:", userInfo: nil, repeats: true)
     }
     
     func countingTime(sender: NSTimer!) {
         
-        _currentTime--
+        currentTime--
         
-        if (_currentTime == 0) {
+        if (currentTime == 0) {
             timeLabel.text = "start"
-            
-        }
-            
-        else if (_currentTime == -1) {
-            _timer.invalidate()
-            let questionViewController = self.storyboard.instantiateViewControllerWithIdentifier("QuestionScene") as QuestionSceneViewController
-            questionViewController.selectedGameMode = selectedGameMode
-            questionViewController.selectedCatergory = selectedCatergory
-            self.navigationController.pushViewController(questionViewController, animated: true)
+        } else if (currentTime == -1) {
+            sender.invalidate()
+            performSegueWithIdentifier("QuizViewSegue", sender: sender)
         }
         
         else {
-            timeLabel.text = String(_currentTime)
+            timeLabel.text = String(currentTime)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if segue.identifier == "QuizViewSegue" {
+            let vc = segue.destinationViewController as QuestionSceneViewController
+            vc.selectedGameMode = selectedGameMode
+            vc.selectedCategory = selectedCategory
+            
         }
     }
 }

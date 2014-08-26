@@ -22,15 +22,25 @@ enum QuestionType : Int {
     }
 }
 
+enum QuestionCategory: Int {
+    case Hardware
+    case ProgrammingLanguage
+    case History
+    case Networking
+    case Unknown
+}
+
 class Question {
-    var type: QuestionType
-    var content: String
-    var imageURLString: String
-    var optionSet: OptionSet
+    var type: QuestionType!
+    var category: QuestionCategory!
+    var content: String!
+    var imageURLString: String!
+    var optionSet: OptionSet!
     
-    init(content:String, type:QuestionType, imageURLString:String, optionSet:OptionSet) {
+    init(content:String, type:QuestionType, category: QuestionCategory, imageURLString:String, optionSet:OptionSet) {
         self.content = content
         self.type = type
+        self.category = category
         self.imageURLString = imageURLString
         self.optionSet = optionSet
     }

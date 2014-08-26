@@ -49,7 +49,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-vC-Vtc">
+                            <button opaque="NO" tag="34" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-vC-Vtc">
                                 <rect key="frame" x="16" y="154" width="568" height="44"/>
                                 <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="34"/>
                                 <state key="normal" title="challenge">
@@ -60,7 +60,7 @@
                                     <action selector="selectMode:" destination="Smm-yb-gIQ" eventType="touchUpInside" id="a6c-hf-eDu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wea-XG-faZ">
+                            <button opaque="NO" tag="35" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wea-XG-faZ">
                                 <rect key="frame" x="16" y="208" width="568" height="44"/>
                                 <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="34"/>
                                 <state key="normal" title="classic">
@@ -71,7 +71,7 @@
                                     <action selector="selectMode:" destination="Smm-yb-gIQ" eventType="touchUpInside" id="Fmg-ei-ejr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQd-VB-3Xv">
+                            <button opaque="NO" tag="36" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQd-VB-3Xv">
                                 <rect key="frame" x="16" y="262" width="568" height="44"/>
                                 <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="34"/>
                                 <state key="normal" title="story">
@@ -217,7 +217,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPy-Rh-sfR">
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPy-Rh-sfR">
                                 <rect key="frame" x="16" y="158" width="568" height="30"/>
                                 <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="25"/>
                                 <state key="normal" title="hardware">
@@ -243,7 +243,7 @@
                                     <action selector="backToModeSelectionScene:" destination="ZZB-QQ-g3Y" eventType="touchUpInside" id="cQE-gR-dEd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4tZ-9e-txr">
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4tZ-9e-txr">
                                 <rect key="frame" x="16" y="198" width="568" height="60"/>
                                 <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="25"/>
                                 <state key="normal">
@@ -256,7 +256,7 @@ language</string>
                                     <action selector="selectCategory:" destination="ZZB-QQ-g3Y" eventType="touchUpInside" id="7gJ-qz-IIl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-TW-lQz">
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-TW-lQz">
                                 <rect key="frame" x="16" y="268" width="568" height="30"/>
                                 <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="25"/>
                                 <state key="normal" title="history">
@@ -267,7 +267,7 @@ language</string>
                                     <action selector="selectCategory:" destination="ZZB-QQ-g3Y" eventType="touchUpInside" id="rE0-VP-PeW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlE-CL-fRh">
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlE-CL-fRh">
                                 <rect key="frame" x="16" y="308" width="568" height="30"/>
                                 <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="25"/>
                                 <state key="normal" title="networking">
@@ -341,6 +341,7 @@ language</string>
                     </view>
                     <connections>
                         <outlet property="timeLabel" destination="fg1-mx-qDG" id="R1n-yD-FOa"/>
+                        <segue destination="KPm-wS-EIV" kind="show" identifier="QuizViewSegue" id="i37-id-ObG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUe-1c-EFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -423,8 +424,6 @@ language</string>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="challengeView" destination="2Bk-nH-1U7" id="Q3K-6P-YhE"/>
                         <outlet property="classicView" destination="gZX-VW-udO" id="CzP-9H-cz1"/>
@@ -441,7 +440,7 @@ language</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfy-H4-HNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3238" y="213"/>
+            <point key="canvasLocation" x="3318" y="222"/>
         </scene>
     </scenes>
     <resources>
