@@ -30,7 +30,7 @@ class CategorySceneViewController: UIViewController {
         if segue.identifier == "GameGetReadySegue" {
             if let button = sender as? UIButton {
                 let getReadyViewController = segue.destinationViewController as GetReadySceneViewController
-                switch button.titleLabel.tag {
+                switch button.tag {
                     case 100:
                         getReadyViewController.selectedCategory = .Hardware
                     case 101:

@@ -19,7 +19,7 @@ class GameModeSceneViewController: UIViewController {
     @IBAction func selectMode(sender: UIButton!) {
         let categoryViewController = self.storyboard.instantiateViewControllerWithIdentifier("CategorySelectionScene") as CategorySceneViewController
         
-        switch sender.titleLabel.tag {
+        switch sender.tag {
         case 34:
             categoryViewController.selectedGameMode = .Challenge
         case 35:
