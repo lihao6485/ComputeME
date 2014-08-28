@@ -360,10 +360,10 @@ language</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZX-VW-udO" userLabel="Classic View">
+                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZX-VW-udO" userLabel="Challange View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWD-eB-Vdh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="30:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWD-eB-Vdh">
                                         <rect key="frame" x="270" y="8" width="70" height="44"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -371,62 +371,115 @@ language</string>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="aWD-eB-Vdh" secondAttribute="centerX" constant="-5" id="Zbz-MV-1wa"/>
+                                </constraints>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="60"/>
+                                </variation>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bk-nH-1U7" userLabel="Challenge View">
+                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bk-nH-1U7" userLabel="Classic View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="dT8-O7-lf4" userLabel="life1">
-                                        <rect key="frame" x="170" y="0.0" width="60" height="60"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="Due-I6-YG2" userLabel="life2">
+                                        <rect key="frame" x="280" y="10" width="40" height="40"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="lgZ-Zg-lqw" userLabel="life3">
-                                        <rect key="frame" x="390" y="0.0" width="60" height="60"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="lgZ-Zg-lqw" userLabel="life3">
+                                        <rect key="frame" x="360" y="10" width="40" height="40"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="Due-I6-YG2" userLabel="life2">
-                                        <rect key="frame" x="279" y="0.0" width="60" height="60"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="dT8-O7-lf4" userLabel="life1">
+                                        <rect key="frame" x="200" y="10" width="40" height="40"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="dT8-O7-lf4" secondAttribute="centerX" constant="80" id="Fuq-fA-X2c"/>
+                                    <constraint firstItem="lgZ-Zg-lqw" firstAttribute="leading" secondItem="dT8-O7-lf4" secondAttribute="trailing" constant="120" id="Xzh-wT-jfW"/>
+                                    <constraint firstItem="Due-I6-YG2" firstAttribute="leading" secondItem="dT8-O7-lf4" secondAttribute="trailing" constant="40" id="hPm-Ty-rHG"/>
+                                </constraints>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="60"/>
+                                </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzL-U7-NYf" userLabel="Option 2">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzL-U7-NYf" userLabel="Option 2">
                                 <rect key="frame" x="0.0" y="410" width="600" height="50"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="Option 2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="410" width="400" height="50"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="410" width="800" height="50"/>
+                                </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyC-mr-8AP" userLabel="Option 3">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyC-mr-8AP" userLabel="Option 3">
                                 <rect key="frame" x="0.0" y="460" width="600" height="50"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="Option 3">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="460" width="400" height="50"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="460" width="800" height="50"/>
+                                </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obU-qw-lVL" userLabel="Option 4">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obU-qw-lVL" userLabel="Option 4">
                                 <rect key="frame" x="0.0" y="510" width="600" height="50"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="Option 4">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="510" width="400" height="50"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="510" width="800" height="50"/>
+                                </variation>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aci-PZ-c67" userLabel="Content View">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aci-PZ-c67" userLabel="Content View">
                                 <rect key="frame" x="0.0" y="60" width="600" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkk-M0-2Y5">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkk-M0-2Y5">
                                 <rect key="frame" x="0.0" y="360" width="600" height="50"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="Option 1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="360" width="400" height="50"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="360" width="800" height="50"/>
+                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gZX-VW-udO" firstAttribute="width" secondItem="12U-MC-tds" secondAttribute="width" id="PzL-xx-VqQ"/>
+                            <constraint firstItem="aci-PZ-c67" firstAttribute="width" secondItem="12U-MC-tds" secondAttribute="width" id="WPT-RO-lX1"/>
+                            <constraint firstItem="hzL-U7-NYf" firstAttribute="width" secondItem="12U-MC-tds" secondAttribute="width" id="Xjg-XW-9Di"/>
+                            <constraint firstItem="pyC-mr-8AP" firstAttribute="width" secondItem="12U-MC-tds" secondAttribute="width" id="ezL-WN-mrC"/>
+                            <constraint firstAttribute="width" secondItem="obU-qw-lVL" secondAttribute="width" id="hhL-Jl-EaA"/>
+                            <constraint firstItem="hkk-M0-2Y5" firstAttribute="width" secondItem="12U-MC-tds" secondAttribute="width" id="pEz-g9-qNS"/>
+                            <constraint firstItem="2Bk-nH-1U7" firstAttribute="width" secondItem="12U-MC-tds" secondAttribute="width" id="wWT-5h-onI"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="challengeView" destination="2Bk-nH-1U7" id="Q3K-6P-YhE"/>
-                        <outlet property="classicView" destination="gZX-VW-udO" id="CzP-9H-cz1"/>
+                        <outlet property="challengeView" destination="gZX-VW-udO" id="b5o-kf-JeU"/>
+                        <outlet property="classicView" destination="2Bk-nH-1U7" id="GgD-ID-iEb"/>
                         <outlet property="contentView" destination="aci-PZ-c67" id="54k-vQ-diS"/>
                         <outlet property="countDownLabel" destination="aWD-eB-Vdh" id="M6l-x4-qsY"/>
                         <outlet property="lifeImageView0" destination="dT8-O7-lf4" id="45m-hS-zwW"/>
@@ -440,7 +493,7 @@ language</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfy-H4-HNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3318" y="222"/>
+            <point key="canvasLocation" x="3315" y="227"/>
         </scene>
     </scenes>
     <resources>

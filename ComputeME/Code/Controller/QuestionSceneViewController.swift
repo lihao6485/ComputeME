@@ -13,8 +13,8 @@ class QuestionSceneViewController: UIViewController {
 
     @IBOutlet var countDownLabel: UILabel!
     @IBOutlet var contentView: UIView!
-    @IBOutlet var challengeView: UIView!
-    @IBOutlet var classicView: UIView!
+    @IBOutlet weak var classicView: UIView!
+    @IBOutlet weak var challengeView: UIView!
     @IBOutlet var option1Button: UIButton!
     @IBOutlet var option2Button: UIButton!
     @IBOutlet var option3Button: UIButton!

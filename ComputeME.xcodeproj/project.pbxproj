@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B2AC17A19AF027A002E753A /* ImportUtility.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1B2AC17919AF027A002E753A /* ImportUtility.sqlite */; };
 		1B7DE86519AB7C1D0005CFE8 /* QuestionSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7DE86419AB7C1D0005CFE8 /* QuestionSceneViewController.swift */; };
 		6D08B8AE19A2FAF50069DE54 /* ProximaNova-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D08B8A819A2FAF50069DE54 /* ProximaNova-Black.ttf */; };
 		6D08B8AF19A2FAF50069DE54 /* ProximaNova-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D08B8A919A2FAF50069DE54 /* ProximaNova-Bold.ttf */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B2AC17919AF027A002E753A /* ImportUtility.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ImportUtility.sqlite; sourceTree = "<group>"; };
 		1B7DE86419AB7C1D0005CFE8 /* QuestionSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionSceneViewController.swift; path = ComputeMe/Code/Controller/QuestionSceneViewController.swift; sourceTree = SOURCE_ROOT; };
 		6D08B8A819A2FAF50069DE54 /* ProximaNova-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Black.ttf"; sourceTree = "<group>"; };
 		6D08B8A919A2FAF50069DE54 /* ProximaNova-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.ttf"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		6D0C9CD4199CEDA40052902F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1B2AC17919AF027A002E753A /* ImportUtility.sqlite */,
 				6D40E8BF199F392C005FA4EE /* Storyboard */,
 				6D18A45C199CF1FE009E7F59 /* Fonts */,
 				6D18A461199CF1FE009E7F59 /* Sounds */,
@@ -307,6 +310,7 @@
 				6D08B8B119A2FAF50069DE54 /* ProximaNova-Light.ttf in Resources */,
 				6D18A466199CF1FE009E7F59 /* CODE Bold.otf in Resources */,
 				6D08B8B319A2FAF50069DE54 /* ProximaNova-Semibold.ttf in Resources */,
+				1B2AC17A19AF027A002E753A /* ImportUtility.sqlite in Resources */,
 				6D08B8AE19A2FAF50069DE54 /* ProximaNova-Black.ttf in Resources */,
 				6D18A46B199CF1FE009E7F59 /* Mining by Moonlight.mp3 in Resources */,
 				6D08B8AF19A2FAF50069DE54 /* ProximaNova-Bold.ttf in Resources */,
