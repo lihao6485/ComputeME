@@ -9,11 +9,15 @@
 import UIKit
 import AVFoundation
 import AudioToolbox
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
+    var managedObjectContext:NSManagedObjectContext!
+    var managedObjectModel:NSManagedObjectModel!
+    var persistentStoreCoordinator: NSPersistentStoreCoordinator!
     
     var bgmPlayer: AVAudioPlayer!
     
@@ -58,5 +62,98 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDocumentsDirectory() -> NSURL? {
         return NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as? NSURL
     }
+    
+    // Returns the managed object context for the application.
+    // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
+    func getManagedObjectContext() ->NSManagedObjectContext
+    {
+    
+        let coordinator = getPersistentStoreCoordinator() as NSPersistentStoreCoordinator
+        
+        managedObjectContext = NSManagedObjectContext()
+        managedObjectContext.persistentStoreCoordinator = coordinator
+        
+        return managedObjectContext;
+    }
+    
+    // Returns the managed object model for the application.
+    // If the model doesn't already exist, it is created from the application's model.
+    func getManagedObjectModel()-> NSManagedObjectModel
+    {
+    
+        let modelURL = NSBundle.mainBundle().URLForResource("DataModel" ,withExtension:"momd") as NSURL!
+        managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL)
+        return managedObjectModel;
+    }
+    
+    // Returns the persistent store coordinator for the application.
+    // If the coordinator doesn't already exist, it is created and the application's store added to it.
+    func getPersistentStoreCoordinator() ->NSPersistentStoreCoordinator
+    {
+    
+        let storeURL = NSFileManager.applicationSupportDirectoryURL()?.URLByAppendingPathComponent("DataModel.sqlite") as NSURL!
+    
+        if(!NSFileManager.defaultManager().fileExistsAtPath(storeURL.path!)) {
+            let preloadURL = NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("ImportUtility", ofType: "sqlite")!) as NSURL!
+    
+            var err:NSErrorPointer = nil
+            if(!NSFileManager.defaultManager().copyItemAtPath(preloadURL.path!, toPath: storeURL.path!, error: err))
+            {
+                NSLog("Oops, could copy preloaded data")
+            }
+        }
+        
+    
+        var error:NSErrorPointer = nil;
+        persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel:managedObjectModel)
+
+        if ((persistentStoreCoordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil, error: error)) == nil) {
+            /*
+            Replace this implementation with code to handle the error appropriately.
+        
+            abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        
+            Typical reasons for an error here include:
+            * The persistent store is not accessible;
+            * The schema for the persistent store is incompatible with current managed object model.
+            Check the error message to determine what the actual problem was.
+            
+        
+            If the persistent store is not accessible, there is typically something wrong with the file path. Often, a file URL is pointing into the application's resources directory instead of a writeable directory.
+        
+            If you encounter schema incompatibility errors during development, you can reduce their frequency by:
+            * Simply deleting the existing store:
+            [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
+        
+            * Performing automatic lightweight migration by passing the following dictionary as the options parameter:
+            @{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES}
+        
+            Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
+        
+            */
+            NSLog("Unresolved error %@", error.debugDescription)
+            abort()
+        }
+    
+        return persistentStoreCoordinator
+    }
+
+}
+
+extension NSFileManager
+  {
+
+  class func applicationSupportDirectoryURL() -> NSURL? {
+    return defaultManager().applicationSupportDirectoryURL()
+  }
+
+  func applicationSupportDirectoryURL() -> NSURL?
+  {
+    let directories = URLsForDirectory(
+      NSSearchPathDirectory.ApplicationSupportDirectory,
+      inDomains: .UserDomainMask)
+
+    return directories[directories.endIndex - 1] as? NSURL
+  }
 }
 

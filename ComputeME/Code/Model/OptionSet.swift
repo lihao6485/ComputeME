@@ -2,65 +2,34 @@
 //  OptionSet.swift
 //  ComputeME
 //
-//  Created by Ryne Cheow on 8/18/14.
+//  Created by Kok Hong on 8/28/14.
 //  Copyright (c) 2014 Pointwelve. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import CoreData
 
+class OptionSet: NSManagedObject {
 
-///Set of options that belongs to a particular question.
-class OptionSet {
-    
-    /// Correct option or answer.
-    private let correctOption: Option!
-    
     /// Set of options that are not answers.
-    private let dummyOptions: [Option]
+    @NSManaged var dummyOptions: AnyObject
+    /// Correct option or answer.
+    @NSManaged var correctOption: Option
+    @NSManaged var question: Question
     
     lazy var allOptions = [Option]()
     
-    init(correctOption: Option, dummyOptions:[Option]) {
-        self.correctOption = correctOption
-        self.dummyOptions = dummyOptions
-        setupAnswerSet()
-    }
+//    init(correctOption: Option, dummyOptions:[Option]) {
+//        super.init()
+//        self.correctOption = correctOption
+//        self.dummyOptions = dummyOptions
+//        setupAnswerSet()
+//    }
     
     private func setupAnswerSet() {
-        allOptions = dummyOptions
+        allOptions = dummyOptions as [Option]
         allOptions.append(correctOption)
         allOptions.shuffle()
     }
-    
-    ///
-    /// Check if parameter option is the correct option of this question.
-    ///
-    /// :param: choice Option chosen.
-    /// :returns: true if option exist in option set and option is correct answer of this question, false otherwise.
-    ///
-    func checkOptionChoiceIfIsCorrect(choice:Option) -> Bool {
-        for opt in allOptions {
-            ///Choice exist
-            if opt === choice {
-                return correctOption === choice
-            }
-        }
-        return false
-    }
+
 }
-
-
-extension OptionSet : Printable {
-    var description: String {
-        var d = "{\n"
-            d += "Correct option: \(correctOption)\n"
-            d += "Dummy options: "
-            for dOpt in dummyOptions {
-                d += "\(dOpt),"
-            }
-            d += "nil\n"
-            d += "}\n"
-            return d
-    }
-}
-

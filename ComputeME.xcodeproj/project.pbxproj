@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1B2AC17A19AF027A002E753A /* ImportUtility.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1B2AC17919AF027A002E753A /* ImportUtility.sqlite */; };
+		1B2AC17D19AF1D71002E753A /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B2AC17B19AF1D71002E753A /* DataModel.xcdatamodeld */; };
 		1B7DE86519AB7C1D0005CFE8 /* QuestionSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7DE86419AB7C1D0005CFE8 /* QuestionSceneViewController.swift */; };
+		1B8110E619AF71A9006989EA /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8110E519AF71A9006989EA /* Option.swift */; };
+		1B95526A19AF3006005AD876 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95526919AF3006005AD876 /* Question.swift */; };
+		1B95526C19AF3007005AD876 /* OptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95526B19AF3007005AD876 /* OptionSet.swift */; };
 		6D08B8AE19A2FAF50069DE54 /* ProximaNova-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D08B8A819A2FAF50069DE54 /* ProximaNova-Black.ttf */; };
 		6D08B8AF19A2FAF50069DE54 /* ProximaNova-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D08B8A919A2FAF50069DE54 /* ProximaNova-Bold.ttf */; };
 		6D08B8B019A2FAF50069DE54 /* ProximaNova-Extrabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D08B8AA19A2FAF50069DE54 /* ProximaNova-Extrabold.ttf */; };
@@ -26,9 +30,6 @@
 		6D18A469199CF1FE009E7F59 /* Comedy Wap.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A462199CF1FE009E7F59 /* Comedy Wap.caf */; };
 		6D18A46A199CF1FE009E7F59 /* Ka-Ching.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A463199CF1FE009E7F59 /* Ka-Ching.wav */; };
 		6D18A46B199CF1FE009E7F59 /* Mining by Moonlight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D18A464199CF1FE009E7F59 /* Mining by Moonlight.mp3 */; };
-		6D7C596219A241D4005A618E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C596119A241D3005A618E /* Question.swift */; };
-		6D7C596419A2429F005A618E /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C596319A2429F005A618E /* Option.swift */; };
-		6D7C596619A24352005A618E /* OptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C596519A24352005A618E /* OptionSet.swift */; };
 		6D7C596819A243A4005A618E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C596719A243A4005A618E /* Extension.swift */; };
 		6D84F1B719AC5A4E00ACFAC0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D84F1B619AC5A4E00ACFAC0 /* Game.swift */; };
 		F6128FC819A264610095920A /* StartSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6128FC719A264610095920A /* StartSceneViewController.swift */; };
@@ -49,7 +50,12 @@
 
 /* Begin PBXFileReference section */
 		1B2AC17919AF027A002E753A /* ImportUtility.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ImportUtility.sqlite; sourceTree = "<group>"; };
+		1B2AC17C19AF1D71002E753A /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		1B7DE86419AB7C1D0005CFE8 /* QuestionSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionSceneViewController.swift; path = ComputeMe/Code/Controller/QuestionSceneViewController.swift; sourceTree = SOURCE_ROOT; };
+		1B8110E519AF71A9006989EA /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Option.swift; path = ComputeMe/Code/Model/Option.swift; sourceTree = SOURCE_ROOT; };
+		1B95526019AF26AE005AD876 /* ComputeME-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComputeME-Bridging-Header.h"; sourceTree = "<group>"; };
+		1B95526919AF3006005AD876 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Question.swift; path = ../../../ComputeMe/Code/Model/Question.swift; sourceTree = "<group>"; };
+		1B95526B19AF3007005AD876 /* OptionSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionSet.swift; path = ../../../ComputeMe/Code/Model/OptionSet.swift; sourceTree = "<group>"; };
 		6D08B8A819A2FAF50069DE54 /* ProximaNova-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Black.ttf"; sourceTree = "<group>"; };
 		6D08B8A919A2FAF50069DE54 /* ProximaNova-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.ttf"; sourceTree = "<group>"; };
 		6D08B8AA19A2FAF50069DE54 /* ProximaNova-Extrabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Extrabold.ttf"; sourceTree = "<group>"; };
@@ -71,9 +77,6 @@
 		6D18A462199CF1FE009E7F59 /* Comedy Wap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comedy Wap.caf"; sourceTree = "<group>"; };
 		6D18A463199CF1FE009E7F59 /* Ka-Ching.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Ka-Ching.wav"; sourceTree = "<group>"; };
 		6D18A464199CF1FE009E7F59 /* Mining by Moonlight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mining by Moonlight.mp3"; sourceTree = "<group>"; };
-		6D7C596119A241D3005A618E /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		6D7C596319A2429F005A618E /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
-		6D7C596519A24352005A618E /* OptionSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionSet.swift; sourceTree = "<group>"; };
 		6D7C596719A243A4005A618E /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6D84F1B619AC5A4E00ACFAC0 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F6128FC719A264610095920A /* StartSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartSceneViewController.swift; sourceTree = "<group>"; };
@@ -103,9 +106,11 @@
 		6D0C9CC8199CEDA40052902F = {
 			isa = PBXGroup;
 			children = (
+				1B2AC17B19AF1D71002E753A /* DataModel.xcdatamodeld */,
 				6D0C9CD3199CEDA40052902F /* ComputeME */,
 				6D0C9CE6199CEDA40052902F /* ComputeMETests */,
 				6D0C9CD2199CEDA40052902F /* Products */,
+				1B95526019AF26AE005AD876 /* ComputeME-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,9 +223,9 @@
 		6D7C595E19A241AB005A618E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6D7C596119A241D3005A618E /* Question.swift */,
-				6D7C596319A2429F005A618E /* Option.swift */,
-				6D7C596519A24352005A618E /* OptionSet.swift */,
+				1B95526B19AF3007005AD876 /* OptionSet.swift */,
+				1B8110E519AF71A9006989EA /* Option.swift */,
+				1B95526919AF3006005AD876 /* Question.swift */,
 				6D84F1B619AC5A4E00ACFAC0 /* Game.swift */,
 			);
 			path = Model;
@@ -342,15 +347,16 @@
 			files = (
 				F6128FC819A264610095920A /* StartSceneViewController.swift in Sources */,
 				F6A9FCB519A35872004F41C1 /* GameModeSceneViewController.swift in Sources */,
-				6D7C596419A2429F005A618E /* Option.swift in Sources */,
-				6D7C596219A241D4005A618E /* Question.swift in Sources */,
 				6D7C596819A243A4005A618E /* Extension.swift in Sources */,
 				F6A9FCB719A3A291004F41C1 /* CategorySceneViewController.swift in Sources */,
+				1B8110E619AF71A9006989EA /* Option.swift in Sources */,
 				6D84F1B719AC5A4E00ACFAC0 /* Game.swift in Sources */,
 				F6EB615C19A627AE004CC3A6 /* GetReadySceneViewController.swift in Sources */,
-				6D7C596619A24352005A618E /* OptionSet.swift in Sources */,
+				1B2AC17D19AF1D71002E753A /* DataModel.xcdatamodeld in Sources */,
 				6D0C9CD7199CEDA40052902F /* AppDelegate.swift in Sources */,
+				1B95526A19AF3006005AD876 /* Question.swift in Sources */,
 				1B7DE86519AB7C1D0005CFE8 /* QuestionSceneViewController.swift in Sources */,
+				1B95526C19AF3007005AD876 /* OptionSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -474,6 +481,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ComputeME-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -482,6 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -490,6 +500,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ComputeME-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -558,6 +569,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1B2AC17B19AF1D71002E753A /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1B2AC17C19AF1D71002E753A /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 1B2AC17C19AF1D71002E753A /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6D0C9CC9199CEDA40052902F /* Project object */;
 }

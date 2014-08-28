@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6220.14" systemVersion="14A329f" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Option" representedClassName="Option" syncable="YES">
+        <attribute name="stringContent" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OptionSet" representedClassName="OptionSet" syncable="YES">
+        <attribute name="dummyOptions" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="option" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Option" syncable="YES"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" syncable="YES"/>
+    </entity>
+    <entity name="Question" representedClassName="Question" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="optionSet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OptionSet" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="OptionSet" positionX="-63" positionY="9" width="128" height="88"/>
+        <element name="Question" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Option" positionX="-54" positionY="27" width="128" height="58"/>
+    </elements>
+</model>

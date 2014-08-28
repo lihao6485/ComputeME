@@ -2,13 +2,14 @@
 //  Question.swift
 //  ComputeME
 //
-//  Created by Ryne Cheow on 8/18/14.
+//  Created by Kok Hong on 8/28/14.
 //  Copyright (c) 2014 Pointwelve. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import CoreData
 
-enum QuestionType : Int {
+enum QuestionType : NSNumber {
     case ImageType
     case TextualType
     
@@ -18,11 +19,11 @@ enum QuestionType : Int {
             return "Image type"
         case .TextualType:
             return "Textual type"
-        }
+            }
     }
 }
 
-enum QuestionCategory: Int {
+enum QuestionCategory: NSNumber {
     case Hardware
     case ProgrammingLanguage
     case History
@@ -30,27 +31,31 @@ enum QuestionCategory: Int {
     case Unknown
 }
 
-class Question {
-    var type: QuestionType!
-    var category: QuestionCategory!
-    var content: String!
-    var imageURLString: String!
-    var optionSet: OptionSet!
+@objc
+class Question: NSManagedObject {
+
+    @NSManaged var category: NSNumber
+    @NSManaged var content: String
+    @NSManaged var image: NSData
+    @NSManaged var type: NSNumber
+    @NSManaged var optionSet: OptionSet!
     
-    init(content:String, type:QuestionType, category: QuestionCategory, imageURLString:String, optionSet:OptionSet) {
-        self.content = content
-        self.type = type
-        self.category = category
-        self.imageURLString = imageURLString
-        self.optionSet = optionSet
-    }
+
+//    init(content:String, type:QuestionType, category: QuestionCategory, image:NSData, optionSet:OptionSet) {
+//        self.content = content
+//        self.type = type
+//        self.category = category
+//        self.image = image
+//        self.optionSet = optionSet
+//    }
+    
 }
 
 extension Question : Printable {
-    var description: String {
+   override var description: String {
         var d = "{\n"
             d += "Content: \(self.content)\n"
-            d += "Image URL String: \(self.imageURLString)\n"
+            d += "Image: \(self.image)\n"
             d += "Type: \(self.type.description)\n"
             d += "Options: \(self.optionSet)"
             d += "\n}"

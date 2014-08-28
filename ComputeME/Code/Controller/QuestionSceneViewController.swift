@@ -95,6 +95,8 @@ class QuestionSceneViewController: UIViewController {
         //TODO implement it
     }
     
-
+    private func loadQuestionFromCoreData() {
+        
+    }
 
 }
