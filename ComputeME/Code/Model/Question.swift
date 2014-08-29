@@ -31,8 +31,7 @@ enum QuestionCategory: NSNumber {
     case Unknown
 }
 
-@objc
-class Question: NSManagedObject {
+@objc class Question: NSManagedObject {
 
     @NSManaged var category: NSNumber
     @NSManaged var content: String

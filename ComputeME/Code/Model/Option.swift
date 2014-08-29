@@ -24,8 +24,8 @@ class Option: NSManagedObject {
 }
 
 
-    extension Option : Printable {
-        override var description :String {
-            return "[ Option content: \(stringContent) ]"
+extension Option : Printable {
+    override var description :String {
+        return "[ Option content: \(stringContent) ]"
     }
 }
