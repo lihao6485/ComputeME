@@ -83,6 +83,10 @@
                                 <rect key="frame" x="534" y="530" width="50" height="50"/>
                                 <state key="normal" image="Setting"/>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YlW-DQ-Wb4" customClass="FBLoginView">
+                                <rect key="frame" x="175" y="461" width="250" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.17254901960784313" green="0.58823529411764708" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -97,10 +101,12 @@
                             <constraint firstAttribute="centerX" secondItem="Zmp-zM-av7" secondAttribute="centerX" id="a1y-Fc-Zjl"/>
                             <constraint firstItem="vKJ-Pw-2Bd" firstAttribute="top" secondItem="2Ee-R2-H3c" secondAttribute="bottom" constant="8" id="lhR-9E-j7C"/>
                             <constraint firstItem="bnW-vC-Vtc" firstAttribute="top" secondItem="Zmp-zM-av7" secondAttribute="bottom" constant="35" id="ngp-Vw-ETV"/>
+                            <constraint firstAttribute="centerX" secondItem="YlW-DQ-Wb4" secondAttribute="centerX" id="sC8-jt-e6n"/>
                             <constraint firstAttribute="centerX" secondItem="VQd-VB-3Xv" secondAttribute="centerX" id="tpd-wH-nux"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fbLoginView" destination="YlW-DQ-Wb4" id="drj-Oh-Wxt"/>
                         <outlet property="storyButton" destination="VQd-VB-3Xv" id="Th5-KA-fNi"/>
                     </connections>
                 </viewController>

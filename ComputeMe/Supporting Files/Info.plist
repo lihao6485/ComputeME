@@ -31,13 +31,26 @@
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
-	<string>audio</string>
+		<string>audio</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+	</array>
+	<key>FacebookAppID</key>
+	<string>356634647821726</string>
+	<key>FacebookDisplayName</key>
+	<string>ComputeMe</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb356634647821726</string>
+			</array>
+		</dict>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

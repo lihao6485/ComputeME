@@ -33,8 +33,10 @@
 		6D7C596819A243A4005A618E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C596719A243A4005A618E /* Extension.swift */; };
 		6D84F1B719AC5A4E00ACFAC0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D84F1B619AC5A4E00ACFAC0 /* Game.swift */; };
 		F6128FC819A264610095920A /* StartSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6128FC719A264610095920A /* StartSceneViewController.swift */; };
+		F655B7D519B4908300871CB4 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F655B7D419B4908300871CB4 /* CloudKit.framework */; };
 		F6A9FCB519A35872004F41C1 /* GameModeSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A9FCB419A35872004F41C1 /* GameModeSceneViewController.swift */; };
 		F6A9FCB719A3A291004F41C1 /* CategorySceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A9FCB619A3A291004F41C1 /* CategorySceneViewController.swift */; };
+		F6E74E6519B5738C0059E18C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E74E6419B5738C0059E18C /* FacebookSDK.framework */; };
 		F6EB615C19A627AE004CC3A6 /* GetReadySceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB615B19A627AE004CC3A6 /* GetReadySceneViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,8 +82,11 @@
 		6D7C596719A243A4005A618E /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6D84F1B619AC5A4E00ACFAC0 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F6128FC719A264610095920A /* StartSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartSceneViewController.swift; sourceTree = "<group>"; };
+		F655B7D319B4907F00871CB4 /* ComputeME.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ComputeME.entitlements; sourceTree = "<group>"; };
+		F655B7D419B4908300871CB4 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F6A9FCB419A35872004F41C1 /* GameModeSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModeSceneViewController.swift; sourceTree = "<group>"; };
 		F6A9FCB619A3A291004F41C1 /* CategorySceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySceneViewController.swift; sourceTree = "<group>"; };
+		F6E74E6419B5738C0059E18C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		F6EB615B19A627AE004CC3A6 /* GetReadySceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetReadySceneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F655B7D519B4908300871CB4 /* CloudKit.framework in Frameworks */,
+				F6E74E6519B5738C0059E18C /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,11 +113,12 @@
 		6D0C9CC8199CEDA40052902F = {
 			isa = PBXGroup;
 			children = (
-				1B2AC17B19AF1D71002E753A /* DataModel.xcdatamodeld */,
+				1B95526019AF26AE005AD876 /* ComputeME-Bridging-Header.h */,
 				6D0C9CD3199CEDA40052902F /* ComputeME */,
 				6D0C9CE6199CEDA40052902F /* ComputeMETests */,
+				1B2AC17B19AF1D71002E753A /* DataModel.xcdatamodeld */,
+				F6E74E6119B573060059E18C /* Framework */,
 				6D0C9CD2199CEDA40052902F /* Products */,
-				1B95526019AF26AE005AD876 /* ComputeME-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +134,10 @@
 		6D0C9CD3199CEDA40052902F /* ComputeME */ = {
 			isa = PBXGroup;
 			children = (
+				F655B7D319B4907F00871CB4 /* ComputeME.entitlements */,
+				6D0C9CDD199CEDA40052902F /* Images.xcassets */,
 				6D0C9CF3199CEE330052902F /* Code */,
 				6D0C9CDA199CEDA40052902F /* Main.storyboard */,
-				6D0C9CDD199CEDA40052902F /* Images.xcassets */,
 				6D0C9CD4199CEDA40052902F /* Supporting Files */,
 			);
 			path = ComputeME;
@@ -231,6 +240,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F6E74E6119B573060059E18C /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				F6E74E6419B5738C0059E18C /* FacebookSDK.framework */,
+				F655B7D419B4908300871CB4 /* CloudKit.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,6 +299,11 @@
 					6D0C9CD0199CEDA40052902F = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = LZV346N8B3;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					6D0C9CE2199CEDA40052902F = {
 						CreatedOnToolsVersion = 6.0;
@@ -473,8 +496,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ComputeME/ComputeME.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+					/Users/LiHao/Documents/FacebookSDK,
+				);
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ComputeME/Supporting Files/ComputeME-Bridging-Header.h";
@@ -493,8 +522,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ComputeME/ComputeME.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+					/Users/LiHao/Documents/FacebookSDK,
+				);
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ComputeME/Supporting Files/ComputeME-Bridging-Header.h";

@@ -34,7 +34,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        self.bgmPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: "\(NSBundle.mainBundle().resourcePath)/Mining by Moonlight.mp3"), error: nil)
 //        self.bgmPlayer.numberOfLoops = -1
 //        self.bgmPlayer.play()
+        
+        FBLoginView.self
+        
         return true
+    }
+
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject?) -> Bool {
+        var wasHandled = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
+
+        return wasHandled
     }
 
     func applicationWillResignActive(application: UIApplication!) {
