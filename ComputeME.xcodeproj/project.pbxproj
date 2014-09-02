@@ -13,6 +13,10 @@
 		1B8110E619AF71A9006989EA /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8110E519AF71A9006989EA /* Option.swift */; };
 		1B95526A19AF3006005AD876 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95526919AF3006005AD876 /* Question.swift */; };
 		1B95526C19AF3007005AD876 /* OptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95526B19AF3007005AD876 /* OptionSet.swift */; };
+		1BE17EC519B57CA8009EC86F /* QuestionWithImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BE17EC419B57CA8009EC86F /* QuestionWithImageView.xib */; };
+		1BE17EC719B57CB2009EC86F /* QuestionWithoutImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BE17EC619B57CB2009EC86F /* QuestionWithoutImageView.xib */; };
+		1BE17EC919B57CBE009EC86F /* QuestionWithImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE17EC819B57CBE009EC86F /* QuestionWithImageView.swift */; };
+		1BE17ECB19B57CC8009EC86F /* QuestionWithoutImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE17ECA19B57CC8009EC86F /* QuestionWithoutImageView.swift */; };
 		6D08B8AE19A2FAF50069DE54 /* ProximaNova-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D08B8A819A2FAF50069DE54 /* ProximaNova-Black.ttf */; };
 		6D08B8AF19A2FAF50069DE54 /* ProximaNova-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D08B8A919A2FAF50069DE54 /* ProximaNova-Bold.ttf */; };
 		6D08B8B019A2FAF50069DE54 /* ProximaNova-Extrabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D08B8AA19A2FAF50069DE54 /* ProximaNova-Extrabold.ttf */; };
@@ -58,6 +62,10 @@
 		1B95526019AF26AE005AD876 /* ComputeME-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComputeME-Bridging-Header.h"; sourceTree = "<group>"; };
 		1B95526919AF3006005AD876 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Question.swift; path = ../../../ComputeMe/Code/Model/Question.swift; sourceTree = "<group>"; };
 		1B95526B19AF3007005AD876 /* OptionSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionSet.swift; path = ../../../ComputeMe/Code/Model/OptionSet.swift; sourceTree = "<group>"; };
+		1BE17EC419B57CA8009EC86F /* QuestionWithImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionWithImageView.xib; sourceTree = "<group>"; };
+		1BE17EC619B57CB2009EC86F /* QuestionWithoutImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionWithoutImageView.xib; sourceTree = "<group>"; };
+		1BE17EC819B57CBE009EC86F /* QuestionWithImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionWithImageView.swift; sourceTree = "<group>"; };
+		1BE17ECA19B57CC8009EC86F /* QuestionWithoutImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionWithoutImageView.swift; sourceTree = "<group>"; };
 		6D08B8A819A2FAF50069DE54 /* ProximaNova-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Black.ttf"; sourceTree = "<group>"; };
 		6D08B8A919A2FAF50069DE54 /* ProximaNova-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.ttf"; sourceTree = "<group>"; };
 		6D08B8AA19A2FAF50069DE54 /* ProximaNova-Extrabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Extrabold.ttf"; sourceTree = "<group>"; };
@@ -110,6 +118,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BE17EBD19B57A2D009EC86F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1BE17EC819B57CBE009EC86F /* QuestionWithImageView.swift */,
+				1BE17ECA19B57CC8009EC86F /* QuestionWithoutImageView.swift */,
+				1BE17EC419B57CA8009EC86F /* QuestionWithImageView.xib */,
+				1BE17EC619B57CB2009EC86F /* QuestionWithoutImageView.xib */,
+			);
+			name = View;
+			path = ../../ComputeMe/Code/View;
+			sourceTree = "<group>";
+		};
 		6D0C9CC8199CEDA40052902F = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +195,7 @@
 		6D0C9CF3199CEE330052902F /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				1BE17EBD19B57A2D009EC86F /* View */,
 				6D7C595E19A241AB005A618E /* Model */,
 				6D0C9CF6199CEE810052902F /* Controller */,
 				6D0C9CD6199CEDA40052902F /* AppDelegate.swift */,
@@ -348,6 +369,8 @@
 				6D08B8B019A2FAF50069DE54 /* ProximaNova-Extrabold.ttf in Resources */,
 				6D18A465199CF1FE009E7F59 /* COCOGOOSE.otf in Resources */,
 				6D08B8B219A2FAF50069DE54 /* ProximaNova-Regular.ttf in Resources */,
+				1BE17EC719B57CB2009EC86F /* QuestionWithoutImageView.xib in Resources */,
+				1BE17EC519B57CA8009EC86F /* QuestionWithImageView.xib in Resources */,
 				6D18A467199CF1FE009E7F59 /* CODE Light.otf in Resources */,
 				6D18A468199CF1FE009E7F59 /* myriadpro.otf in Resources */,
 				6D18A469199CF1FE009E7F59 /* Comedy Wap.caf in Resources */,
@@ -379,7 +402,9 @@
 				6D0C9CD7199CEDA40052902F /* AppDelegate.swift in Sources */,
 				1B95526A19AF3006005AD876 /* Question.swift in Sources */,
 				1B7DE86519AB7C1D0005CFE8 /* QuestionSceneViewController.swift in Sources */,
+				1BE17EC919B57CBE009EC86F /* QuestionWithImageView.swift in Sources */,
 				1B95526C19AF3007005AD876 /* OptionSet.swift in Sources */,
+				1BE17ECB19B57CC8009EC86F /* QuestionWithoutImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

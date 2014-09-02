@@ -470,6 +470,9 @@ language</string>
                                 <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="0.0" y="360" width="800" height="50"/>
                                 </variation>
+                                <connections>
+                                    <action selector="selectOption:" destination="KPm-wS-EIV" eventType="touchUpInside" id="l08-Iv-MXl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -495,6 +498,7 @@ language</string>
                         <outlet property="option2Button" destination="hzL-U7-NYf" id="sew-Ps-XJs"/>
                         <outlet property="option3Button" destination="pyC-mr-8AP" id="mHn-ZA-e4y"/>
                         <outlet property="option4Button" destination="obU-qw-lVL" id="QiM-gz-LBE"/>
+                        <outlet property="selectOption" destination="hkk-M0-2Y5" id="m3X-tx-p2r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfy-H4-HNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
