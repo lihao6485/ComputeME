@@ -31,4 +31,29 @@ extension UIView {
         self.animateWithDuration(duration, delay: 0, options: options, animations: animations, completion: nil)
     }
 
+    func removeAllSubViews()
+    {
+       for subView :AnyObject in self.subviews
+       {
+            subView.removeFromSuperview()
+       }
+    }
+
+}
+
+extension NSFileManager
+  {
+
+  class func applicationSupportDirectoryURL() -> NSURL? {
+    return defaultManager().applicationSupportDirectoryURL()
+  }
+
+  func applicationSupportDirectoryURL() -> NSURL?
+  {
+    let directories = URLsForDirectory(
+      NSSearchPathDirectory.ApplicationSupportDirectory,
+      inDomains: .UserDomainMask)
+
+    return directories[directories.endIndex - 1] as? NSURL
+  }
 }
