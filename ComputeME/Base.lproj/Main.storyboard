@@ -16,6 +16,7 @@
             <string>COCOGOOSE</string>
             <string>COCOGOOSE</string>
             <string>COCOGOOSE</string>
+            <string>COCOGOOSE</string>
         </mutableArray>
         <mutableArray key="CODE Light.otf">
             <string>Code-Light</string>
@@ -82,6 +83,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma4-eg-wMh">
                                 <rect key="frame" x="534" y="530" width="50" height="50"/>
                                 <state key="normal" image="Setting"/>
+                                <connections>
+                                    <segue destination="uOX-ZB-yAC" kind="show" id="wpX-d4-7UU"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YlW-DQ-Wb4" customClass="FBLoginView">
                                 <rect key="frame" x="175" y="461" width="250" height="50"/>
@@ -113,6 +117,195 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxI-V0-RXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1184" y="222"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Uol-eI-SKi">
+            <objects>
+                <viewController id="uOX-ZB-yAC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dDA-hi-5gl"/>
+                        <viewControllerLayoutGuide type="bottom" id="FeD-0W-lkI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FGE-2B-Zkg" customClass="Set">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-YV-hoE">
+                                <rect key="frame" x="9" y="20" width="88" height="30"/>
+                                <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="17"/>
+                                <state key="normal" title="MODE">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgl-xb-lvu">
+                                <rect key="frame" x="174" y="79" width="252" height="64"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="S">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <font key="NSOriginalFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="E">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <font key="NSOriginalFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="T">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <font key="NSOriginalFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="T">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <font key="NSOriginalFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="I">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <font key="NSOriginalFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="N">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <font key="NSOriginalFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="G">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <font key="NSOriginalFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="S">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="25" name="Verdana"/>
+                                            <font key="NSOriginalFont" size="25" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.14000000059604645"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Music" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMA-Zf-XSB">
+                                <rect key="frame" x="177" y="288" width="66" height="27"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5rW-Cc-2av">
+                                <rect key="frame" x="332" y="216" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxS-gH-jA9">
+                                <rect key="frame" x="234" y="501" width="133" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="RESET ALL">
+                                    <color key="titleColor" red="0.68235294117647061" green="0.078431372549019607" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QT3-ah-o0e">
+                                <rect key="frame" x="332" y="288" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sound Effect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xd9-mI-BBM">
+                                <rect key="frame" x="139" y="219" width="143" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17135761667291982" green="0.64660455807972039" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5rW-Cc-2av" firstAttribute="top" secondItem="Fgl-xb-lvu" secondAttribute="bottom" constant="78" id="1UX-fx-7SI"/>
+                            <constraint firstItem="ZMA-Zf-XSB" firstAttribute="top" secondItem="xd9-mI-BBM" secondAttribute="bottom" constant="44" id="3fv-Dc-fK0"/>
+                            <constraint firstItem="QT3-ah-o0e" firstAttribute="top" secondItem="5rW-Cc-2av" secondAttribute="bottom" constant="48" id="GYc-qP-7X1"/>
+                            <constraint firstItem="Xdg-YV-hoE" firstAttribute="top" secondItem="dDA-hi-5gl" secondAttribute="bottom" id="JS7-lh-5lf"/>
+                            <constraint firstItem="QT3-ah-o0e" firstAttribute="leading" secondItem="ZMA-Zf-XSB" secondAttribute="trailing" constant="89" id="LpS-7L-kQf"/>
+                            <constraint firstItem="Xdg-YV-hoE" firstAttribute="leading" secondItem="FGE-2B-Zkg" secondAttribute="leadingMargin" constant="-7" id="OvD-H1-2dA"/>
+                            <constraint firstItem="5rW-Cc-2av" firstAttribute="leading" secondItem="xd9-mI-BBM" secondAttribute="trailing" constant="50" id="TRv-tM-Ybi"/>
+                            <constraint firstAttribute="centerX" secondItem="WxS-gH-jA9" secondAttribute="centerX" constant="-0.5" id="Z0z-4x-95t"/>
+                            <constraint firstItem="Fgl-xb-lvu" firstAttribute="top" secondItem="dDA-hi-5gl" secondAttribute="bottom" constant="59" id="dJ7-OZ-QnP"/>
+                            <constraint firstItem="xd9-mI-BBM" firstAttribute="top" secondItem="Fgl-xb-lvu" secondAttribute="bottom" constant="76" id="lzj-gJ-1at"/>
+                            <constraint firstAttribute="centerX" secondItem="ZMA-Zf-XSB" secondAttribute="centerX" constant="40" id="pRK-Lb-Pqg"/>
+                            <constraint firstItem="FeD-0W-lkI" firstAttribute="top" secondItem="WxS-gH-jA9" secondAttribute="bottom" constant="55" id="tbg-rJ-8b5"/>
+                            <constraint firstAttribute="centerX" secondItem="xd9-mI-BBM" secondAttribute="centerX" constant="40" id="ttS-uY-Whk"/>
+                            <constraint firstAttribute="centerX" secondItem="Fgl-xb-lvu" secondAttribute="centerX" id="y7M-f8-JGt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k78-AV-UoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184" y="1008"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hao-iv-co3">

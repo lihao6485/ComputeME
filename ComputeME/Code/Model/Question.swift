@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreData
 
 enum QuestionType : NSNumber {
     case ImageType
@@ -31,27 +30,27 @@ enum QuestionCategory: NSNumber {
     case Unknown
 }
 
-@objc class Question: NSManagedObject {
+class Question {
 
-    @NSManaged var category: NSNumber
-    @NSManaged var content: String
-    @NSManaged var image: NSData
-    @NSManaged var type: NSNumber
-    @NSManaged var optionSet: OptionSet!
+    var category: QuestionCategory!
+    var content: String
+    var image: NSData
+    var type: QuestionType!
+    var optionSet: OptionSet!
     
 
-//    init(content:String, type:QuestionType, category: QuestionCategory, image:NSData, optionSet:OptionSet) {
-//        self.content = content
-//        self.type = type
-//        self.category = category
-//        self.image = image
-//        self.optionSet = optionSet
-//    }
+    init(content:String, type:QuestionType, category: QuestionCategory, image:NSData, optionSet:OptionSet) {
+        self.content = content
+        self.type = type
+        self.category = category
+        self.image = image
+        self.optionSet = optionSet
+    }
     
 }
 
 extension Question : Printable {
-   override var description: String {
+    var description: String {
         var d = "{\n"
             d += "Content: \(self.content)\n"
             d += "Image: \(self.image)\n"

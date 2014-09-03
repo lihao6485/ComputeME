@@ -7,24 +7,21 @@
 //
 
 import Foundation
-import CoreData
 
-class OptionSet: NSManagedObject {
+class OptionSet {
 
     /// Set of options that are not answers.
-    @NSManaged var dummyOptions: AnyObject
+    var dummyOptions: [Option]
     /// Correct option or answer.
-    @NSManaged var correctOption: Option
-    @NSManaged var question: Question
-    
+    var correctOption: Option
+
     lazy var allOptions = [Option]()
     
-//    init(correctOption: Option, dummyOptions:[Option]) {
-//        super.init()
-//        self.correctOption = correctOption
-//        self.dummyOptions = dummyOptions
-//        setupAnswerSet()
-//    }
+    init(correctOption: Option, dummyOptions:[Option]) {
+        self.correctOption = correctOption
+        self.dummyOptions = dummyOptions
+        setupAnswerSet()
+    }
     
     private func setupAnswerSet() {
         allOptions = dummyOptions as [Option]

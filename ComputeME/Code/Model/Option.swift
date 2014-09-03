@@ -7,25 +7,24 @@
 //
 
 import Foundation
-import CoreData
 
-class Option: NSManagedObject {
+class Option {
 
-    @NSManaged var stringContent: String
+    var stringContent: String
 
     /**
     Initialise option with string content and image content
     
     :param: stringContent The string content of the option
     */
-//    init(stringContent:String){
-//        self.stringContent = stringContent
-//    }
+    init(stringContent:String){
+        self.stringContent = stringContent
+    }
 }
 
 
 extension Option : Printable {
-    override var description :String {
+    var description :String {
         return "[ Option content: \(stringContent) ]"
     }
 }
