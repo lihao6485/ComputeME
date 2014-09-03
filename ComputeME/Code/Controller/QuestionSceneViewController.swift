@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import AudioToolbox
 
 class QuestionSceneViewController: UIViewController {
 
@@ -128,7 +130,7 @@ class QuestionSceneViewController: UIViewController {
     
     private func setUpNextQuestion() {
         let question = questions[currentQuestion] as Question
-        self.contentView.removeAllSubViews()
+        self.contentView.removeAllSubviews()
         self.contentView.addSubview(self.loadContentViewWithQuestion(question))
         self.setUpOptionButtonsWithOptions(question.optionSet.allOptions)
     }
@@ -139,6 +141,13 @@ class QuestionSceneViewController: UIViewController {
     
     private func loadQuestion() {
         
+    }
+    
+    private func playSoundEffect(fileName:String , fileFormat:String) {
+        var soundPath = NSBundle.mainBundle().pathForResource(fileName, ofType: fileFormat)
+        var soundID: SystemSoundID = 0
+        AudioServicesCreateSystemSoundID(NSURL(fileURLWithPath: soundPath!), &soundID)
+        AudioServicesPlaySystemSound(soundID)
     }
     
     //MARK: - Load Content View
@@ -174,22 +183,24 @@ class QuestionSceneViewController: UIViewController {
         var correctColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1.0)
         var wrongColor = UIColor(red: 1.0, green: 106/255, blue: 110/255, alpha: 1.0)
         
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
         if (sender.titleLabel.text == options.correctOption.stringContent) {
             sender.backgroundColor = correctColor
             correctAnswers++
             
-//            if(appDelegate.isSoundEffectOn)
-//            {
-//                [self playSoundEffect:@"Ka-Ching" fileFormat:@"wav"];
-//            }
+            if(appDelegate.isSoundEffectOn)
+            {
+                self.playSoundEffect("Ka-Ching", fileFormat: "wav")
+            }
             
         }
         else {
             sender.backgroundColor = wrongColor
-//            if(appDelegate.isSoundEffectOn)
-//            {
-//                [self playSoundEffect:@"Comedy Wap" fileFormat:@"caf"];
-//            }
+            if(appDelegate.isSoundEffectOn)
+            {
+                 self.playSoundEffect("Comedy Wap", fileFormat: "caf")
+            }
             
             switch(options.correctOption.stringContent) {
                 case self.option1Button.titleLabel.text :
