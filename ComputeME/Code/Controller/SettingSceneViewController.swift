@@ -26,9 +26,10 @@ class SettingSceneViewController: UIViewController ,UIAlertViewDelegate{
     
     
     @IBAction func resetAllButtonAction(sender: AnyObject) {
-        var alert = UIAlertView(title: "Reset All", message: "Are you sure want to reset all scores and settings?", delegate: self, cancelButtonTitle: "Cancel", otherButtonTitles: "Ok" , "")
-        alert.show()
-        
+//        var alert = UIAlertView(title: "Reset All", message: "Are you sure want to reset all scores and settings?", delegate: self, cancelButtonTitle: "Cancel", otherButtonTitles: "Ok" , "")
+//        alert.show()
+        let alertController = UIAlertController(title: "Reset all", message: "Are you sure want to reset all scores and settings?", preferredStyle: .Alert)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     @IBAction func modeButtonAction(sender: AnyObject) {

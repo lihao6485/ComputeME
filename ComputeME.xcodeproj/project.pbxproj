@@ -209,12 +209,12 @@
 		6D0C9CF6199CEE810052902F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F6128FC719A264610095920A /* StartSceneViewController.swift */,
-				F6A9FCB419A35872004F41C1 /* GameModeSceneViewController.swift */,
 				F6A9FCB619A3A291004F41C1 /* CategorySceneViewController.swift */,
+				F6A9FCB419A35872004F41C1 /* GameModeSceneViewController.swift */,
 				F6EB615B19A627AE004CC3A6 /* GetReadySceneViewController.swift */,
 				1B7DE86419AB7C1D0005CFE8 /* QuestionSceneViewController.swift */,
 				1B68335919B6D02C00B7E625 /* SettingSceneViewController.swift */,
+				F6128FC719A264610095920A /* StartSceneViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
