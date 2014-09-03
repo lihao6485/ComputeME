@@ -37,7 +37,7 @@ class GetReadySceneViewController: UIViewController {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "QuizViewSegue" {
             let vc = segue.destinationViewController as QuestionSceneViewController
             vc.selectedGameMode = selectedGameMode

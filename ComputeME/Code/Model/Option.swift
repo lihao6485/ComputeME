@@ -22,7 +22,6 @@ class Option {
     }
 }
 
-
 extension Option : Printable {
     var description :String {
         return "[ Option content: \(stringContent) ]"

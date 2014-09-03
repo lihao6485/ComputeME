@@ -21,7 +21,7 @@ class GameModeSceneViewController: UIViewController, FBLoginViewDelegate {
     }
     
     @IBAction func selectMode(sender: UIButton!) {
-        let categoryViewController = self.storyboard.instantiateViewControllerWithIdentifier("CategorySelectionScene") as CategorySceneViewController
+        let categoryViewController = self.storyboard?.instantiateViewControllerWithIdentifier("CategorySelectionScene") as CategorySceneViewController
         
         switch sender.tag {
         case 34:
@@ -34,7 +34,7 @@ class GameModeSceneViewController: UIViewController, FBLoginViewDelegate {
             categoryViewController.selectedGameMode = .Unknown
         }
         
-        self.navigationController.pushViewController(categoryViewController, animated: true)
+        self.navigationController?.pushViewController(categoryViewController, animated: true)
     }
     
     // MARK: FBLoginViewDelegate

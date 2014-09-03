@@ -15,7 +15,7 @@ class StartSceneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController.navigationBarHidden = true
+        self.navigationController?.navigationBarHidden = true
         
         UIView.animateWithDuration(0.5, options: .Repeat | .Autoreverse | .AllowUserInteraction | .CurveEaseIn) {
             self.startLabel.alpha = 0.0
@@ -27,7 +27,7 @@ class StartSceneViewController: UIViewController {
     }
     
     @IBAction func handleTap(recognizer: UITapGestureRecognizer) {
-        let gameModeSceneViewController = self.storyboard.instantiateViewControllerWithIdentifier("GameModeSelectionScene") as GameModeSceneViewController
-        self.navigationController.pushViewController(gameModeSceneViewController, animated: true)
+        let gameModeSceneViewController = self.storyboard?.instantiateViewControllerWithIdentifier("GameModeSelectionScene") as GameModeSceneViewController
+        self.navigationController?.pushViewController(gameModeSceneViewController, animated: true)
     }
 }

@@ -122,10 +122,10 @@ class QuestionSceneViewController: UIViewController {
         self.option2Button.setTitle(options[1].stringContent, forState: UIControlState.Normal)
         self.option3Button.setTitle(options[2].stringContent, forState: UIControlState.Normal)
         self.option4Button.setTitle(options[3].stringContent, forState: UIControlState.Normal)
-        self.option1Button.titleLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        self.option2Button.titleLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        self.option3Button.titleLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        self.option4Button.titleLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        self.option1Button.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        self.option2Button.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        self.option3Button.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        self.option4Button.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
     }
     
     private func setUpNextQuestion() {
@@ -185,7 +185,7 @@ class QuestionSceneViewController: UIViewController {
         
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         
-        if (sender.titleLabel.text == options.correctOption.stringContent) {
+        if (sender.titleLabel?.text == options.correctOption.stringContent) {
             sender.backgroundColor = correctColor
             correctAnswers++
             
@@ -203,16 +203,16 @@ class QuestionSceneViewController: UIViewController {
             }
             
             switch(options.correctOption.stringContent) {
-                case self.option1Button.titleLabel.text :
+                case self.option1Button.titleLabel?.text! :
                     self.option1Button.backgroundColor = correctColor
                 
-                case self.option2Button.titleLabel.text :
+                case self.option2Button.titleLabel?.text :
                     self.option2Button.backgroundColor = correctColor
                 
-                case self.option3Button.titleLabel.text :
+                case self.option3Button.titleLabel?.text :
                     self.option3Button.backgroundColor = correctColor
                 
-                case self.option4Button.titleLabel.text :
+                case self.option4Button.titleLabel?.text :
                     self.option4Button.backgroundColor = correctColor
                 
                 default: println("There are no correct text. Please debug it.")

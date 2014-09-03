@@ -33,7 +33,7 @@ class SettingSceneViewController: UIViewController ,UIAlertViewDelegate{
     }
     
     @IBAction func modeButtonAction(sender: AnyObject) {
-        self.navigationController.popViewControllerAnimated(true)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     @IBAction func soundEffectSwitchAction(sender: UISwitch) {
