@@ -124,8 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				1BE17EC819B57CBE009EC86F /* QuestionWithImageView.swift */,
-				1BE17ECA19B57CC8009EC86F /* QuestionWithoutImageView.swift */,
 				1BE17EC419B57CA8009EC86F /* QuestionWithImageView.xib */,
+				1BE17ECA19B57CC8009EC86F /* QuestionWithoutImageView.swift */,
 				1BE17EC619B57CB2009EC86F /* QuestionWithoutImageView.xib */,
 			);
 			name = View;
@@ -197,11 +197,11 @@
 		6D0C9CF3199CEE330052902F /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				1BE17EBD19B57A2D009EC86F /* View */,
-				6D7C595E19A241AB005A618E /* Model */,
-				6D0C9CF6199CEE810052902F /* Controller */,
 				6D0C9CD6199CEDA40052902F /* AppDelegate.swift */,
+				6D0C9CF6199CEE810052902F /* Controller */,
 				6D7C596719A243A4005A618E /* Extension.swift */,
+				6D7C595E19A241AB005A618E /* Model */,
+				1BE17EBD19B57A2D009EC86F /* View */,
 			);
 			path = Code;
 			sourceTree = "<group>";
